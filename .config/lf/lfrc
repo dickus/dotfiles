@@ -11,7 +11,7 @@ cmd unarchive ${{
         *.zip) unzip "$f" ;;
         *.tar.gz) tar -xzvf "$f" ;;
         *.tar.bz2) tar -xjvf "$f" ;;
-        *.tar) tar -xvf "$f" ;;
+        *.tar|*.tar.xz) tar -xvf "$f" ;;
         *.7z|*.rar) 7z x "$f" ;;
         *) echo "Unsupported format" ;;
     esac
@@ -23,7 +23,7 @@ cmd open ${{
         *.png|*.jpg|*.jpeg) feh "$f" ;;
         *.mkv|*.mp4|*.mov) mpv "$f" ;;
         *.mp3|*.flac) mpv --audio-display=no "$f" ;;
-        *.doc|*.docx) libreoffice "$f" ;;
+        *.doc|*.docx|*.pptx|*.xlsx) libreoffice "$f" ;;
         *.pdf) zathura "$f" ;;
         *.html) firefox "$f" ;;
         *) alacritty -e nvim "$f" ;;
@@ -79,6 +79,18 @@ cmd on-quit ${{
 }}
 
 
+cmd isomount ${{
+    mkdir ~/mnt
+    fuseiso "$f" ~/mnt
+}}
+
+
+cmd isoumount ${{
+    fusermount -u ~/mnt
+    rm -R ~/mnt
+}}
+
+
 # unmapping
 map m
 map M
@@ -95,6 +107,8 @@ map u
 map ua unarchive
 map b setbg
 map F no_spaces
+map mm isomount
+map mn isoumount
 
 
 # mapping
