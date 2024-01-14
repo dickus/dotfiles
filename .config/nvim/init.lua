@@ -88,6 +88,8 @@ require('packer').startup(function(use)
     }
 
     use 'brenoprata10/nvim-highlight-colors'
+
+    use 'wfxr/minimap.vim'
 end)
 
 
@@ -234,4 +236,10 @@ require('lualine').setup {
 }
 
 
+--highlight colors
 require('nvim-highlight-colors').setup {}
+
+
+--minimap
+vim.api.nvim_set_var('minimap_width', 10)
+vim.api.nvim_set_var('minimap_auto_start', 1)
