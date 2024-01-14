@@ -1,47 +1,3 @@
-local Plug = vim.fn['plug#']
-
-vim.call('plug#begin', '~/.config/nvim/plugged')
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-Plug 'arcticicestudio/nord-vim'    
-Plug 'morhetz/gruvbox'
-    
-Plug 'https://github.com/ap/vim-css-color'
-
-Plug 'https://github.com/junegunn/limelight.vim'
-
-Plug 'https://github.com/jremmen/vim-ripgrep'
-
-Plug 'https://github.com/terryma/vim-multiple-cursors'
-
-Plug 'https://github.com/junegunn/goyo.vim'
-
-Plug 'vimwiki/vimwiki'
-
-vim.call ('plug#end')
-
-
-if vim.env.TMUX == nil then
-    if vim.fn.has("nvim") then
-        vim.env.NVIM_TUI_ENABLE_TRUE_COLOR = 1
-    end
-    if vim.fn.has("termguicolors") then
-        vim.o.termguicolors = true
-    end
-end
-
-
-vim.g.vimwiki_list = {
-    {
-        path = '$HOME/Documents/vimwiki/',
-        syntax = 'markdown',
-        ext = 'md'
-    }
-}
-
-
 --basic settings
 vim.cmd('syntax on') --enables syntax highlight
 vim.cmd('set nocompatible')
@@ -67,14 +23,17 @@ vim.o.formatoptions = 'tcqrn1'
 vim.o.lbr = true --softwrap
 vim.o.clipboard = vim.o.clipboard .. 'unnamedplus' --enable copying from nvim to system buffer
 vim.o.mouse = '' --disable mouse
-vim.opt.spelllang = 'en_us'
-vim.opt.spell = true
+vim.o.spelllang = 'en_us'
+vim.o.spell = true
 vim.o.sol = true
 
 
---colorscheme +airline colorscheme
-vim.cmd('colorscheme nord')
-vim.g['airline_theme'] = 'nord_minimal'
+--colorscheme
+function ColorNeoVim(color)
+    color = color or 'nord'
+    vim.cmd.colorscheme(color)
+end
+ColorNeoVim()
 
 
 --limelight
@@ -82,10 +41,77 @@ vim.g.limelight_conceal_guifg = '#3B4252'
 
 
 --keybindings
-vim.api.nvim_set_keymap('n', '<M-q>', ':q<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<M-q>', ':q!<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<M-w>', ':w<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<M-e>', ':setlocal spell spelllang=en_us<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<M-r>', ':setlocal spell spelllang=ru_ru<CR>', {noremap = true})
 
 
 --limelight keybindings
-vim.api.nvim_set_keymap('n', '<C-g>', ':Limelight <bar> :Goyo 120<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-g>', ':Limelight <bar> :Goyo 75<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-h>', ':Limelight! <bar> :Goyo!<CR>', {noremap = true})
+
+
+--packer
+require('packer').startup(function(use)
+    use 'wbthomason/packer.nvim'
+
+    use 'shaunsingh/nord.nvim'
+    
+    use 'junegunn/limelight.vim'
+
+    use 'junegunn/goyo.vim'
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+    use 'brenoprata10/nvim-highlight-colors'
+end)
+
+
+--lualine
+require('lualine').setup {
+    options = {
+        icons_enabled = true,
+        theme = 'auto',
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
+        disabled_filetypes = {
+            statusline = {},
+            winbar = {},
+        },
+        ignore_focus = {},
+        always_divide_middle = true,
+        globalstatus = false,
+        refresh = {
+            statusline = 1000,
+            tabline = 1000,
+            winbar = 1000,
+        }
+    },
+    sections = {
+        lualine_a = {'mode'},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_c = {'filename'},
+        lualine_x = {'encoding', 'fileformat', 'filetype'},
+        lualine_y = {'progress'},
+        lualine_z = {'location'}
+    },
+    inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {'filename'},
+        lualine_x = {'location'},
+        lualine_y = {},
+        lualine_z = {}
+    },
+    tabline = {},
+    winbar = {},
+    inactive_winbar = {},
+    extensions = {}
+}
+
+
+require('nvim-highlight-colors').setup {}
