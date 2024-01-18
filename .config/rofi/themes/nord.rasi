@@ -1,5 +1,5 @@
 configuration {
-	font:        "Envy Code R 10";
+	font:        "Source Code Pro 10";
 	line-margin: 10;
 
     display-ssh:    "";

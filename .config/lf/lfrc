@@ -27,12 +27,13 @@ cmd unarchive ${{
 cmd open ${{
     case "$f" in
         *.png|*.jpg|*.jpeg) feh "$f" ;;
-        *.mkv|*.mp4|*.mov) mpv "$f" ;;
+        *.svg) feh --conversion-timeout 1 "$f" ;;
+        *.mkv|*.mp4|*.MP4|*.mov) mpv "$f" ;;
         *.mp3|*.flac) mpv --audio-display=no "$f" ;;
         *.doc|*.docx|*.pptx|*.xlsx) libreoffice "$f" ;;
         *.pdf) zathura "$f" ;;
         *.html) firefox "$f" ;;
-        *) alacritty -e nvim "$f" ;;
+        *) kitty -e nvim "$f" ;;
     esac
 }}
 #: }}}

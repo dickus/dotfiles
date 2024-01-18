@@ -12,7 +12,7 @@ $shutdown" | rofi -dmenu\
                   -i\
                   -p "Power"\
                   -config "~/.config/rofi/powermenu.rasi"\
-                  -font "Envy Code R 10"\
+                  -font "Source Code Pro 10"\
                   -scrollbar-width "0" )
 
 # Do something based on selected option

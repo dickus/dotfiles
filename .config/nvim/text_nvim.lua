@@ -11,17 +11,16 @@ vim.o.hidden = true --hide buffers with unsaved changes
 vim.o.backup = false --this
 vim.o.writebackup = false --and this disable backups
 vim.o.updatetime = 300 --idle time for status bar update
-vim.o.shortmess = vim.o.shortmess .. 'c'
+vim.o.shortmess = 'c'
 vim.o.scrolloff = 99 --scrolling with cursor
 vim.o.guicursor = 'n:block-Cursor,i:hor20-Cursor'
 vim.o.wildmenu = true --menu with Tab for command input
 vim.o.hls = true --this
 vim.o.is = true --and this enable highlighting words while searching
-vim.o.lc = true
 vim.o.cmdheight = 1
 vim.o.formatoptions = 'tcqrn1'
 vim.o.lbr = true --softwrap
-vim.o.clipboard = vim.o.clipboard .. 'unnamedplus' --enable copying from nvim to system buffer
+vim.o.clipboard = 'unnamedplus' --enable copying from nvim to system buffer
 vim.o.mouse = '' --disable mouse
 vim.o.spelllang = 'en_us'
 vim.o.spell = true
@@ -41,6 +40,7 @@ vim.g.limelight_conceal_guifg = '#3B4252'
 
 
 --keybindings
+vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<M-q>', ':q!<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<M-w>', ':w<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<M-e>', ':setlocal spell spelllang=en_us<CR>', {noremap = true})
@@ -66,8 +66,6 @@ require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
-
-    use 'brenoprata10/nvim-highlight-colors'
 end)
 
 
@@ -112,6 +110,3 @@ require('lualine').setup {
     inactive_winbar = {},
     extensions = {}
 }
-
-
-require('nvim-highlight-colors').setup {}

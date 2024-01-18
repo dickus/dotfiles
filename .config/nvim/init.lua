@@ -25,7 +25,7 @@ vim.o.mouse = '' --disable mouse
 vim.o.sol = true
 vim.o.signcolumn = 'yes'
 vim.o.foldmethod = 'syntax'
-
+vim.api.nvim_set_var('markdown_fenced_languages', {'html', 'python', 'lua', 'vim', 'typescript', 'javascript'})
 
 --colorscheme
 function ColorNeoVim(color)
@@ -43,6 +43,8 @@ vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd h<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd j<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ss', ':s///g', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>sg', ':%s///g', {noremap = true})
 
 
 --packer
@@ -75,6 +77,8 @@ require('packer').startup(function(use)
 
             -- LSP Support
             {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp'},
@@ -90,6 +94,10 @@ require('packer').startup(function(use)
     use 'brenoprata10/nvim-highlight-colors'
 
     use 'wfxr/minimap.vim'
+
+    use 'vimwiki/vimwiki'
+
+    use 'f3rno/vimwiki-footnotes'
 end)
 
 
@@ -132,8 +140,9 @@ vim.api.nvim_set_keymap('n', '<M-q>', ':q!<CR>', {noremap = true})
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
-require('lspconfig').gopls.setup{}
-require('lspconfig').clangd.setup{}
+--require('lspconfig').gopls.setup{}
+--require('lspconfig').clangd.setup{}
+--require('lspconfig').marksman.setup{}
 
 lsp.set_preferences({
     sign_icons = { }
@@ -243,3 +252,20 @@ require('nvim-highlight-colors').setup {}
 --minimap
 vim.api.nvim_set_var('minimap_width', 10)
 vim.api.nvim_set_var('minimap_auto_start', 1)
+
+
+--mason
+require('mason').setup {}
+require('mason-lspconfig').setup {}
+
+
+--vimwiki
+vim.g.vimwiki_list = {
+    {
+        path = '~/Documents/vimwiki/',
+        syntax = 'markdown',
+        ext = 'md'
+    }
+}
+
+vim.g.vimwiki_folding='syntax'

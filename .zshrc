@@ -21,3 +21,8 @@ function precmd() {
     unset timer
   fi
 }
+
+
+alias dfs="df -h / /home"
+alias gs="git status"
+alias work="sudo openvpn --cd ~/.ya_vpn --config ~/.ya_vpn/openvpn.conf"

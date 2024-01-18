@@ -5,13 +5,13 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # program launcher
 super + d
 	rofi -modi drun -show drun -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal alacritty \
-                -font "Droid Sans Regular 10"
+                -columns 2 -padding 50 -hide-scrollbar -terminal kitty \
+                -font "Source Code Pro 10"
 
 # power-menu 
 super + shift + e
@@ -110,13 +110,13 @@ super + w
   firefox
 
 super + e
-  alacritty -e lf
+  kitty -e lf
 
 super + v
-  alacritty --class 'vimwiki' --title 'vimwiki' -e nvim -u $HOME/.config/nvim/text_nvim.lua
+  kitty --class 'nvim_text' --title 'nvim_text' -e nvim -u $HOME/.config/nvim/text_nvim.lua
 
 super + shift + v
-  alacritty --class 'nvim' --title 'nvim' -e nvim
+  kitty --class 'nvim' --title 'nvim' -e nvim
 
 super + n
   rofi -show calc -no-show-match -no-sort
