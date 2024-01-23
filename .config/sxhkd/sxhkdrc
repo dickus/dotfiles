@@ -5,12 +5,12 @@
 
 # terminal emulator
 super + Return
-	kitty
+	alacritty
 
 # program launcher
 super + d
 	rofi -modi drun -show drun -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal kitty \
+                -columns 2 -padding 50 -hide-scrollbar -terminal alacritty \
                 -font "Source Code Pro 10"
 
 # power-menu 
@@ -110,13 +110,13 @@ super + w
   firefox
 
 super + e
-  kitty -e lf
+  alacritty -e lf
 
 super + v
-  kitty --class 'nvim_text' --title 'nvim_text' -e nvim -u $HOME/.config/nvim/text_nvim.lua
+  alacritty --class 'nvim_text' --title 'nvim_text' -e nvim -u $HOME/.config/nvim/text_nvim.lua
 
 super + shift + v
-  kitty --class 'nvim' --title 'nvim' -e nvim
+  alacritty --class 'nvim' --title 'nvim' -e nvim
 
 super + n
   rofi -show calc -no-show-match -no-sort

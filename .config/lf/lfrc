@@ -29,11 +29,11 @@ cmd open ${{
         *.png|*.jpg|*.jpeg) feh "$f" ;;
         *.svg) feh --conversion-timeout 1 "$f" ;;
         *.mkv|*.mp4|*.MP4|*.mov) mpv "$f" ;;
-        *.mp3|*.flac) mpv --audio-display=no "$f" ;;
-        *.doc|*.docx|*.pptx|*.xlsx) libreoffice "$f" ;;
+        *.mp3|*.flac|*.m4a) mpv --audio-display=no "$f" ;;
+        *.doc|*.docx|*.pptx|*.xlsx|*.xls) libreoffice "$f" ;;
         *.pdf) zathura "$f" ;;
         *.html) firefox "$f" ;;
-        *) kitty -e nvim "$f" ;;
+        *) alacritty -e nvim "$f" ;;
     esac
 }}
 #: }}}
@@ -62,11 +62,11 @@ cmd paste ${{
     mode=$(echo "$load" | sed -n '1p')
     list=$(echo "$load" | sed '1d')
     if [ $mode = 'copy' ]; then
-        cp -Ruv $list .
+        cp -Ru $list .
         rm ~/.local/share/lf/files
         lf -remote 'send clear'
     elif [ $mode = 'move' ]; then
-        mv -uv $list .
+        mv -u $list .
         rm ~/.local/share/lf/files
         lf -remote 'send clear'
     fi

@@ -25,7 +25,7 @@ vim.o.mouse = '' --disable mouse
 vim.o.sol = true
 vim.o.signcolumn = 'yes'
 vim.o.foldmethod = 'syntax'
-vim.api.nvim_set_var('markdown_fenced_languages', {'html', 'python', 'lua', 'vim', 'typescript', 'javascript'})
+vim.api.nvim_set_var('markdown_fenced_languages', {'cpp', 'bash'})
 
 --colorscheme
 function ColorNeoVim(color)
@@ -140,9 +140,7 @@ vim.api.nvim_set_keymap('n', '<M-q>', ':q!<CR>', {noremap = true})
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
---require('lspconfig').gopls.setup{}
---require('lspconfig').clangd.setup{}
---require('lspconfig').marksman.setup{}
+require('lspconfig').clangd.setup{}
 
 lsp.set_preferences({
     sign_icons = { }
@@ -269,3 +267,10 @@ vim.g.vimwiki_list = {
 }
 
 vim.g.vimwiki_folding='syntax'
+
+
+vim.api.nvim_create_autocmd("ExitPre", {
+	group = vim.api.nvim_create_augroup("Exit", { clear = true }),
+	command = "set guicursor=a:hor20",
+	desc = "Set cursor back to beam when leaving Neovim."
+})
