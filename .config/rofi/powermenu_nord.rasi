@@ -1,11 +1,11 @@
-@import "~/.config/rofi/themes/gruvbox.rasi"
+@import "~/.config/rofi/themes/nord.rasi"
 
 listview {
     lines: 4;
 }
 
 window {
-    background-color: @white2;
+    background-color: @black0;
     border: 0px;
     padding: 0;
     width: 160px;
@@ -22,7 +22,7 @@ listview {
     padding: 8px;
     border-color: @blue;
     border: 0px 2px 2px 2px;
-    background-color: @white2;
+    background-color: @black0;
     dynamic: false;
     scrollbar: false;
 }
@@ -30,23 +30,23 @@ listview {
 element {
     padding: 3px;
     vertical-align: 0.5;
-    background-color: @white2;
+    background-color: @black0;
     text-color: @white2;
 }
 
 element.normal.normal {
-    background-color: @white2;
-    text-color: @black0;
+    background-color: @black0;
+    text-color: @white2;
 }
 
 element.selected.normal {
     background-color: @blue;
-    text-color: @white2;
+    text-color: @black2;
 }
 
 element.alternate.normal {
-    background-color: @white2;
-    text-color: @black0;
+    background-color: @black0;
+    text-color: @white2;
 }
 
 inputbar {
@@ -62,12 +62,12 @@ case-indicator {
 
 entry {
     spacing: 0;
-    text-color: @blue;
+    text-color: @white0;
 }
 
 prompt {
     spacing: 0;
-    text-color: @blue;
+    text-color: @white0;
 }
 
 inputbar {
@@ -78,5 +78,5 @@ textbox-prompt-colon {
     expand: false;
     str: ":";
     margin: 0px 0.3em 0em 0em ;
-    text-color: @blue;
+    text-color: @white0;
 }

@@ -27,14 +27,14 @@ vim.o.signcolumn = 'yes'
 vim.o.foldmethod = 'syntax'
 vim.api.nvim_set_var('markdown_fenced_languages', {'cpp', 'bash'})
 
+
 --colorscheme
-function ColorNeoVim(color)
-    color = color or 'nord'
-    vim.cmd.colorscheme(color)
-end
-ColorNeoVim()
+vim.o.background = "light"
+vim.cmd('colorscheme gruvbox')
+
 
 --keybindings
+local opts = { noremap=true, silent=true }
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<M-q>', ':q!<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<M-w>', ':w<CR>', {noremap = true})
@@ -58,6 +58,7 @@ require('packer').startup(function(use)
     })
 
     use 'shaunsingh/nord.nvim'
+    use 'ellisonleao/gruvbox.nvim'
 
     use({
         'nvim-treesitter/nvim-treesitter',
@@ -72,9 +73,6 @@ require('packer').startup(function(use)
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
-            -- {'williamboman/mason.nvim'},
-            -- {'williamboman/mason-lspconfig.nvim'},
-
             -- LSP Support
             {'neovim/nvim-lspconfig'},
             {'williamboman/mason.nvim'},
@@ -98,6 +96,15 @@ require('packer').startup(function(use)
     use 'vimwiki/vimwiki'
 
     use 'f3rno/vimwiki-footnotes'
+
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup {}
+        end
+    }
 end)
 
 
@@ -269,8 +276,20 @@ vim.g.vimwiki_list = {
 vim.g.vimwiki_folding='syntax'
 
 
+--cursor fix for alacritty
 vim.api.nvim_create_autocmd("ExitPre", {
-	group = vim.api.nvim_create_augroup("Exit", { clear = true }),
-	command = "set guicursor=a:hor20",
-	desc = "Set cursor back to beam when leaving Neovim."
+    group = vim.api.nvim_create_augroup("Exit", { clear = true }),
+    command = "set guicursor=a:hor20",
+    desc = "Set cursor back to beam when leaving Neovim."
 })
+
+
+--lsp quickfix
+local function quickfix()
+    vim.lsp.buf.code_action({
+        filter = function(a) return a.isPreferred end,
+        apply = true
+    })
+end
+
+vim.keymap.set('n', '<leader>qf', quickfix, opts)

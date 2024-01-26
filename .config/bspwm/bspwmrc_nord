@@ -41,9 +41,9 @@ bspc rule -a TelegramDesktop state=floating
 
 
 # Border
-bspc config focused_border_color "#076678"
-bspc config normal_border_color  "#BDAE93"
-bspc config active_border_color  "#282828"
+bspc config focused_border_color "#5e81ac"
+bspc config normal_border_color  "#4c566a"
+bspc config active_border_color  "#d8dee9"
 
 
 #

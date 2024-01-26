@@ -28,15 +28,8 @@ vim.o.sol = true
 
 
 --colorscheme
-function ColorNeoVim(color)
-    color = color or 'nord'
-    vim.cmd.colorscheme(color)
-end
-ColorNeoVim()
-
-
---limelight
-vim.g.limelight_conceal_guifg = '#3B4252'
+vim.o.background = "light"
+vim.cmd('colorscheme gruvbox')
 
 
 --keybindings
@@ -65,6 +58,16 @@ require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup {}
+        end
     }
 end)
 
