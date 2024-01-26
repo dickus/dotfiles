@@ -29,7 +29,7 @@ vim.o.sol = true
 
 --colorscheme
 vim.o.background = "light"
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme catppuccin')
 
 
 --keybindings
@@ -50,6 +50,8 @@ require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'shaunsingh/nord.nvim'
+    use 'ellisonleao/gruvbox.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
     
     use 'junegunn/limelight.vim'
 

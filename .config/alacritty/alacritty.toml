@@ -1,26 +1,16 @@
-[colors.bright]
-black   = "#282828"
-blue    = "#076678"
-cyan    = "#427B58"
-green   = "#79740E"
-magenta = "#8F3F71"
-red     = "#9D0006"
-white   = "#282828"
-yellow  = "#D57614"
-
 [colors.normal]
-black   = "#3C3836"
-blue    = "#458588"
-cyan    = "#689D6A"
-green   = "#98971A"
-magenta = "#D16286"
-red     = "#CC241D"
-white   = "#282828"
-yellow  = "#D79921"
+black   = "#4C4F69"
+blue    = "#6189B2"
+cyan    = "#81A9A8"
+green   = "#8CA378"
+magenta = "#B48EAD"
+red     = "#BF616A"
+white   = "#4C4F69"
+yellow  = "#EBCB8B"
 
 [colors.primary]
-background = "#FBF1C7"
-foreground = "#3C3836"
+background = "#ECEFF4"
+foreground = "#2E3440"
 
 [cursor]
 thickness = 0.3
@@ -38,15 +28,15 @@ TERM     = "alacritty"
 size = 11.0
 
 [font.bold]
-family = "Source Code Pro"
+family = "SFMono Nerd Font Mono"
 style  = "Bold"
 
 [font.italic]
-family = "Source Code Pro"
+family = "SFMono Nerd Font Mono"
 style  = "Italic"
 
 [font.normal]
-family = "Source Code Pro"
+family = "SFMono Nerd Font Mono"
 style  = "Regular"
 
 [window.padding]

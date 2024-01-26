@@ -10,7 +10,7 @@
     padding = 10
     horizontal_padding = 8
     frame_width = 2
-    frame_color = "#6189B2"
+    frame_color = "#076678"
     separator_color = auto
     sort = yes
     idle_threshold = 120
@@ -54,20 +54,20 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#ECEFF4"
-    foreground = "#2E3440"
+    background = "#FBF1C7"
+    foreground = "#3C3836"
     timeout    = 5
     icon       = /usr/share/icons/Arc-X-D/status/16/dialog-information.png
 
 [urgency_normal]
-    background = "#ECEFF4"
-    foreground = "#2E3440"
+    background = "#FBF1C7"
+    foreground = "#3C3836"
     timeout    = 5
     icon       = /usr/share/icons/Arc-X-D/status/16/dialog-question.png
 
 [urgency_critical]
-    background = "#ECEFF4"
-    foreground = "#2E3440"
-    frame_color = "#BF616A"
+    background = "#FBF1C7"
+    foreground = "#3C3836"
+    frame_color = "#9D0006"
     timeout     = 120
     icon        = /usr/share/icons/Arc-X-D/status/16/dialog-warning.png

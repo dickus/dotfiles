@@ -24,13 +24,12 @@ vim.o.clipboard = 'unnamedplus' --enable copying from nvim to system buffer
 vim.o.mouse = '' --disable mouse
 vim.o.sol = true
 vim.o.signcolumn = 'yes'
-vim.o.foldmethod = 'syntax'
-vim.api.nvim_set_var('markdown_fenced_languages', {'cpp', 'bash'})
+vim.o.foldmethod = 'manual'
 
 
 --colorscheme
 vim.o.background = "light"
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme nord')
 
 
 --keybindings
@@ -57,13 +56,8 @@ require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     })
 
-    use 'shaunsingh/nord.nvim'
+    use 'nordtheme/vim'
     use 'ellisonleao/gruvbox.nvim'
-
-    use({
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    })
 
     use 'theprimeagen/harpoon'
 
@@ -91,8 +85,6 @@ require('packer').startup(function(use)
 
     use 'brenoprata10/nvim-highlight-colors'
 
-    use 'wfxr/minimap.vim'
-
     use 'vimwiki/vimwiki'
 
     use 'f3rno/vimwiki-footnotes'
@@ -111,19 +103,6 @@ end)
 --telescope
 require('telescope')
 vim.api.nvim_set_keymap('n', 'ff', ':Telescope find_files hidden=true<CR>', {noremap = true})
-
-
---treesitter
-require('nvim-treesitter.configs').setup {
-    ensure_installed = { 'c', 'cpp', 'go', 'markdown', 'lua', 'vim', 'vimdoc', 'query' },
-    sync_install = false,
-    auto_install = true,
-    ignore_install = { 'javascript' },
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-    },
-}
 
 
 --harpoon
@@ -211,7 +190,7 @@ cmp.setup({
 require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = 'auto',
+        theme = 'iceberg_light',
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         disabled_filetypes = {
@@ -252,11 +231,6 @@ require('lualine').setup {
 
 --highlight colors
 require('nvim-highlight-colors').setup {}
-
-
---minimap
-vim.api.nvim_set_var('minimap_width', 10)
-vim.api.nvim_set_var('minimap_auto_start', 1)
 
 
 --mason
