@@ -29,7 +29,7 @@ vim.o.foldmethod = 'manual'
 
 --colorscheme
 vim.o.background = "light"
-vim.cmd('colorscheme nord')
+vim.cmd('colorscheme everforest')
 
 
 --keybindings
@@ -56,8 +56,9 @@ require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     })
 
-    use 'nordtheme/vim'
+    use 'shaunsingh/nord.nvim'
     use 'ellisonleao/gruvbox.nvim'
+    use 'sainnhe/everforest'
 
     use 'theprimeagen/harpoon'
 
@@ -190,7 +191,7 @@ cmp.setup({
 require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = 'iceberg_light',
+        theme = 'auto',
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         disabled_filetypes = {

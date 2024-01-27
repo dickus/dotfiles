@@ -1,5 +1,5 @@
 configuration {
-	font:        "Source Code Pro 10";
+	font:        "SFMono Nerd Font Mono 10";
 	line-margin: 10;
 
     display-ssh:    "";

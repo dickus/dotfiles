@@ -1,16 +1,26 @@
+[colors.bright]
+black   = "#5C6A72"
+blue    = "#3A94C5"
+cyan    = "#35A77C"
+green   = "#8DA101"
+magenta = "#DF69BA"
+red     = "#F85552"
+white   = "#FDF6E3"
+yellow  = "#DFA000"
+
 [colors.normal]
-black   = "#4C4F69"
-blue    = "#6189B2"
-cyan    = "#81A9A8"
-green   = "#8CA378"
-magenta = "#B48EAD"
-red     = "#BF616A"
-white   = "#4C4F69"
-yellow  = "#EBCB8B"
+black   = "#5C6A72"
+blue    = "#3A94C5"
+cyan    = "#35A77C"
+green   = "#8DA101"
+magenta = "#DF69BA"
+red     = "#F85552"
+white   = "#FDF6E3"
+yellow  = "#DFA000"
 
 [colors.primary]
-background = "#ECEFF4"
-foreground = "#2E3440"
+background = "#F0F1D2"
+foreground = "#5C6A72"
 
 [cursor]
 thickness = 0.3

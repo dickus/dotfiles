@@ -11,28 +11,28 @@ configuration {
 }
 
 * {
-	black0:      #2e3440;
-	black1:      #3b4252;
-	black2:      #434c5e;
-	black3:      #4c566a;
+	black0:      #5C6A72;
+	black1:      #708089;
+	black2:      #939D91;
+	black3:      #A6B0A0;
 
-	white0:      #d8dee9;
-	white1:      #e5e9f0;
-	white2:      #eceff4;
+	white0:      #E6E2CC;
+	white1:      #EFEBD4;
+	white2:      #F0F1D2;
 
-	aqua:        #8fbcbb;
-	lightblue:   #88c0d0;
-	blue:        #81a1c1;
-	lightaqua:   #5e81ac;
-	lightred:    #bf616a;
+	lightaqua:   #EAEDC8;
+	aqua:        #35A77C;
+	lightblue:   #E9F0E9;
+	blue:        #3A94C5;
+	lightred:    #FBE3DA;
 
-	lightorange: #d08770;
-	lightyellow: #ebcb8b;
-	lightgreen:  #a3be8c;
-	lightpurple: #b48ead;
+	lightorange: #FAE3B5;
+	lightyellow: #FAEDCD;
+	lightgreen:  #D4F1A0;
+	lightpurple: #FDF6E3;
 
     foreground:       @blue;
-    background-color: @black0;
+    background-color: @white2;
 }
 
 window {
@@ -40,7 +40,7 @@ window {
     anchor:   center;
     border:   0px;
 
-    background-color: @black0;
+    background-color: @white2;
     spacing:          0;
     children:         [mainbox];
     orientation:      horizontal;
@@ -55,7 +55,7 @@ mainbox {
 inputbar {
     color:            @blue;
     padding:          8px;
-    background-color: @black0;
+    background-color: @white2;
 
     border:       2px;
     border-color: @blue;
@@ -74,7 +74,7 @@ listview {
     padding:          8px;
     border-color:     @blue;
     border:           0px 2px 2px 2px;
-    background-color: @black0;
+    background-color: @white2;
     dynamic:          false;
     lines:            6;
     columns:          3;
@@ -83,8 +83,8 @@ listview {
 element {
     padding:          3px;
     vertical-align:   0.5;
-    background-color: @black0;
-    text-color:       @white2;
+    background-color: @white2;
+    text-color:       @black0;
 }
 
 element selected.normal {
