@@ -18,7 +18,7 @@ configuration {
 
 	white0:      #E6E2CC;
 	white1:      #EFEBD4;
-	white2:      #F0F1D2;
+	white2:      #FDF6E3;
 
 	lightaqua:   #EAEDC8;
 	aqua:        #35A77C;
@@ -29,7 +29,7 @@ configuration {
 	lightorange: #FAE3B5;
 	lightyellow: #FAEDCD;
 	lightgreen:  #D4F1A0;
-	lightpurple: #FDF6E3;
+	lightpurple: #FBE3F6;
 
     foreground:       @blue;
     background-color: @white2;

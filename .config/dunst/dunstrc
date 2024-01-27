@@ -54,19 +54,19 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#F0F1D2"
+    background = "#FDF6E3"
     foreground = "#5C6A72"
     timeout    = 5
     icon       = /usr/share/icons/Arc-X-D/status/16/dialog-information.png
 
 [urgency_normal]
-    background = "#F0F1D2"
+    background = "#FDF6E3"
     foreground = "#5C6A72"
     timeout    = 5
     icon       = /usr/share/icons/Arc-X-D/status/16/dialog-question.png
 
 [urgency_critical]
-    background = "#F0F1D2"
+    background = "#FDF6E3"
     foreground = "#5C6A72"
     frame_color = "#F85552"
     timeout     = 120

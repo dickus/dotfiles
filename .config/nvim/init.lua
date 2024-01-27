@@ -58,7 +58,7 @@ require('packer').startup(function(use)
 
     use 'shaunsingh/nord.nvim'
     use 'ellisonleao/gruvbox.nvim'
-    use 'sainnhe/everforest'
+    use 'neanias/everforest-nvim'
 
     use 'theprimeagen/harpoon'
 
