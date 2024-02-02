@@ -25,6 +25,7 @@ vim.o.mouse = '' --disable mouse
 vim.o.sol = true
 vim.o.signcolumn = 'yes'
 vim.o.foldmethod = 'manual'
+vim.o.relativenumber = true
 
 
 --colorscheme
@@ -86,9 +87,7 @@ require('packer').startup(function(use)
 
     use 'brenoprata10/nvim-highlight-colors'
 
-    use 'vimwiki/vimwiki'
-
-    use 'f3rno/vimwiki-footnotes'
+    use 'jakewvincent/mkdnflow.nvim'
 
     use {
         "folke/which-key.nvim",
@@ -120,7 +119,6 @@ vim.keymap.set('n', '<leader>4', function() uih.nav_file(4) end)
 
 --undotree
 vim.api.nvim_set_keymap('n', '<leader>u', ':UndotreeToggle<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<M-q>', ':q!<CR>', {noremap = true})
 
 
 --lsp
@@ -128,6 +126,8 @@ local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
 require('lspconfig').clangd.setup{}
+require('lspconfig').gopls.setup{}
+require('lspconfig').marksman.setup{}
 
 lsp.set_preferences({
     sign_icons = { }
@@ -239,18 +239,6 @@ require('mason').setup {}
 require('mason-lspconfig').setup {}
 
 
---vimwiki
-vim.g.vimwiki_list = {
-    {
-        path = '~/Documents/vimwiki/',
-        syntax = 'markdown',
-        ext = 'md'
-    }
-}
-
-vim.g.vimwiki_folding='syntax'
-
-
 --cursor fix for alacritty
 vim.api.nvim_create_autocmd("ExitPre", {
     group = vim.api.nvim_create_augroup("Exit", { clear = true }),
@@ -268,3 +256,16 @@ local function quickfix()
 end
 
 vim.keymap.set('n', '<leader>qf', quickfix, opts)
+
+
+--mkdnflow
+require('mkdnflow').setup {
+    mappings = {
+        MkdnGoBack = {'n', '<M-h>'},
+        MkdnGoForward = {'n', '<M-l>'},
+        MkdnFoldSection = {'n', 'zc'},
+        MkdnUnfoldSection = {'n', 'zo'}
+    }
+}
+
+vim.api.nvim_set_keymap('n', '<leader>ww', ':e ~/Documents/vimwiki/index.md<CR>', {noremap = true, silent = true})

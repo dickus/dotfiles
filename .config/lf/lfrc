@@ -128,7 +128,6 @@ map yy copy
 map R reload
 map mk :unselect; invert
 map ma :unselect
-map <f-2> rename
 #: }}}
 #: Navigation {{{
 map gs cd ~/.steam/steam/steamapps/common

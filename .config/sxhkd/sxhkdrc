@@ -99,9 +99,6 @@ XF86AudioMute
 Print
   $HOME/.config/scripts/screenshoter.sh screen
 
-super + Print
-  $HOME/.config/scripts/screenshoter.sh window
-
 super + shift + s
   $HOME/.config/scripts/screenshoter.sh region
 
@@ -111,12 +108,6 @@ super + w
 
 super + e
   alacritty -e lf
-
-super + v
-  alacritty --class 'nvim_text' --title 'nvim_text' -e nvim -u $HOME/.config/nvim/text_nvim.lua
-
-super + shift + v
-  alacritty --class 'nvim' --title 'nvim' -e nvim
 
 super + n
   rofi -show calc -no-show-match -no-sort
