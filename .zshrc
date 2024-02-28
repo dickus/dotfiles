@@ -31,3 +31,8 @@ alias nvimt="nvim -u $HOME/.config/nvim/text_nvim.lua"
 
 export PF_INFO="ascii os kernel wm editor shell pkgs uptime memory"
 export PF_COL2="0"
+
+eval "$(zoxide init --cmd cd zsh)"
+
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin/

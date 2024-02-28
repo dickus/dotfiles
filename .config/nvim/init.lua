@@ -87,7 +87,9 @@ require('packer').startup(function(use)
 
     use 'brenoprata10/nvim-highlight-colors'
 
-    use 'jakewvincent/mkdnflow.nvim'
+    use 'mzlogin/vim-markdown-toc'
+    use 'vimwiki/vimwiki'
+    use 'f3rno/vimwiki-footnotes'
 
     use {
         "folke/which-key.nvim",
@@ -127,7 +129,7 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 require('lspconfig').clangd.setup{}
 require('lspconfig').gopls.setup{}
-require('lspconfig').marksman.setup{}
+require('lspconfig').pyright.setup{}
 
 lsp.set_preferences({
     sign_icons = { }
@@ -258,14 +260,17 @@ end
 vim.keymap.set('n', '<leader>qf', quickfix, opts)
 
 
---mkdnflow
-require('mkdnflow').setup {
-    mappings = {
-        MkdnGoBack = {'n', '<M-h>'},
-        MkdnGoForward = {'n', '<M-l>'},
-        MkdnFoldSection = {'n', 'zc'},
-        MkdnUnfoldSection = {'n', 'zo'}
+--vim-markdown-toc
+vim.api.nvim_set_keymap('n', '<leader>mt', ':GenTocGFM<CR>', {noremap = true, silent = true})
+
+
+--vimwiki
+vim.g.vimwiki_list = {
+    {
+        path = '~/Documents/vimwiki',
+        syntax = 'markdown',
+        ext = 'md'
     }
 }
 
-vim.api.nvim_set_keymap('n', '<leader>ww', ':e ~/Documents/vimwiki/index.md<CR>', {noremap = true, silent = true})
+vim.g.vimwiki_folding = 'syntax'
