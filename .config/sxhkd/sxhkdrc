@@ -1,4 +1,4 @@
--r $HOME/Documents
+-r ~/Documents
 #
 # wm independent hotkeys
 #
@@ -15,7 +15,7 @@ super + d
 
 # power-menu 
 super + shift + e
-     $HOME/.config/rofi/powermenu.sh
+     ~/.config/rofi/powermenu.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -97,10 +97,10 @@ XF86AudioMute
 
 # Screenshot
 Print
-  $HOME/.config/scripts/screenshoter.sh screen
+  ~/.config/scripts/screenshoter.sh screen
 
 super + shift + s
-  $HOME/.config/scripts/screenshoter.sh region
+  ~/.config/scripts/screenshoter.sh region
 
 # Shortcuts
 super + w 

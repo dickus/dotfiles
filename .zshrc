@@ -1,11 +1,11 @@
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 ZSH_THEME="dickus"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 function preexec() {
@@ -25,8 +25,7 @@ function precmd() {
 
 alias dfs="df -h / /home"
 alias gs="git status"
-alias work="sudo openvpn --cd ~/.ya_vpn --config ~/.ya_vpn/openvpn.conf"
-alias nvimt="nvim -u $HOME/.config/nvim/text_nvim.lua"
+alias nvimt="nvim -u ~/.config/nvim/text_nvim.lua"
 alias battery="./.config/scripts/gamepad-battery.sh"
 
 

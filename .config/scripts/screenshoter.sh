@@ -4,7 +4,7 @@ arg=$1
 f="screen_$(date +%F_%H%M%S)".png
 
 case "$arg" in
-    screen) import -window root $HOME/Pictures/"$f" && xclip -sel clip -t image/png -i $HOME/Pictures/"$f";;
-    region) import $HOME/Pictures/"$f" && xclip -sel clip -t image/png -i $HOME/Pictures/"$f";;
+    screen) import -window root ~/Pictures/"$f" && xclip -sel clip -t image/png -i ~/Pictures/"$f";;
+    region) import ~/Pictures/"$f" && xclip -sel clip -t image/png -i ~/Pictures/"$f";;
 esac
 

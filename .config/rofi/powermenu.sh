@@ -18,7 +18,7 @@ $shutdown" | rofi -dmenu\
 # Do something based on selected option
 if [ "$selected_option" == "$lock" ]
 then
-    /home/$USER/.config/bspwm/scripts/i3lock-fancy/i3lock-fancy.sh
+    ~/.config/bspwm/scripts/i3lock-fancy/i3lock-fancy.sh
 elif [ "$selected_option" == "$shutdown" ]
 then
     systemctl poweroff
