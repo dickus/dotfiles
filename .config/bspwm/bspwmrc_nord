@@ -20,13 +20,9 @@ bspc rule -a firefox desktop='^2'
 
 bspc rule -a obsidian desktop='^3'
 
-bspc rule -a Lutris desktop='^5'
-
 bspc rule -a Steam desktop='^6'
 bspc rule -a steam desktop='^6'
 bspc rule -a steamwebhelper desktop='^6'
-
-bspc rule -a retroarch desktop='^7'
 
 bspc rule -a Gimp-2.10 desktop='^8'
 bspc rule -a Blender desktop='^8'
@@ -36,9 +32,8 @@ bspc rule -a discord-screenaudio desktop='^9'
 
 bspc rule -a qBittorrent desktop='^10'
 
-bspc rule -a 'nvim' state=floating rectangle=800x550+558+262
-bspc rule -a 'nvim_text' state=floating rectangle=1000x1000+475+60
 bspc rule -a TelegramDesktop state=floating
+bspc rule -a *:*:Picture-in-Picture follow=false state=floating sticky=on
 
 
 # Border
@@ -54,7 +49,10 @@ bspc config active_border_color  "#d8dee9"
 sh ~/.screenlayout/monitor.sh &
 
 # start daemon for virtual audio cables
-systemctl --user is-active --quiet virtual-audio-cables.service || systemctl --user start virtual-audio-cables.service
+# systemctl --user is-active --quiet virtual-audio-cables.service || systemctl --user start virtual-audio-cables.service
+
+# Picom
+picom -b
 
 # Layout
 setxkbmap -option grp:caps_toggle us,ru &
@@ -66,7 +64,7 @@ setxkbmap -option grp:caps_toggle us,ru &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Wallpaper
-feh --bg-fill --randomize $HOME/Pictures/wallpapers
+systemctl --user is-active --quiet wallpaper-changer.service || systemctl --user start wallpaper-changer.service
 
 # Network Applet
 nm-applet --indicator &
