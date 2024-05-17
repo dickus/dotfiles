@@ -27,6 +27,7 @@ alias dfs="df -h / /home"
 alias gs="git status"
 alias work="sudo openvpn --cd ~/.ya_vpn --config ~/.ya_vpn/openvpn.conf"
 alias nvimt="nvim -u $HOME/.config/nvim/text_nvim.lua"
+alias battery="./.config/scripts/gamepad-battery.sh"
 
 
 export PF_INFO="ascii os kernel wm editor shell pkgs uptime memory"
