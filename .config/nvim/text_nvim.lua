@@ -40,6 +40,11 @@ vim.api.nvim_set_keymap('n', '<M-e>', ':setlocal spell spelllang=en_us<CR>', {no
 vim.api.nvim_set_keymap('n', '<M-r>', ':setlocal spell spelllang=ru_ru<CR>', {noremap = true})
 
 
+--find and replace
+vim.api.nvim_set_keymap('n', '<leader>ss', ':s///g<Left><Left><Left>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>sg', ':%s///g<Left><Left><Left>', {noremap = true})
+
+
 --limelight keybindings
 vim.api.nvim_set_keymap('n', '<C-g>', ':Limelight <bar> :Goyo 75<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-h>', ':Limelight! <bar> :Goyo!<CR>', {noremap = true})

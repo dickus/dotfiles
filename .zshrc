@@ -1,4 +1,4 @@
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="dickus"
 
@@ -24,7 +24,6 @@ function precmd() {
 
 
 alias dfs="df -h / /home"
-alias gs="git status"
 alias nvimt="nvim -u ~/.config/nvim/text_nvim.lua"
 alias battery="./.config/scripts/gamepad-battery.sh"
 

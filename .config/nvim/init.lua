@@ -43,8 +43,10 @@ vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd h<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd j<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>ss', ':s///g', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>sg', ':%s///g', {noremap = true})
+
+--find and replace
+vim.api.nvim_set_keymap('n', '<leader>ss', ':s///g<Left><Left><Left>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>sg', ':%s///g<Left><Left><Left>', {noremap = true})
 
 
 --packer
