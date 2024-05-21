@@ -24,9 +24,10 @@ foreground = "#3C3836"
 
 [cursor]
 thickness = 0.3
+blink_timeout = 0
 
 [cursor.style]
-blinking = "off"
+blinking = "on"
 shape    = "underline"
 
 [env]

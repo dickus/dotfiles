@@ -12,7 +12,7 @@ vim.o.writebackup = false --and this disable backups
 vim.o.updatetime = 300 --idle time for status bar update
 vim.o.shortmess = 'c'
 vim.o.scrolloff = 99 --scrolling with cursor
-vim.o.guicursor = 'n:block-Cursor,i:hor20-Cursor'
+vim.o.guicursor = 'n-v-c:block-Cursor/lCursor-blinkwait0-blinkon0-blinkoff0,i:hor20-Cursor/lCursor-blinkwait0-blinkon100-blinkoff100'
 vim.o.wildmenu = true --menu with Tab for command input
 vim.o.hls = true --this
 vim.o.is = true --and this enable highlighting words while searching
@@ -246,7 +246,7 @@ require('mason-lspconfig').setup {}
 --cursor fix for alacritty
 vim.api.nvim_create_autocmd("ExitPre", {
     group = vim.api.nvim_create_augroup("Exit", { clear = true }),
-    command = "set guicursor=a:hor20",
+    command = "set guicursor=a:hor20-Cursor/lCursor-blinkwait0-blinkon100-blinkoff100",
     desc = "Set cursor back to beam when leaving Neovim."
 })
 
