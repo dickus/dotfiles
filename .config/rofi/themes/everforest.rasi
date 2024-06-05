@@ -38,13 +38,12 @@ configuration {
 window {
     location: center;
     anchor:   center;
-    border:   0px;
 
     background-color: @white2;
     spacing:          0;
     children:         [mainbox];
     orientation:      horizontal;
-    width:            30%;
+    width:            37%;
 }
 
 mainbox {

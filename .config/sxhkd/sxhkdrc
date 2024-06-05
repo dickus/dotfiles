@@ -17,6 +17,10 @@ super + d
 super + shift + e
      ~/.config/rofi/powermenu.sh
 
+# window switch
+super + Tab
+     rofi -show window
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -58,8 +62,8 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+super + grave
+	bspc node -f last
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}

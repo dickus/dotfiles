@@ -12,14 +12,23 @@ if [ "$INFO" ]; then
         MODEL=$(echo $MODEL | sed "s/model://")
         DEVICE_NAME=$(echo $MODEL | grep -P "^[^\s]")
         PERCENT=$(upower -i $item | grep -Eow "[0-9]{2,3}%")
+        LOW_PERCENT=$(echo "$PERCENT" | awk '{print int($1)}')
     
         echo -e "\033[1mid:\033[0m \t${DEVICE_ID}"
         echo -e "\033[1mName:\033[0m \t${DEVICE_NAME}"
 
-        if [ "$CURRENT_ITEM" -lt "$ITEMS" ]; then
-            echo -e "\033[1mCharge:\033[0m ${PERCENT}\n"
+        if [ $LOW_PERCENT -ge 50 ]; then
+            if [ "$CURRENT_ITEM" -lt "$ITEMS" ]; then
+                echo -e "\033[1mCharge:\033[0m ${PERCENT}\n"
+            else
+                echo -e "\033[1mCharge:\033[0m ${PERCENT}"
+            fi
         else
-            echo -e "\033[1mCharge:\033[0m ${PERCENT}"
+            if [ "$CURRENT_ITEM" -lt "$ITEMS" ]; then
+                echo -e "\033[1mCharge:\033[0m \033[0;31m${PERCENT}\033[0m\n"
+            else
+                echo -e "\033[1mCharge:\033[0m \033[0;31m${PERCENT}\033[0m"
+            fi
         fi
 
         CURRENT_ITEM=$((CURRENT_ITEM + 1))

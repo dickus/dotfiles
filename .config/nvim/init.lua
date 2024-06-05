@@ -44,6 +44,9 @@ vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd j<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', {noremap = true})
 
+--clear search highlighting on Esc in normal mode
+vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', {noremap = true})
+
 --find and replace
 vim.api.nvim_set_keymap('n', '<leader>ss', ':s///g<Left><Left><Left>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>sg', ':%s///g<Left><Left><Left>', {noremap = true})
