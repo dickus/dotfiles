@@ -26,6 +26,8 @@ function precmd() {
 alias dfs="df -h / /home"
 alias nvimt="nvim -u ~/.config/nvim/text_nvim.lua"
 alias battery="./.config/scripts/gamepad-battery.sh"
+alias fetch="fastfetch"
+alias cal="cal -m"
 
 
 eval "$(zoxide init --cmd cd zsh)"

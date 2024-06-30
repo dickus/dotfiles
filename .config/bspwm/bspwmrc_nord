@@ -55,7 +55,7 @@ sh ~/.screenlayout/monitor.sh &
 picom -b
 
 # Layout
-setxkbmap -option grp:caps_toggle us,ru &
+setxkbmap -option grp:caps_toggle us,ru,by &
 
 # Notifications
 /usr/bin/dunst &
