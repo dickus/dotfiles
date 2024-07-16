@@ -1,0 +1,156 @@
+# Preview
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
+
+set ignorecase true
+set scrolloff 99
+
+
+# Custom commands
+# Archives
+cmd unarchive ${{
+    case "$f" in
+        *.zip) unzip "$f" ;;
+        *.tar.gz) tar -xzvf "$f" ;;
+        *.tar.bz2) tar -xjvf "$f" ;;
+        *.tar|*.tar.xz) tar -xvf "$f" ;;
+        *.7z|*.rar) 7z x "$f" ;;
+        *) echo "Unsupported format" ;;
+    esac
+}}
+
+# File opener
+cmd open ${{
+    case "$f" in
+        *.png|*.jpg|*.jpeg) feh "$f" ;;
+        *.svg) feh --conversion-timeout 1 "$f" ;;
+        *.mkv|*.mp4|*.MP4|*.mov) mpv "$f" ;;
+        *.mp3|*.flac|*.m4a) mpv --audio-display=no "$f" ;;
+        *.pdf) zathura "$f" ;;
+        *.html) firefox "$f" ;;
+        *) alacritty -e nvim "$f" ;;
+    esac
+}}
+
+# Background picker
+cmd setbg ${{
+    feh --no-fehbg --bg-fill "$f"
+}}
+
+# Make new file
+cmd mkfile ${{
+    printf "File name: "
+    read -r ans
+    touch "$ans"
+}}
+
+# Make new directory
+cmd mkdir ${{
+    printf "Directory name: "
+    read -r ans
+    mkdir "$ans"
+}}
+
+# Copy/cut and paste
+cmd paste ${{
+    IFS=$'\n'
+    load=$(cat ~/.local/share/lf/files)
+    mode=$(echo "$load" | sed -n '1p')
+    list=$(echo "$load" | sed '1d')
+    files=($list)
+    if [ $mode = 'copy' ]; then
+        cp -Ru "${files[@]}" ./
+        rm ~/.local/share/lf/files
+        lf -remote 'send clear'
+    elif [ $mode = 'move' ]; then
+        mv -u $list "${files[@]}" ./
+        rm ~/.local/share/lf/files
+        lf -remote 'send clear'
+    fi
+    unset IFS
+}}
+
+# Rename to remove spaces
+cmd no_spaces ${{
+    mv "$f" "$(echo $f | sed 's/ /_/g')"
+}}
+
+# Clearing copypaste buffer on quit
+cmd on-quit ${{
+    if [ -f ~/.local/share/lf/files ]; then
+        rm ~/.local/share/lf/files
+        lf -remote 'send clear'
+    fi
+}}
+
+# Mounting/unmounting ISO
+cmd isomount ${{
+    ext="${f##*.}"
+    if [ -d ~/mnt ]; then
+        fusermount -u ~/mnt
+        rm -R ~/mnt
+    elif [ "$ext" = "iso" ]; then
+        mkdir ~/mnt
+        fuseiso "$f" ~/mnt
+    fi
+}}
+
+# fzf
+# file
+cmd fzf_file ${{
+    selected_file=$(fzf --preview="cat {}")
+
+    if [ -n "$selected_file" ]; then
+        nvim "$selected_file"
+    fi
+}}
+
+# directory
+cmd fzf_dir ${{
+    ~/.config/lf/scripts/fzf_dir.sh
+}}
+
+
+# Keymapping
+# Unmapping default keys
+map m
+map M
+map d
+map y
+map o
+map "'"
+map '"'
+map F
+map u
+map f
+
+# Custom commands mapping
+map ua unarchive
+map b setbg
+map mf mkfile
+map md mkdir
+map F no_spaces
+map mm isomount
+map ff fzf_file
+map fd fzf_dir
+
+# Default commands mapping
+map . set hidden
+map . set hidden!
+map DD delete
+map dd cut
+map yy copy
+map R reload
+map mk :unselect; invert
+map ma :unselect
+
+# Navigation
+map gs cd ~/.steam/steam/steamapps/common
+map gc cd ~/.config
+map gp cd ~/Pictures
+map gh cd
+map gd cd ~/Downloads
+map gv cd ~/Videos
+map gm cd ~/Videos/Media

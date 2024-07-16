@@ -1,0 +1,111 @@
+configuration {
+	font:        "SFMono Nerd Font Mono 10";
+	line-margin: 10;
+
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   ">";
+    display-window: "";
+    display-combi:  "";
+    show-icons:     true;
+}
+
+* {
+	black0:      #5C6A72;
+	black1:      #708089;
+	black2:      #939D91;
+	black3:      #A6B0A0;
+
+	white0:      #E6E2CC;
+	white1:      #EFEBD4;
+	white2:      #FDF6E3;
+
+	lightaqua:   #EAEDC8;
+	aqua:        #35A77C;
+	lightblue:   #E9F0E9;
+	blue:        #3A94C5;
+	lightred:    #FBE3DA;
+
+	lightorange: #FAE3B5;
+	lightyellow: #FAEDCD;
+	lightgreen:  #D4F1A0;
+	lightpurple: #FBE3F6;
+
+    foreground:       @blue;
+    background-color: @white2;
+}
+
+window {
+    location: center;
+    anchor:   center;
+
+    background-color: @white2;
+    spacing:          0;
+    children:         [mainbox];
+    orientation:      horizontal;
+    width:            30%;
+}
+
+mainbox {
+    spacing:  0;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    color:            @blue;
+    padding:          8px;
+    background-color: @white2;
+
+    border:       2px;
+    border-color: @blue;
+}
+
+entry, prompt, case-indicator {
+    text-font:  inherit;
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0px 0.3em 0em 0em ;
+}
+
+listview {
+    padding:          8px;
+    border-color:     @blue;
+    border:           0px 2px 2px 2px;
+    background-color: @white2;
+    dynamic:          false;
+    lines:            10;
+    columns:          2;
+}
+
+element {
+    padding:          3px;
+    vertical-align:   0.5;
+    background-color: @white2;
+    text-color:       @black0;
+}
+
+element selected.normal {
+	background-color: @blue;
+	text-color:       @white2;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+button {
+    padding:          6px;
+    color:            @foreground;
+    horizontal-align: 0.5;
+
+    border:       2px 0px 2px 2px;
+    border-color: @foreground;
+}
+
+button selected normal {
+    border:       2px 0px 2px 2px;
+    border-color: @foreground;
+}

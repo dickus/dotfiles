@@ -1,0 +1,3 @@
+preview any_text text/* {{
+    bat "${f}"
+}}
