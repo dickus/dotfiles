@@ -75,3 +75,4 @@ xsetroot -cursor_name left_ptr &
 # Polybar
 killall -q polybar
 polybar
+

@@ -27,6 +27,9 @@ vim.o.signcolumn = 'yes'
 vim.o.foldmethod = 'manual'
 vim.o.relativenumber = true
 
+vim.g.netrw_banner = 0 --remove text above files in search
+vim.g.netrw_liststyle = 3 --make a tree in search
+
 
 --colorscheme
 vim.o.background = "light"
@@ -36,8 +39,6 @@ vim.cmd('colorscheme everforest')
 --keybindings
 local opts = { noremap=true, silent=true }
 vim.g.mapleader = ' '
-vim.api.nvim_set_keymap('n', '<M-q>', ':q!<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<M-w>', ':w<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>pv', ':Ex<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd h<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd j<CR>', {noremap = true})
@@ -69,6 +70,8 @@ require('packer').startup(function(use)
     use 'theprimeagen/harpoon'
 
     use 'mbbill/undotree'
+
+    use 'christoomey/vim-tmux-navigator'
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -106,6 +109,7 @@ end)
 --telescope
 require('telescope')
 vim.api.nvim_set_keymap('n', 'ff', ':Telescope find_files hidden=true<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'fg', ':Telescope live_grep hidden=true<CR>', {noremap = true})
 
 
 --harpoon
@@ -131,6 +135,7 @@ lsp.preset('recommended')
 require('lspconfig').clangd.setup{}
 require('lspconfig').rust_analyzer.setup{}
 require('lspconfig').bashls.setup{}
+require('lspconfig').marksman.setup{}
 
 lsp.set_preferences({
     sign_icons = { }

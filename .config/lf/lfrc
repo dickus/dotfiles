@@ -125,10 +125,11 @@ map '"'
 map F
 map u
 map f
+map p
 
 # Custom commands mapping
 map ua unarchive
-map b setbg
+map pb setbg
 map mf mkfile
 map md mkdir
 map F no_spaces
@@ -142,6 +143,7 @@ map . set hidden!
 map DD delete
 map dd cut
 map yy copy
+map pp paste
 map R reload
 map mk :unselect; invert
 map ma :unselect

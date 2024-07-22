@@ -34,8 +34,6 @@ vim.cmd('colorscheme everforest')
 
 --keybindings
 vim.g.mapleader = ' '
-vim.api.nvim_set_keymap('n', '<M-q>', ':q!<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<M-w>', ':w<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<M-e>', ':setlocal spell spelllang=en_us<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<M-r>', ':setlocal spell spelllang=ru_ru<CR>', {noremap = true})
 

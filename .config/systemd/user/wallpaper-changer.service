@@ -4,7 +4,7 @@ Wants=wallpaper-changer.timer
 
 [Service]
 Type=oneshot
-ExecStart=/bin/zsh /home/dickus/.config/scripts/wallpaper-changer.sh
+ExecStart=/bin/bash -c "/home/dickus/.config/scripts/wallpaper-changer.sh"
 
 [Install]
 WantedBy=multi-user.target

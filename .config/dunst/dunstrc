@@ -54,20 +54,21 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#FDF6E3"
-    foreground = "#5C6A72"
-    timeout    = 5
-    icon       = /usr/share/icons/Arc-X-D/status/16/dialog-information.png
+    background  = "#FDF6E3"
+    foreground  = "#5C6A72"
+    frame_color = "#8DA101"
+    timeout     = 5
+    icon        = /usr/share/icons/Nordzy/actions/24/view-calendar-day.svg
 
 [urgency_normal]
-    background = "#FDF6E3"
-    foreground = "#5C6A72"
-    timeout    = 5
-    icon       = /usr/share/icons/Arc-X-D/status/16/dialog-question.png
+    background  = "#FDF6E3"
+    foreground  = "#5C6A72"
+    timeout     = 5
+    icon        = /usr/share/icons/Nordzy/actions/24/chronometer.svg
 
 [urgency_critical]
-    background = "#FDF6E3"
-    foreground = "#5C6A72"
+    background  = "#FDF6E3"
+    foreground  = "#5C6A72"
     frame_color = "#F85552"
     timeout     = 120
-    icon        = /usr/share/icons/Arc-X-D/status/16/dialog-warning.png
+    icon        = /usr/share/icons/Nordzy/actions/24/button_cancel.svg

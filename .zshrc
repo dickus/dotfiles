@@ -25,12 +25,17 @@ function precmd() {
 
 alias dfs="df -h / /home"
 alias nvimt="nvim -u ~/.config/nvim/text_nvim.lua"
-alias battery="./.config/scripts/gamepad-battery.sh"
 alias fetch="fastfetch"
 alias cal="cal -m"
-alias inv="./.config/scripts/neofzf.sh"
+alias nvimf="~/.config/scripts/neofzf.sh"
 alias cat="bat --theme gruvbox-light"
 alias bat="bat --theme gruvbox-light"
+alias grep="rg"
+alias cp="cp -uv"
+alias mv="mv -uv"
+alias rm="sudo rm -Rv"
+alias ls="exa -F"
+alias mkdir="mkdir -v"
 
 
 eval "$(zoxide init --cmd cd zsh)"
