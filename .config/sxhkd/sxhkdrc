@@ -86,13 +86,21 @@ super + {Left,Down,Up,Right}
 # Special hotkeys
 #
 
-# Volume up
+# System volume up
 super + minus
     ./.config/scripts/volume.sh down
     
-# Volume down
+# System volume down
 super + equal
     ./.config/scripts/volume.sh up
+
+# System mute toggle
+ctrl + alt + equal
+    ./.config/scripts/volume.sh mute
+
+# Microphone mute toggle
+ctrl + alt + minus
+    ./.config/scripts/microphone.sh
 
 # Screenshot
 Print
@@ -117,8 +125,6 @@ super + g
 super + a
     jamesdsp
 
-super + b
-    marcador rofi
-
 super + space
     rofimoji --action=copy-unicode --files=$HOME/.local/share/rofimoji/data/symbols.additional.csv
+

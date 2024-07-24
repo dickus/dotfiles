@@ -26,11 +26,10 @@ cmd open ${{
     case "$f" in
         *.png|*.jpg|*.jpeg) feh "$f" ;;
         *.svg) feh --conversion-timeout 1 "$f" ;;
-        *.mkv|*.mp4|*.MP4|*.mov) mpv "$f" ;;
-        *.mp3|*.flac|*.m4a) mpv --audio-display=no "$f" ;;
+        *.mkv|*.mp4|*.MP4|*.mov|*.mp3|*.flac|*.m4a) nohup mpv "$f" > /dev/null 2>&1 & ;;
         *.pdf) zathura "$f" ;;
         *.html) firefox "$f" ;;
-        *) alacritty -e nvim "$f" ;;
+        *) nvim "$f" ;;
     esac
 }}
 
@@ -60,11 +59,11 @@ cmd paste ${{
     mode=$(echo "$load" | sed -n '1p')
     list=$(echo "$load" | sed '1d')
     files=($list)
-    if [ $mode = 'copy' ]; then
+    if [[ $mode = 'copy' ]]; then
         cp -Ru "${files[@]}" ./
         rm ~/.local/share/lf/files
         lf -remote 'send clear'
-    elif [ $mode = 'move' ]; then
+    elif [[ $mode = 'move' ]]; then
         mv -u $list "${files[@]}" ./
         rm ~/.local/share/lf/files
         lf -remote 'send clear'
@@ -79,7 +78,7 @@ cmd no_spaces ${{
 
 # Clearing copypaste buffer on quit
 cmd on-quit ${{
-    if [ -f ~/.local/share/lf/files ]; then
+    if [[ -f ~/.local/share/lf/files ]]; then
         rm ~/.local/share/lf/files
         lf -remote 'send clear'
     fi
@@ -88,10 +87,10 @@ cmd on-quit ${{
 # Mounting/unmounting ISO
 cmd isomount ${{
     ext="${f##*.}"
-    if [ -d ~/mnt ]; then
+    if [[ -d ~/mnt ]]; then
         fusermount -u ~/mnt
         rm -R ~/mnt
-    elif [ "$ext" = "iso" ]; then
+    elif [[ "$ext" = "iso" ]]; then
         mkdir ~/mnt
         fuseiso "$f" ~/mnt
     fi
@@ -102,7 +101,7 @@ cmd isomount ${{
 cmd fzf_file ${{
     selected_file=$(fzf --preview="cat {}")
 
-    if [ -n "$selected_file" ]; then
+    if [[ -n "$selected_file" ]]; then
         nvim "$selected_file"
     fi
 }}
@@ -110,6 +109,28 @@ cmd fzf_file ${{
 # directory
 cmd fzf_dir ${{
     ~/.config/lf/scripts/fzf_dir.sh
+}}
+
+# link
+cmd link %{{
+    set -- $(cat ~/.local/share/lf/files)
+    mode="$1"
+    shift
+
+    if [[ "$#" -lt 1 ]]; then
+        lf -remote "send $id echo no files to link"
+        exit 0
+    fi
+
+    case "$mode" in
+        copy)
+            ln -sr -t . -- "$@";;
+        move)
+            ln -t . -- "$@";;
+    esac
+
+    rm ~/.local/share/lf/files
+    lf -remote "send clear"
 }}
 
 
@@ -126,6 +147,7 @@ map F
 map u
 map f
 map p
+map c
 
 # Custom commands mapping
 map ua unarchive
@@ -136,6 +158,7 @@ map F no_spaces
 map mm isomount
 map ff fzf_file
 map fd fzf_dir
+map - link
 
 # Default commands mapping
 map . set hidden
@@ -146,7 +169,7 @@ map yy copy
 map pp paste
 map R reload
 map mk :unselect; invert
-map ma :unselect
+map <esc> :unselect
 
 # Navigation
 map gs cd ~/.steam/steam/steamapps/common

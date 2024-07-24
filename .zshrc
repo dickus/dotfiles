@@ -36,6 +36,7 @@ alias mv="mv -uv"
 alias rm="sudo rm -Rv"
 alias ls="exa -F"
 alias mkdir="mkdir -v"
+alias find="fd"
 
 
 eval "$(zoxide init --cmd cd zsh)"
