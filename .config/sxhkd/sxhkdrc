@@ -87,13 +87,13 @@ super + {Left,Down,Up,Right}
 #
 
 # System volume up
-super + minus
-    ./.config/scripts/volume.sh down
-    
-# System volume down
 super + equal
     ./.config/scripts/volume.sh up
 
+# System volume down
+super + minus
+    ./.config/scripts/volume.sh down
+    
 # System mute toggle
 ctrl + alt + equal
     ./.config/scripts/volume.sh mute

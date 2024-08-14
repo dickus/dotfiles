@@ -24,10 +24,11 @@ function precmd() {
 
 
 alias dfs="df -h / /home"
-alias nvimt="nvim -u ~/.config/nvim/text_nvim.lua"
+alias vi="nvim"
+alias vit="nvim -u ~/.config/nvim/text_nvim.lua"
 alias fetch="fastfetch"
 alias cal="cal -m"
-alias nvimf="~/.config/scripts/neofzf.sh"
+alias vif="~/.config/scripts/neofzf.sh"
 alias cat="bat --theme gruvbox-light"
 alias bat="bat --theme gruvbox-light"
 alias grep="rg"
@@ -38,11 +39,11 @@ alias ls="exa -F"
 alias mkdir="mkdir -v"
 alias find="fd"
 
+export SUDO_EDITOR="nvim"
+export EDITOR="nvim"
+
 
 eval "$(zoxide init --cmd cd zsh)"
 
 source <(fzf --zsh)
 
-
-export GOPATH=~/go
-export PATH=$PATH:$GOPATH/bin/

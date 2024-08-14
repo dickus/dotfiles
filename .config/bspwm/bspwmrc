@@ -21,11 +21,12 @@ bspc rule -a firefox desktop='^2'
 bspc rule -a Steam desktop='^6'
 bspc rule -a steam desktop='^6'
 bspc rule -a steamwebhelper desktop='^6'
+bspc rule -a "SDL Application" desktop='^6'
 
 bspc rule -a Gimp-2.10 desktop='^8'
 bspc rule -a Blender desktop='^8'
 
-bspc rule -a discord desktop='^9'
+bspc rule -a vesktop desktop='^9'
 
 bspc rule -a qBittorrent desktop='^10'
 
@@ -51,7 +52,7 @@ picom -b
 # start daemon for virtual audio cables
 # systemctl --user is-active --quiet virtual-audio-cables.service || systemctl --user start virtual-audio-cables.service
 
-# caps to esc
+# Layout
 setxkbmap -option grp:caps_toggle us,ru,by &
 
 # Notifications

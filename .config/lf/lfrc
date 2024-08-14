@@ -26,7 +26,7 @@ cmd open ${{
     case "$f" in
         *.png|*.jpg|*.jpeg) feh "$f" ;;
         *.svg) feh --conversion-timeout 1 "$f" ;;
-        *.mkv|*.mp4|*.MP4|*.mov|*.mp3|*.flac|*.m4a) nohup mpv "$f" > /dev/null 2>&1 & ;;
+        *.mkv|*.mp4|*.MP4|*.mov|*.mp3|*.flac|*.m4a|*.avi) nohup mpv "$f" > /dev/null 2>&1 & ;;
         *.pdf) zathura "$f" ;;
         *.html) firefox "$f" ;;
         *) nvim "$f" ;;

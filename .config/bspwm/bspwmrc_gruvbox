@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -21,11 +21,12 @@ bspc rule -a firefox desktop='^2'
 bspc rule -a Steam desktop='^6'
 bspc rule -a steam desktop='^6'
 bspc rule -a steamwebhelper desktop='^6'
+bspc rule -a "SDL Application" desktop='^6'
 
 bspc rule -a Gimp-2.10 desktop='^8'
 bspc rule -a Blender desktop='^8'
 
-bspc rule -a discord desktop='^9'
+bspc rule -a vesktop desktop='^9'
 
 bspc rule -a qBittorrent desktop='^10'
 
