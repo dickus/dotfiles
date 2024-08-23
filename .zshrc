@@ -38,7 +38,7 @@ alias rm="sudo rm -Rv"
 alias ls="exa -F"
 alias mkdir="mkdir -vp"
 alias find="fd"
-alias theme="./.config/scripts/theme_changer.sh"
+alias theme="~/.config/scripts/theme_changer.sh"
 
 export SUDO_EDITOR="nvim"
 export EDITOR="nvim"
