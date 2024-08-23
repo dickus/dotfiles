@@ -27,6 +27,7 @@ cmd open ${{
         *.png|*.jpg|*.jpeg) feh "$f" ;;
         *.svg) feh --conversion-timeout 1 "$f" ;;
         *.mkv|*.mp4|*.MP4|*.mov|*.mp3|*.flac|*.m4a|*.avi) nohup mpv "$f" > /dev/null 2>&1 & ;;
+        *.gif) nohup mpv --loop-file=inf "$f" > /dev/null 2>&1 & ;;
         *.pdf) zathura "$f" ;;
         *.html) firefox "$f" ;;
         *) nvim "$f" ;;
@@ -90,7 +91,7 @@ cmd isomount ${{
     if [[ -d ~/mnt ]]; then
         fusermount -u ~/mnt
         rm -R ~/mnt
-    elif [[ "$ext" = "iso" ]]; then
+    elif [[ "$ext" = "iso" ]] || [[ "$ext" = "mdf" ]]; then
         mkdir ~/mnt
         fuseiso "$f" ~/mnt
     fi
@@ -179,3 +180,5 @@ map gh cd
 map gd cd ~/Downloads
 map gv cd ~/Videos
 map gm cd ~/Videos/Media
+map gl cd ~/.local/share
+map gf cd ~/.dotfiles

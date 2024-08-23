@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source $HOME/.config/bspwm/colors/nord.sh
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
@@ -35,9 +37,9 @@ bspc rule -a *:*:Picture-in-Picture follow=false state=floating sticky=on
 
 
 # Border
-bspc config focused_border_color "#3A94C5"
-bspc config normal_border_color  "#BDC3AF"
-bspc config active_border_color  "#5C6A72"
+bspc config focused_border_color $FOCUSED_BORDER
+bspc config normal_border_color  $NORMAL_BORDER
+bspc config active_border_color  $ACTIVE_BORDER
 
 
 #
@@ -56,7 +58,8 @@ picom -b
 setxkbmap -option grp:caps_toggle us,ru,by &
 
 # Notifications
-/usr/bin/dunst &
+killall -q dunst
+dunst -config "$DUNST_THEME" &
 
 # Polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -73,3 +76,4 @@ xsetroot -cursor_name left_ptr &
 # Polybar
 killall -q polybar
 polybar
+

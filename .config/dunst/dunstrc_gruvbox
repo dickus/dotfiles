@@ -10,7 +10,6 @@
     padding = 10
     horizontal_padding = 8
     frame_width = 2
-    frame_color = "#076678"
     separator_color = auto
     sort = yes
     idle_threshold = 120
@@ -63,6 +62,7 @@
 [urgency_normal]
     background  = "#FBF1C7"
     foreground  = "#3C3836"
+    frame_color = "#076678"
     timeout     = 5
     icon        = /usr/share/icons/Nordzy/actions/24/chronometer.svg
 
@@ -72,3 +72,4 @@
     frame_color = "#9D0006"
     timeout     = 120
     icon        = /usr/share/icons/Nordzy/actions/24/button_cancel.svg
+

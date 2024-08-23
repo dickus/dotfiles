@@ -1,3 +1,6 @@
+--colorscheme
+require('colors.nord')
+
 --basic settings
 vim.cmd('syntax on') --enables syntax highlight
 vim.o.expandtab = true --spaces instead of tabs
@@ -31,11 +34,6 @@ vim.g.netrw_banner = 0 --remove text above files in search
 vim.g.netrw_liststyle = 3 --make a tree in search
 
 
---colorscheme
-vim.o.background = "light"
-vim.cmd('colorscheme everforest')
-
-
 --keybindings
 local opts = { noremap=true, silent=true }
 vim.g.mapleader = ' '
@@ -49,8 +47,8 @@ vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', {noremap = true})
 
 --find and replace
-vim.api.nvim_set_keymap('n', '<leader>ss', ':s///g<Left><Left><Left>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>sg', ':%s///g<Left><Left><Left>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ss', ':s//g<Left><Left>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>sg', ':%s//g<Left><Left>', {noremap = true})
 
 
 --packer

@@ -8,6 +8,10 @@
         "separator": "",
         "key": {
             "width": 8
+        },
+        "stat": true,
+        "size": {
+            "binaryPrefix": "jedec"
         }
     },
     "modules": [

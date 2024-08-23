@@ -1,3 +1,6 @@
+--colorscheme
+require('colors.nord')
+
 --basic settings
 vim.cmd('syntax on') --enables syntax highlight
 vim.cmd('set nocompatible')
@@ -27,11 +30,6 @@ vim.o.spell = true
 vim.o.sol = true
 
 
---colorscheme
-vim.o.background = "light"
-vim.cmd('colorscheme everforest')
-
-
 --keybindings
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<M-e>', ':setlocal spell spelllang=en_us<CR>', {noremap = true})
@@ -41,8 +39,8 @@ vim.api.nvim_set_keymap('n', '<M-r>', ':setlocal spell spelllang=ru_ru<CR>', {no
 vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', {noremap = true})
 
 --find and replace
-vim.api.nvim_set_keymap('n', '<leader>ss', ':s///g<Left><Left><Left>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>sg', ':%s///g<Left><Left><Left>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ss', ':s//g<Left><Left>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>sg', ':%s//g<Left><Left>', {noremap = true})
 
 --limelight keybindings
 vim.api.nvim_set_keymap('n', '<C-g>', ':Limelight <bar> :Goyo 75<CR>', {noremap = true})
