@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source $HOME/.config/bspwm/colors/nord.sh
+source $HOME/.config/bspwm/themes/nord.sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -65,7 +65,7 @@ dunst -config "$DUNST_THEME" &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Wallpaper
-systemctl --user is-active --quiet wallpaper-changer.service || systemctl --user start wallpaper-changer.service
+feh --bg-fill --randomize ~/Pictures/wallpapers/
 
 # Network Applet
 nm-applet --indicator &

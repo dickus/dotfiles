@@ -1,6 +1,6 @@
 configuration {
-	font:        "SFMono Nerd Font Mono 10";
-	line-margin: 10;
+    font:        "SFMono Nerd Font Mono 10";
+    line-margin: 10;
 
     display-ssh:    "";
     display-run:    "";
@@ -11,28 +11,32 @@ configuration {
 }
 
 * {
-	black0:      #282828;
-	black1:      #3C3836;
-	black2:      #504945;
-	black3:      #665C54;
+    black0:      #282828;
+    black1:      #3C3836;
+    black2:      #504945;
+    black3:      #665C54;
 
-	white0:      #D5C4A1;
-	white1:      #EBDBB2;
-	white2:      #FBF1C7;
+    white0:      #D5C4A1;
+    white1:      #EBDBB2;
+    white2:      #FBF1C7;
 
-	aqua:        #427B58;
-	lightblue:   #458588;
-	blue:        #076678;
-	lightaqua:   #689D6A;
-	lightred:    #CC241D;
+    aqua:        #427B58;
+    lightblue:   #458588;
+    blue:        #076678;
+    lightaqua:   #689D6A;
+    lightred:    #CC241D;
 
-	lightorange: #D65D0E;
-	lightyellow: #D79921;
-	lightgreen:  #98971A;
-	lightpurple: #B16286;
+    lightorange: #D65D0E;
+    lightyellow: #D79921;
+    lightgreen:  #98971A;
+    lightpurple: #B16286;
 
     foreground:       @blue;
     background-color: @white2;
+
+    back:             @white2;
+    text:             @black0;
+    alt-text:         @white2;
 }
 
 window {
@@ -88,8 +92,8 @@ element {
 }
 
 element selected.normal {
-	background-color: @blue;
-	text-color:       @white2;
+    background-color: @blue;
+    text-color:       @white2;
 }
 
 element-text, element-icon {
@@ -110,3 +114,4 @@ button selected normal {
     border:       2px 0px 2px 2px;
     border-color: @foreground;
 }
+

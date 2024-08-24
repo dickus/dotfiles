@@ -22,7 +22,7 @@ listview {
     padding: 8px;
     border-color: @blue;
     border: 0px 2px 2px 2px;
-    background-color: @white2;
+    background-color: @back;
     dynamic: false;
     scrollbar: false;
 }
@@ -31,22 +31,22 @@ element {
     padding: 3px;
     vertical-align: 0.5;
     background-color: @white2;
-    text-color: @white2;
+    text-color: @text;
 }
 
 element.normal.normal {
-    background-color: @white2;
-    text-color: @black0;
+    background-color: @back;
+    text-color: @text;
 }
 
 element.selected.normal {
     background-color: @blue;
-    text-color: @white2;
+    text-color: @alt-text;
 }
 
 element.alternate.normal {
-    background-color: @white2;
-    text-color: @black0;
+    background-color: @back;
+    text-color: @text;
 }
 
 inputbar {

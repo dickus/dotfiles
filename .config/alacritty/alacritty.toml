@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/colors/nord.toml",]
+import = ["~/.config/alacritty/themes/nord.toml",]
 
 [cursor]
 thickness = 0.3

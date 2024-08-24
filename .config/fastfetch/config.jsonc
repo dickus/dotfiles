@@ -7,7 +7,7 @@
     "display": {
         "separator": "",
         "key": {
-            "width": 8
+            "width": 9
         },
         "stat": true,
         "size": {
@@ -15,12 +15,6 @@
         }
     },
     "modules": [
-        {
-            "key": "os",
-            "format": "{2}",
-            "type": "os",
-            "keyColor": "34"
-        },
         {
             "key": "kernel",
             "format": "{2}",
@@ -49,6 +43,13 @@
             "key": "uptime",
             "format": "{2}h {3}m",
             "type": "uptime",
+            "keyColor": "34"
+        },
+        {
+            "type": "command",
+            "key": "created",
+            "shell": "/bin/bash",
+            "text": "$HOME/.config/scripts/creation_time.sh",
             "keyColor": "34"
         },
         {
