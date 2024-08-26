@@ -1,5 +1,5 @@
 --colorscheme
-require("themes.nord")
+require("themes.gruvbox-dark")
 
 require("settings")
 require("keys")

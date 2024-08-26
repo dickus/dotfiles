@@ -6,6 +6,7 @@ set cleaner ctpvclear
 
 set ignorecase true
 set scrolloff 99
+set icons
 
 
 # Custom commands

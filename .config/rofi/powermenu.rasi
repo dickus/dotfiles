@@ -1,4 +1,4 @@
-@import "~/.config/rofi/themes/nord.rasi"
+@import "~/.config/rofi/themes/gruvbox-dark.rasi"
 
 listview {
     lines: 4;

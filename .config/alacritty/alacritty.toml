@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/themes/nord.toml",]
+import = ["~/.config/alacritty/themes/gruvbox-dark.toml",]
 
 [cursor]
 thickness = 0.3
@@ -29,6 +29,6 @@ family = "SFMono Nerd Font Mono"
 style  = "Regular"
 
 [window.padding]
-x = 4
-y = 4
+x = 2
+y = 2
 

@@ -1,4 +1,4 @@
-theme "nord"
+theme "gruvbox-dark"
 
 
 mouse_mode        false

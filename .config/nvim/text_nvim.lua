@@ -1,5 +1,5 @@
 --colorscheme
-require('themes.everforest')
+require('themes.gruvbox-dark')
 
 require("settings")
 require("keys")
