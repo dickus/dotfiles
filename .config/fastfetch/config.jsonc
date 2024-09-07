@@ -7,7 +7,7 @@
     "display": {
         "separator": "",
         "key": {
-            "width": 9
+            "width": 8
         },
         "stat": true,
         "size": {
@@ -47,7 +47,7 @@
         },
         {
             "type": "command",
-            "key": "created",
+            "key": "exists",
             "shell": "/bin/bash",
             "text": "$HOME/.config/scripts/creation_time.sh",
             "keyColor": "34"

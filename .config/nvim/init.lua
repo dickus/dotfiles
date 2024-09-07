@@ -1,5 +1,5 @@
 --colorscheme
-require("themes.gruvbox-dark")
+require("themes.nord")
 
 require("settings")
 require("keys")
@@ -14,6 +14,8 @@ require("plugins.highlight-colors")
 require("plugins.neo-tree")
 require("plugins.which-keys")
 require("plugins.cmps")
+require("plugins.obsidian")
+require("plugins.footnote")
 
 --basic settings
 vim.o.cmdheight = 2

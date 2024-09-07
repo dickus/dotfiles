@@ -101,7 +101,18 @@ cmd isomount ${{
 # fzf
 # file
 cmd fzf_file ${{
-    selected_file=$(fzf --preview="cat {}")
+    selected_file=$(fzf --preview="bat {}")
+
+    if [[ -n "$selected_file" ]]; then
+        nvim "$selected_file"
+    fi
+}}
+
+# file by content
+cmd fzf_cont ${{
+    selected_file=$(rg --files --hidden --no-ignore /home 2>/dev/null | fzf --preview="bat {}" --bind "change:reload(rg --ignore-case --hidden --no-ignore --line-number --color always {q} || true)" | sed "s/:.*//" | sed "s/\x1b\[[0-9;]*m//g")
+
+    file_path=$(realpath "$HOME/$selected_file")
 
     if [[ -n "$selected_file" ]]; then
         nvim "$selected_file"
@@ -135,6 +146,11 @@ cmd link %{{
     lf -remote "send clear"
 }}
 
+# script to +x
+cmd rights ${{
+    chmod +x "$f"
+}}
+
 
 # Keymapping
 # Unmapping default keys
@@ -160,7 +176,9 @@ map F no_spaces
 map mm isomount
 map ff fzf_file
 map fd fzf_dir
+map fg fzf_cont
 map - link
+map me rights
 
 # Default commands mapping
 map . set hidden
@@ -183,3 +201,4 @@ map gv cd ~/Videos
 map gm cd ~/Videos/Media
 map gl cd ~/.local/share
 map gf cd ~/.dotfiles
+map gw cd ~/.docs

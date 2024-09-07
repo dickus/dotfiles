@@ -128,3 +128,5 @@ super + a
 super + space
     rofimoji --action=copy-unicode --files=$HOME/.local/share/rofimoji/data/symbols.additional.csv
 
+super + p
+    alacritty -e ~/.config/scripts/vpn.sh

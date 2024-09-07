@@ -1,12 +1,16 @@
+@reboot $HOME/.config/scripts/theme_change/check_time.sh
+@reboot source $HOME/.zshrc
+@reboot DISPLAY=:0 bspc wm -r
+
+*/10 * * * * $HOME/.config/scripts/wallpaper_changer.sh
+
 00 8 * * * $HOME/.config/scripts/theme_change/theme_schedule.sh light
 00 8 * * * sed -i 's|bat --theme .*"|bat --theme gruvbox-light"|' $HOME/.zshrc
 00 8 * * * DISPLAY=:0 bspc wm -r
 00 8 * * * source $HOME/.zshrc
+
 30 19 * * * $HOME/.config/scripts/theme_change/theme_schedule.sh dark
 30 19 * * * sed -i 's|bat --theme .*"|bat --theme gruvbox-dark"|' $HOME/.zshrc
 30 19 * * * DISPLAY=:0 bspc wm -r
 30 19 * * * source $HOME/.zshrc
-@reboot jamesdsp
-@reboot $HOME/.config/scripts/theme_change/check_time.sh
-@reboot source $HOME/.zshrc
-@reboot DISPLAY=:0 bspc wm -r
+

@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/themes/gruvbox-dark.toml",]
+import = ["~/.config/alacritty/themes/nord.toml",]
 
 [cursor]
 thickness = 0.3

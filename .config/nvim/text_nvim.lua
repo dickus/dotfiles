@@ -1,14 +1,16 @@
 --colorscheme
-require('themes.gruvbox-dark')
+require('themes.everforest')
 
 require("settings")
 require("keys")
 
+require("plugins.lazy")
 require("plugins.telescope")
 require("plugins.lualine")
 require("plugins.limelight")
 require("plugins.neo-tree")
 require("plugins.which-keys")
+require("plugins.zenmode")
 
 --basic settings
 vim.cmd("set nocompatible")

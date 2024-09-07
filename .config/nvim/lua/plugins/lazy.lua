@@ -71,7 +71,29 @@ local plugins = {
     },
 
     "junegunn/limelight.vim",
-    "junegunn/goyo.vim",
+    "folke/zen-mode.nvim",
+
+    {
+        "epwalsh/obsidian.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        lazy = true,
+        ft = "markdown",
+    },
+
+    {
+        "hedyhli/outline.nvim",
+        lazy = true,
+        cmd = { "Outline", "OutlineOpen" },
+        keys = {
+            { "<C-o>", "<cmd>Outline<CR>", desc = "Toggle outline" }
+        },
+        opts = {  },
+    },
+
+    {
+        "chenxin-yan/footnote.nvim",
+        ft = "markdown",
+    },
 }
 local opts = {}
 
