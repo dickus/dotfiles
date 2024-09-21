@@ -58,9 +58,7 @@ vim.opt_local.conceallevel = 1
 --set current directory to .docs
 vim.keymap.set("n", "<leader>ww", ":cd $HOME/.docs<CR>", { noremap = true })
 --use template in current note
-vim.keymap.set("n", "<leader>on", ":ObsidianTemplate note<CR>", { noremap = true, silent = true })
---remove date from first heading
-vim.keymap.set("n", "<leader>of", ":%s/# [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]_/# /g<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate<CR>", { noremap = true, silent = true })
 --move note from drafts to notes
 vim.keymap.set("n", "<leader>ok", ":!mv '%:p' ~/.docs/notes<CR>:bd<CR>")
 --delete note

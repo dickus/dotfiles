@@ -7,8 +7,19 @@ if [[ -z "$1" ]]; then
 fi
 
 file_name=$(echo "$1" | tr ' ' '-')
-formatted_file_name=$(date "+%Y-%m-%d")_${file_name}.md
-cd "$HOME/.docs" || exit
-touch "drafts/${formatted_file_name}"
-nvim "drafts/${formatted_file_name}"
+formatted_file_name=$(date "+%Y-%m-%d")_${file_name}
+docs_path="$HOME/.docs"
+templates_directory="templates"
+drafts_directory="drafts"
+
+cd "$HOME" || exit
+touch "${docs_path}/${drafts_directory}/${formatted_file_name}".md
+
+cat "${docs_path}/${templates_directory}/note.md" > "${docs_path}/${drafts_directory}/${formatted_file_name}".md
+
+sed -i "s|{{id}}|${formatted_file_name}|" "${docs_path}/${drafts_directory}/${formatted_file_name}".md
+sed -i "s|{{title}}|${file_name}|" "${docs_path}/${drafts_directory}/${formatted_file_name}".md
+
+cd "${docs_path}"
+nvim "${drafts_directory}/${formatted_file_name}".md
 
