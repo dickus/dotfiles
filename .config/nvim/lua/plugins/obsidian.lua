@@ -65,4 +65,8 @@ vim.keymap.set("n", "<leader>ok", ":!mv '%:p' ~/.docs/notes<CR>:bd<CR>")
 vim.keymap.set("n", "<leader>od", ":!rm '%:p'<CR>:bd<CR>")
 --save and close current buffer
 vim.keymap.set("n", "<leader>oq", ":w<CR>:bd<CR>")
+--show links within current buffer
+vim.keymap.set("n", "<leader>ol", ":ObsidianLinks<CR>")
+--show backlinks
+vim.keymap.set("n", "<leader>ob", ":ObsidianBacklinks<CR>")
 

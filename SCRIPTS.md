@@ -4,8 +4,6 @@ Creates a file in $HOME/.docs catalog with a date and chosen text as its name, a
 
 I use this with my obsidian.nvim workflow. It also has an alias within .zshrc file for 'on'.
 
-Not my script originally. Got it from [agalea91](https://github.com/agalea91/dotfiles)'s Zettelkasten setup.
-
 ![new_file](previews/new_file.gif)
 
 
@@ -26,7 +24,7 @@ Changes themes for some tools based on what you've set with `theme`. Runs with `
 ![theme](previews/theme.gif)
 
 
-## Miscelanous
+## Miscellanous
 ### creation_time.sh
 Gets the time that this installation exists. Runs with `fastfetch` for the custom output.
 
@@ -63,3 +61,7 @@ Enables/disables `wireguard` VPN with config in $HOME/.wg. Runs with `sxhkd` key
 
 ### wallpaper_changer.sh
 Changes wallpapers to a random image from $HOME/Pictures/wallpapers using `feh`. Runs with `fcron`.
+
+
+### df.sh
+Allows me to use `df` with or without `/mnt` directory based on wether it contains anything. Runs with `dfs` specified in `.zshrc`.
