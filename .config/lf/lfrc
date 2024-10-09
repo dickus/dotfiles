@@ -30,8 +30,8 @@ cmd open ${{
         *.mkv|*.mp4|*.MP4|*.mov|*.m4a|*.avi) nohup mpv "$f" > /dev/null 2>&1 & ;;
         *.mp3|*.flac) alacritty -e mpv "$f" > /dev/null 2>&1 & ;;
         *.gif) nohup mpv --loop-file=inf "$f" > /dev/null 2>&1 & ;;
-        *.pdf) zathura "$f" ;;
-        *.html) firefox "$f" ;;
+        *.pdf) nohup zathura "$f" > /dev/null 2>&1 & ;;
+        *.html) nohup firefox "$f" > /dev/null 2>&1 & ;;
         *) nvim "$f" ;;
     esac
 }}
