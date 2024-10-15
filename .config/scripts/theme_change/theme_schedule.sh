@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 theme="$1"
 
@@ -15,7 +15,7 @@ case $theme in
         sed -i 's|/dark/|/light/|' $HOME/.config/scripts/microphone.sh
         sed -i 's|/dark/|/light/|' $HOME/.config/scripts/volume.sh
         sed -i 's|/dark/|/light/|' $HOME/.config/scripts/vpn.sh
-        sed -i 's|/dark/|/light/|' $HOME/.config/screenshoter.sh ;;
+        sed -i 's|/dark/|/light/|' $HOME/.config/scripts/screenshoter.sh ;;
 
     dark)
         sed -i 's|/themes/.*.toml|/themes/nord.toml|' $HOME/.config/alacritty/alacritty.toml
@@ -29,9 +29,6 @@ case $theme in
         sed -i 's|/light/|/dark/|' $HOME/.config/scripts/microphone.sh
         sed -i 's|/light/|/dark/|' $HOME/.config/scripts/volume.sh
         sed -i 's|/light/|/dark/|' $HOME/.config/scripts/vpn.sh
-        sed -i 's|/light/|/dark/|' $HOME/.config/screenshoter.sh ;;
+        sed -i 's|/light/|/dark/|' $HOME/.config/scripts/screenshoter.sh ;;
 esac
-
-bspc wm -r
-source .zshrc
 
