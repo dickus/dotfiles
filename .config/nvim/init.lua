@@ -1,5 +1,5 @@
 --colorscheme
-require("themes.nord")
+require("themes.everforest")
 
 require("settings")
 require("keys")

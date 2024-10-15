@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/themes/nord.toml",]
+import = ["~/.config/alacritty/themes/everforest.toml",]
 
 [cursor]
 thickness = 0.3

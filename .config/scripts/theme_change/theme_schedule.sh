@@ -14,7 +14,8 @@ case $theme in
         sed -i 's|theme ".*"|theme "everforest"|' $HOME/.config/zellij/config.kdl
         sed -i 's|/dark/|/light/|' $HOME/.config/scripts/microphone.sh
         sed -i 's|/dark/|/light/|' $HOME/.config/scripts/volume.sh
-        sed -i 's|/dark/|/light/|' $HOME/.config/scripts/vpn.sh ;;
+        sed -i 's|/dark/|/light/|' $HOME/.config/scripts/vpn.sh
+        sed -i 's|/dark/|/light/|' $HOME/.config/screenshoter.sh ;;
 
     dark)
         sed -i 's|/themes/.*.toml|/themes/nord.toml|' $HOME/.config/alacritty/alacritty.toml
@@ -27,7 +28,8 @@ case $theme in
         sed -i 's|theme ".*"|theme "nord"|' $HOME/.config/zellij/config.kdl
         sed -i 's|/light/|/dark/|' $HOME/.config/scripts/microphone.sh
         sed -i 's|/light/|/dark/|' $HOME/.config/scripts/volume.sh
-        sed -i 's|/light/|/dark/|' $HOME/.config/scripts/vpn.sh ;;
+        sed -i 's|/light/|/dark/|' $HOME/.config/scripts/vpn.sh
+        sed -i 's|/light/|/dark/|' $HOME/.config/screenshoter.sh ;;
 esac
 
 bspc wm -r

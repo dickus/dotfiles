@@ -59,3 +59,8 @@ Then I recommend you to use [stow](https://github.com/aspiers/stow/) to manage d
 cd dotfiles && stow . && cd
 ```
 
+And load `fcron`:
+```
+fcrontab $HOME/.config/cron/crontab
+```
+
