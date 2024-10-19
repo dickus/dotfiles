@@ -111,7 +111,7 @@ super + shift + s
 
 # Shortcuts
 super + w 
-    firefox
+    librewolf
 
 super + e
     alacritty -e lf

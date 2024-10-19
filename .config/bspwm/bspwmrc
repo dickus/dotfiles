@@ -18,7 +18,7 @@ bspc config focus_follows_pointer   true
 
 bspc rule -a TelegramDesktop desktop='^1'
 
-bspc rule -a firefox desktop='^2'
+bspc rule -a LibreWolf desktop='^2'
 
 bspc rule -a Steam desktop='^4'
 bspc rule -a steam desktop='^4'
@@ -52,7 +52,7 @@ bspc config active_border_color  $ACTIVE_BORDER
 picom -b
 
 # start daemon for virtual audio cables
-# systemctl --user is-active --quiet virtual-audio-cables.service || systemctl --user start virtual-audio-cables.service
+systemctl --user is-active --quiet virtual-audio-cables.service || systemctl --user start virtual-audio-cables.service
 
 # Layout
 setxkbmap -option grp:caps_toggle us,ru,by &
