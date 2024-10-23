@@ -1,6 +1,3 @@
---colorscheme
-require("themes.everforest")
-
 require("settings")
 require("keys")
 
@@ -16,6 +13,9 @@ require("plugins.which-keys")
 require("plugins.cmps")
 require("plugins.obsidian")
 require("plugins.footnote")
+
+--colorscheme
+require("themes.everforest")
 
 --basic settings
 vim.o.cmdheight = 2

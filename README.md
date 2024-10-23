@@ -49,14 +49,14 @@ My dotfiles for a bunch of apps with Xorg.
 
 ## Installation
 ```
-git clone git@github.com:dickus/dotfiles.git
+git clone git@github.com:dickus/dotfiles.git .dotfiles
 ```
 
 If you don't need some configs, remove them from repo after you clone it.
 
 Then I recommend you to use [stow](https://github.com/aspiers/stow/) to manage dotfiles.
 ```
-cd dotfiles && stow . && cd
+cd .dotfiles && stow . && cd
 ```
 
 And load `fcron`:
