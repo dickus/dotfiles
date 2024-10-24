@@ -8,7 +8,7 @@ If you want to use just a part of these dots, you'll have to change some setting
 * [exa](#exa)
 * [fastfetch](#fastfetch)
 * [feh](#feh)
-* [firefox](#firefox)
+* [librewolf](#librewolf)
 * [fuseiso](#fuseiso)
 * [fzf](#fzf)
 * [imagemagick](#imagemagick)
@@ -70,7 +70,7 @@ If you want to use just a part of these dots, you'll have to change some setting
 2. .config/lf/lfrc
 3. .config/scripts/wallpaper_changer.sh
 
-### firefox
+### librewolf
 1. .config/bspwm/bspwmrc
 2. .config/dunst/*
 3. .config/lf/lfrc
