@@ -11,5 +11,5 @@ case "$arg" in
         import ~/Pictures/"$f" && xclip -sel clip -t image/png -i ~/Pictures/"$f" ;;
 esac
 
-notify-send -t 2000 -i $HOME/.icons/light/insert-image.svg "Screenshot saved" "$f"
+notify-send -t 2000 -i $HOME/Pictures/"$f" "Screenshot saved" "$f"
 

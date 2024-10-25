@@ -19,11 +19,11 @@ My dotfiles for a bunch of apps with Xorg.
 * `fcron` for scheduled scripts run.
 * [feh](https://github.com/derf/feh) for viewing images and set wallpapers.
 * [ffmpegthumbnailer](https://github.com/dirkvdb/ffmpegthumbnailer) for video preview in `lf`.
-* `librewolf` for browser.
 * [fuseiso](https://sourceforge.net/projects/fuseiso/) for handling .iso and .mdf/.mds files.
 * [fzf](https://github.com/junegunn/fzf) for fuzzy files search.
 * [imagemagick](https://github.com/ImageMagick/ImageMagick) for making screenshots.
 * [lf](https://github.com/gokcehan/lf) for file manager.
+* `librewolf` for browser.
 * [mpv](https://github.com/mpv-player/mpv) for media.
 * `nordzy` for [icons](https://github.com/alvatip/Nordzy-icon) and [cursor](https://github.com/alvatip/Nordzy-cursors).
 * [nvim](https://github.com/neovim/neovim) for text and code editor.

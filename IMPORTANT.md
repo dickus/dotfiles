@@ -8,11 +8,11 @@ If you want to use just a part of these dots, you'll have to change some setting
 * [exa](#exa)
 * [fastfetch](#fastfetch)
 * [feh](#feh)
-* [librewolf](#librewolf)
 * [fuseiso](#fuseiso)
 * [fzf](#fzf)
 * [imagemagick](#imagemagick)
 * [lf](#lf)
+* [librewolf](#librewolf)
 * [mpv](#mpv)
 * [nordzy](#nordzy)
 * [nvim](#nvim)
@@ -70,12 +70,6 @@ If you want to use just a part of these dots, you'll have to change some setting
 2. .config/lf/lfrc
 3. .config/scripts/wallpaper_changer.sh
 
-### librewolf
-1. .config/bspwm/bspwmrc
-2. .config/dunst/*
-3. .config/lf/lfrc
-4. .config/sxhkd/sxhkdrc
-
 ### fuseiso
 1. .config/lf/lfrc
 
@@ -90,6 +84,12 @@ If you want to use just a part of these dots, you'll have to change some setting
 
 ### lf
 1. .config/sxhkd/sxhkdrc
+
+### librewolf
+1. .config/bspwm/bspwmrc
+2. .config/dunst/*
+3. .config/lf/lfrc
+4. .config/sxhkd/sxhkdrc
 
 ### mpv
 1. .config/lf/lfrc
