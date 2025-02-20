@@ -71,9 +71,6 @@ local plugins = {
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
-    "junegunn/limelight.vim",
-    "folke/zen-mode.nvim",
-
     {
         "epwalsh/obsidian.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
@@ -94,6 +91,13 @@ local plugins = {
     {
         "chenxin-yan/footnote.nvim",
         ft = "markdown",
+    },
+
+    {
+        "folke/snacks.nvim",
+        dependencies = { "echasnovski/mini.nvim", version = false },
+        priority = 1000,
+        lazy = false,
     },
 }
 local opts = {}

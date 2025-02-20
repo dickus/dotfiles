@@ -13,6 +13,7 @@ require("plugins.which-keys")
 require("plugins.cmps")
 require("plugins.obsidian")
 require("plugins.footnote")
+require("plugins.snacks")
 
 --colorscheme
 require("themes.everforest")

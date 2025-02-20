@@ -5,12 +5,12 @@
 
 # terminal emulator
 super + Return
-    alacritty
+    kitty
 
 # program launcher
 super + d
     rofi -modi drun -show drun -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal alacritty \
+                -columns 2 -padding 50 -hide-scrollbar -terminal kitty \
                 -font "Source Code Pro 10"
 
 # power-menu 
@@ -78,7 +78,7 @@ super + alt + {h,j,k,l}
     bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # move a floating window
-super + {Left,Down,Up,Right}
+super + shift + ctrl + {h,j,k,l}
     bspc node -v {-20 0,0 20,0 -20,20 0}
 
 
@@ -114,7 +114,7 @@ super + w
     librewolf
 
 super + e
-    alacritty -e lf
+    kitty -e lf
 
 super + n
     rofi -show calc -no-show-match -no-sort
@@ -129,4 +129,4 @@ super + space
     rofimoji --action=copy-unicode --files=$HOME/.local/share/rofimoji/data/symbols.additional.csv
 
 super + p
-    alacritty -e ~/.config/scripts/vpn.sh
+    kitty -e ~/.config/scripts/vpn.sh

@@ -25,7 +25,6 @@ function precmd() {
 
 alias dfs="df -h / /home"
 alias vi="nvim"
-alias vit="nvim -u ~/.config/nvim/text_nvim.lua"
 alias vif="~/.config/scripts/neofzf_name.sh"
 alias vic="~/.config/scripts/neofzf_cont.sh"
 alias fetch="fastfetch"

@@ -9,7 +9,7 @@ My dotfiles for a bunch of apps with Xorg.
 
 
 ## Software list
-* [alacritty](https://github.com/alacritty/alacritty) for terminal emulator.
+* [alacritty](https://github.com/alacritty/alacritty) for alternative terminal emulator.
 * [bat](https://github.com/sharkdp/bat) for `cat` replacement.
 * [bspwm](https://github.com/baskerville/bspwm) for window manager.
 * [ctpv](https://github.com/NikitaIvanovV/ctpv) for image preview in `lf`.
@@ -22,6 +22,7 @@ My dotfiles for a bunch of apps with Xorg.
 * [fuseiso](https://sourceforge.net/projects/fuseiso/) for handling .iso and .mdf/.mds files.
 * [fzf](https://github.com/junegunn/fzf) for fuzzy files search.
 * [imagemagick](https://github.com/ImageMagick/ImageMagick) for making screenshots.
+* [kitty](https://github.com/kovidgoyal/kitty) for main terminal emulator.
 * [lf](https://github.com/gokcehan/lf) for file manager.
 * `librewolf` for browser.
 * [mpv](https://github.com/mpv-player/mpv) for media.

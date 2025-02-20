@@ -82,6 +82,10 @@ If you want to use just a part of these dots, you'll have to change some setting
 ### imagemagick
 1. .config/scripts/screenshoter.sh
 
+### kitty
+1. .config/picom/picom.conf
+2. .config/sxhkd/sxhkdrc
+
 ### lf
 1. .config/sxhkd/sxhkdrc
 

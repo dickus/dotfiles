@@ -3,3 +3,5 @@
 .config/blender/*/config/*.txt
 .config/blender/*/scripts/addons/*
 .config/nvim/lazy-lock.json
+.local/share/rofimoji/frecency
+.local/share/rofimoji/recent*
