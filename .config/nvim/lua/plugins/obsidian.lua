@@ -76,4 +76,6 @@ vim.keymap.set("n", "<leader>mn", ":!mv '%:p' ~/.docs/notes<CR>:bd<CR>")
 vim.keymap.set("n", "<leader>ml", ":!mv '%:p' ~/.docs/lore<CR>:bd<CR>")
 --move note from drafts to D&D notes
 vim.keymap.set("n", "<leader>md", ":!mv '%:p' ~/.docs/DND<CR>:bd<CR>")
+--move note from drafts to code notes
+vim.keymap.set("n", "<leader>mc", ":!mv '%:p' ~/.docs/code<CR>:bd<CR>")
 
