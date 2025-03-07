@@ -62,15 +62,32 @@ cmd paste ${{
     mode=$(echo "$load" | sed -n '1p')
     list=$(echo "$load" | sed '1d')
     files=($list)
+
     if [[ $mode = 'copy' ]]; then
-        cp -Ru "${files[@]}" ./
+        for file in "${files[@]}"; do
+            if [[ -d "$file" ]]; then
+                cp -Ru "$file/." ./
+            else
+                cp -u "$file" ./
+            fi
+        done
+
         rm ~/.local/share/lf/files
         lf -remote 'send clear'
     elif [[ $mode = 'move' ]]; then
-        mv -u $list "${files[@]}" ./
+        for file in "${files[@]}"; do
+            if [[ -d "$file" ]] && [[ -d "./$(basename "$file")" ]]; then
+                cp -Ru "$file/." "./$(basename "$file")"
+                rm -rf "$file"
+            else
+                mv -u "$file" ./
+            fi
+        done
+
         rm ~/.local/share/lf/files
         lf -remote 'send clear'
     fi
+
     unset IFS
 }}
 
@@ -152,6 +169,70 @@ cmd rights ${{
     chmod +x "$f"
 }}
 
+# moving files to .trash folder instead of deleting
+cmd trash %{{
+    IFS=$'\n'
+    set -f
+
+    trash_dir="$HOME/.trash"
+
+    errors_flag=0
+
+    for file in $fx; do
+        if [[ "$file" == "$trash_dir/"* ]]; then
+            echo "File is already trashed."
+            continue
+        fi
+
+        relpath=${file#$HOME/}
+        target="$trash_dir/$relpath"
+        target_dir="$(dirname "$target")"
+
+        if ! mkdir -p "$target_dir"; then
+            error_flag=1
+            continue
+        fi
+
+        if ! mv -v -- "$file" "$target"; then
+            error_flag=1
+        fi
+    done
+
+    (( error_flag == 0 )) && lf -remote "send clear"
+    unset IFS
+}}
+
+# checking .trash and restoring files/directories
+cmd trash-restore %{{
+    trash_dir="$HOME/.trash"
+    IFS=$'\n'
+
+    for file in $fx; do
+        relpath=${file#$trash_dir/}
+        target="$HOME/$relpath"
+
+        mkdir -p "$(dirname "$target")"
+
+        if [[ -d "$file" ]]; then
+            if [[ -d "$target" ]]; then
+                cp -Ru "$file/." "$target/"
+                rm -rf "$file"
+            else
+                mv -u "$file" "$target"
+            fi
+        else
+            mv -u "$file" "$target"
+        fi
+    done
+
+    unset IFS
+}}
+
+cmd trash-clean %{{
+    find "$HOME/.trash" -mtime +7 -exec rm -rf {} +
+    echo "Trash cleaned."
+}}
+
 
 # Keymapping
 # Unmapping default keys
@@ -167,6 +248,8 @@ map u
 map f
 map p
 map c
+map DD
+map dd
 
 # Custom commands mapping
 map ua unarchive
@@ -180,13 +263,16 @@ map fd fzf_dir
 map fg fzf_cont
 map - link
 map me rights
+map dd trash
+map dr trash-restore
+map DT trash-clean
 
 # Default commands mapping
 map . set hidden
 map . set hidden!
+map dm cut
+map dc copy
 map DD delete
-map dd cut
-map yy copy
 map pp paste
 map R reload
 map mk :unselect; invert
@@ -203,3 +289,4 @@ map gm cd ~/Videos/Media
 map gl cd ~/.local/share
 map gf cd ~/.dotfiles
 map gw cd ~/.docs
+map gt cd ~/.trash

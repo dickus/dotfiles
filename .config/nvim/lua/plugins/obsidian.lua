@@ -41,7 +41,7 @@ require("obsidian").setup({
     preferred_link_style = "wiki",
 
     templates = {
-        subdir = nil,
+        folder = "templates",
         date_format = "",
         substitutions = {},
     },
