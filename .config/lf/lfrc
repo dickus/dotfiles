@@ -66,7 +66,7 @@ cmd paste ${{
     if [[ $mode = 'copy' ]]; then
         for file in "${files[@]}"; do
             if [[ -d "$file" ]]; then
-                cp -Ru "$file/." ./
+                cp -Ru "$file/." "./$(basename "$file")"
             else
                 cp -u "$file" ./
             fi
