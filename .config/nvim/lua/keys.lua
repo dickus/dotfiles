@@ -17,3 +17,11 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { noremap = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 
+--markdown workflow
+---set current directory to .docs
+vim.keymap.set("n", "<leader>ww", ":cd $HOME/.docs<CR>", { noremap = true })
+---delete note
+vim.keymap.set("n", "<leader>od", ":!rm '%:p'<CR>:bd<CR>")
+---save and close current buffer
+vim.keymap.set("n", "<leader>oq", ":w<CR>:bd<CR>")
+

@@ -1,4 +1,5 @@
 require("obsidian").setup({
+    picker = { name = "snacks.pick" },
     disable_frontmatter = true,
 
     ui = { enable = false },
@@ -57,18 +58,12 @@ require("obsidian").setup({
 
 vim.opt_local.conceallevel = 1
 
---set current directory to .docs
-vim.keymap.set("n", "<leader>ww", ":cd $HOME/.docs<CR>", { noremap = true })
 --use template in current note
-vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate<CR>", { noremap = true, silent = true })
---delete note
-vim.keymap.set("n", "<leader>od", ":!rm '%:p'<CR>:bd<CR>")
---save and close current buffer
-vim.keymap.set("n", "<leader>oq", ":w<CR>:bd<CR>")
+vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate<CR>", { desc = "Use note template", noremap = true, silent = true })
 --show links within current buffer
-vim.keymap.set("n", "<leader>ol", ":ObsidianLinks<CR>")
+vim.keymap.set("n", "<leader>ol", ":ObsidianLinks<CR>", { desc = "Open links" })
 --show backlinks
-vim.keymap.set("n", "<leader>ob", ":ObsidianBacklinks<CR>")
+vim.keymap.set("n", "<leader>ob", ":ObsidianBacklinks<CR>", { desc = "Open backlinks" })
 
 --move note from drafts to notes
 vim.keymap.set("n", "<leader>mn", ":!mv '%:p' ~/.docs/notes<CR>:bd<CR>")

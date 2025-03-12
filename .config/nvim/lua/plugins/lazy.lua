@@ -51,22 +51,6 @@ local plugins = {
     "folke/which-key.nvim",
 
     {
-        "nvim-telescope/telescope.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
-    },
-
-    "nvim-telescope/telescope-ui-select.nvim",
-
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons",
-            "MunifTanjim/nui.nvim",
-        },
-    },
-
-    {
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
@@ -95,7 +79,7 @@ local plugins = {
 
     {
         "folke/snacks.nvim",
-        dependencies = { "echasnovski/mini.nvim", version = false },
+        dependencies = { "echasnovski/mini.icons", version = false },
         priority = 1000,
         lazy = false,
     },
