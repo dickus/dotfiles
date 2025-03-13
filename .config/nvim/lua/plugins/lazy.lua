@@ -18,6 +18,7 @@ local plugins = {
     "shaunsingh/nord.nvim",
     "ellisonleao/gruvbox.nvim",
     "neanias/everforest-nvim",
+    "catppuccin/nvim",
 
     "brenoprata10/nvim-highlight-colors",
 
@@ -56,8 +57,11 @@ local plugins = {
     },
 
     {
-        "epwalsh/obsidian.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
+        "obsidian-nvim/obsidian.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim",
+        },
         lazy = true,
         ft = "markdown",
     },

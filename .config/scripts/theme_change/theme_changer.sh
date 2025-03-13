@@ -3,11 +3,13 @@
 light="$1"
 dark="$2"
 
-light_themes=("everforest" "gruvbox")
-dark_themes=("gruvbox" "nord")
+light_themes=("everforest" "gruvbox" "latte")
+dark_themes=("frappe" "gruvbox" "nord")
 
-current_light="$(cat $HOME/.config/scripts/theme_change/theme_schedule.sh | grep -oP '/themes/\K[^.]+(?=.toml)' | head -n 1)"
-current_dark="$(cat $HOME/.config/scripts/theme_change/theme_schedule.sh | grep -oP '/themes/\K[^.]+(?=.toml)' | tail -n 1)"
+max_length=$(( ${#light_themes[@]} > ${#dark_themes[@]} ? ${#light_themes[@]} : ${#dark_themes[@]} ))
+
+current_light="$(cat $HOME/.config/scripts/theme_change/theme_schedule.sh | grep -oP 'light_theme="\K[^"]+' | head -n 1)"
+current_dark="$(cat $HOME/.config/scripts/theme_change/theme_schedule.sh | grep -oP 'dark_theme="\K[^"]+' | tail -n 1)"
 
 
 for theme_index in "${!light_themes[@]}"; do
@@ -31,31 +33,32 @@ if [[ "$#" -ne 1 ]] && [[ "$#" -ne 2 ]]; then
     exit
 fi
 
-if [[ "$light" == "help" ]]; then
+if [[ "$1" == "help" ]]; then
     echo -e "\033[1mtheme <light_theme> <dark_theme>\033[0m\n"
     printf "\033[1m%-15s %s\033[0m\n" "Light themes" "Dark themes"
-    printf "%-15s %s\n" "${light_themes[0]}" "${dark_themes[0]}"
-    printf "%-15s %s\n" "${light_themes[1]}" "${dark_themes[1]}"
+
+    for ((i = 0; i < max_length; i++)); do
+        light_list=${light_themes[i]:-}
+        dark_list=${dark_themes[i]:-}
+
+        printf "%-15s %s\n" "$light_list" "$dark_list"
+    done
 
     exit
 fi
 
 
-if [[ "$light" != "everforest" ]] && [[ "$light" != "gruvbox" ]] && [[ "$dark" != "gruvbox" ]] && [[ "$dark" != "nord" ]]; then
+if ! [[ "${light_themes[@]}" =~ "$light" ]] || ! [[ "${dark_themes[@]}" =~ "$dark" ]]; then
     echo "Incorrect themes input."
     echo -e "Run \033[1mtheme\033[0m with no arguments to see how to use it."
 
     exit
-fi
-
-if [[ "$light" != "everforest" ]] && [[ "$light" != "gruvbox" ]]; then
+elif ! [[ "${light_themes[@]}" =~ "$light" ]]; then
     echo "Incorrect light theme input."
     echo -e "Run \033[1mtheme\033[0m with no arguments to see how to use it."
 
     exit
-fi
-
-if [[ "$dark" != "gruvbox" ]] && [[ "$dark" != "nord" ]]; then
+elif ! [[ "${dark_themes[@]}" =~ "$dark" ]]; then
     echo "Incorrect dark theme input."
     echo -e "Run \033[1mtheme\033[0m with no arguments to see how to use it."
 
@@ -63,27 +66,17 @@ if [[ "$dark" != "gruvbox" ]] && [[ "$dark" != "nord" ]]; then
 fi
 
 
-if [[ "$current_light" != *"$light"* ]]; then
-    case $light in
-        everforest)
-            sed -i 's|gruvbox-light|everforest|' $HOME/.config/scripts/theme_change/theme_schedule.sh ;;
+if [[ "$current_light" != "$light" ]]; then
+    sed -i "s|^light_theme=.*|light_theme=\"$light\"|" $HOME/.config/scripts/theme_change/theme_schedule.sh
 
-        gruvbox)
-            sed -i 's|everforest|gruvbox-light|' $HOME/.config/scripts/theme_change/theme_schedule.sh ;;
-    esac
     echo -e "Light theme is changed to \033[1m'$light'\033[0m."
 else
     echo -e "Light theme is already set to \033[1m'$light'\033[0m."
 fi
 
-if [[ "$current_dark" != *"$dark"* ]]; then
-    case $dark in
-        gruvbox)
-            sed -i 's|nord|gruvbox-dark|' $HOME/.config/scripts/theme_change/theme_schedule.sh ;;
+if [[ "$current_dark" != "$dark" ]]; then
+    sed -i "s|^dark_theme=.*|dark_theme=\"$dark\"|" $HOME/.config/scripts/theme_change/theme_schedule.sh
 
-        nord)
-            sed -i 's|gruvbox-dark|nord|' $HOME/.config/scripts/theme_change/theme_schedule.sh ;;
-    esac
     echo -e "Dark theme is changed to \033[1m'$dark'\033[0m."
 else
     echo -e "Dark theme is already set to \033[1m'$dark'\033[0m."

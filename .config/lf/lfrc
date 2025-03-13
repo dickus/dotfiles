@@ -284,8 +284,6 @@ map gc cd ~/.config
 map gp cd ~/Pictures
 map gh cd
 map gd cd ~/Downloads
-map gv cd ~/Videos
-map gm cd ~/Videos/Media
 map gl cd ~/.local/share
 map gf cd ~/.dotfiles
 map gw cd ~/.docs

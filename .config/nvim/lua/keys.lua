@@ -19,9 +19,11 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 
 --markdown workflow
 ---set current directory to .docs
-vim.keymap.set("n", "<leader>ww", ":cd $HOME/.docs<CR>", { noremap = true })
----delete note
-vim.keymap.set("n", "<leader>od", ":!rm '%:p'<CR>:bd<CR>")
+vim.keymap.set("n", "<leader>ww", ":cd $HOME/.docs<CR>", { desc = "Open notes dir", noremap = true })
+---delete note and close buffer
+vim.keymap.set("n", "<leader>od", ":!rm '%:p'<CR>:bd<CR>", { desc = "Delete note" })
 ---save and close current buffer
-vim.keymap.set("n", "<leader>oq", ":w<CR>:bd<CR>")
+vim.keymap.set("n", "<leader>oq", ":w<CR>:bd<CR>", { desc = "Save and close note" })
+--move note from drafts to notes
+vim.keymap.set("n", "<leader>ok", ":!mv '%:p' ~/.docs/notes<CR>:bd<CR>", { desc = "Move draft to notes" })
 

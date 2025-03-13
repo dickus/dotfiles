@@ -1,5 +1,4 @@
 require("obsidian").setup({
-    picker = { name = "snacks.pick" },
     disable_frontmatter = true,
 
     ui = { enable = false },
@@ -59,18 +58,11 @@ require("obsidian").setup({
 vim.opt_local.conceallevel = 1
 
 --use template in current note
-vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate<CR>", { desc = "Use note template", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>oi", ":ObsidianTemplate<CR>", { desc = "Use note template", noremap = true, silent = true })
 --show links within current buffer
 vim.keymap.set("n", "<leader>ol", ":ObsidianLinks<CR>", { desc = "Open links" })
 --show backlinks
 vim.keymap.set("n", "<leader>ob", ":ObsidianBacklinks<CR>", { desc = "Open backlinks" })
-
---move note from drafts to notes
-vim.keymap.set("n", "<leader>mn", ":!mv '%:p' ~/.docs/notes<CR>:bd<CR>")
---move note from drafts to LORE notes
-vim.keymap.set("n", "<leader>ml", ":!mv '%:p' ~/.docs/lore<CR>:bd<CR>")
---move note from drafts to D&D notes
-vim.keymap.set("n", "<leader>md", ":!mv '%:p' ~/.docs/DND<CR>:bd<CR>")
---move note from drafts to code notes
-vim.keymap.set("n", "<leader>mc", ":!mv '%:p' ~/.docs/code<CR>:bd<CR>")
+--open tags search
+vim.keymap.set({ "n", "v" }, "<leader>ot", ":ObsidianTags<CR>", { desc = "Open tags search" })
 

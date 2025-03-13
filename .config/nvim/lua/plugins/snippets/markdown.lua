@@ -59,7 +59,7 @@ ls.add_snippets("markdown", {
     s({
         trig = "note",
         name = "Add internal link from clipboard",
-        desc = "[[clipboard]] $1",
+        desc = "[[clipboard|$1]]",
     }, {
         t("[["),
         d(2, function ()
@@ -78,7 +78,7 @@ ls.add_snippets("markdown", {
             return sn(nil, i(2, clip))
         end),
 
-        t("]] "), i(1),
+        t("|"), i(1), t("]]"),
     }),
 })
 

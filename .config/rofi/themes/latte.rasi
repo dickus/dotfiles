@@ -1,0 +1,117 @@
+configuration {
+    font:        "SFMono Nerd Font Mono 10";
+    line-margin: 10;
+
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   ">";
+    display-window: "";
+    display-combi:  "";
+    show-icons:     true;
+}
+
+* {
+    black0:      #4c4f69;
+    black1:      #51576d;
+    black2:      #626880;
+    black3:      #737994;
+
+    white0:      #b5bfe2;
+    white1:      #c6d0f5;
+    white2:      #eff1f5;
+
+    aqua:        #179299;
+    lightaqua:   #209fb5;
+    lightblue:   #7287fd;
+    blue:        #1e66f5;
+    lightred:    #d20f39;
+
+    lightorange: #fe640b;
+    lightyellow: #df8e1d;
+    lightgreen:  #40a02b;
+    lightpurple: #8839ef;
+
+    foreground:       @blue;
+    background-color: @white2;
+
+    back:             @white2;
+    text:             @black0;
+    alt-text:         @white2;
+}
+
+window {
+    location: center;
+    anchor:   center;
+    border:   0px;
+
+    background-color: @white2;
+    spacing:          0;
+    children:         [mainbox];
+    orientation:      horizontal;
+    width:            30%;
+}
+
+mainbox {
+    spacing:  0;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    color:            @blue;
+    padding:          8px;
+    background-color: @white2;
+
+    border:       2px;
+    border-color: @blue;
+}
+
+entry, prompt, case-indicator {
+    text-font:  inherit;
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0px 0.3em 0em 0em ;
+}
+
+listview {
+    padding:          8px;
+    border-color:     @blue;
+    border:           0px 2px 2px 2px;
+    background-color: @white2;
+    dynamic:          false;
+    lines:            10;
+    columns:          2;
+}
+
+element {
+    padding:          3px;
+    vertical-align:   0.5;
+    background-color: @white2;
+    text-color:       @black0;
+}
+
+element selected.normal {
+    background-color: @blue;
+    text-color:       @white2;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+button {
+    padding:          6px;
+    color:            @foreground;
+    horizontal-align: 0.5;
+
+    border:       2px 0px 2px 2px;
+    border-color: @foreground;
+}
+
+button selected normal {
+    border:       2px 0px 2px 2px;
+    border-color: @foreground;
+}
+

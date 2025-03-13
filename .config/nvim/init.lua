@@ -14,7 +14,7 @@ require("plugins.snacks")
 require("plugins.luasnip")
 
 --colorscheme
-require("themes.everforest")
+require("themes.latte")
 
 --basic settings
 vim.o.cmdheight = 2

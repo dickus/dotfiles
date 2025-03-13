@@ -32,5 +32,5 @@ x = 2
 y = 2
 
 [general]
-import = ["~/.config/alacritty/themes/everforest.toml",]
+import = ["~/.config/alacritty/themes/latte.toml",]
 

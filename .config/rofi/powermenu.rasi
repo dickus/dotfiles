@@ -1,4 +1,4 @@
-@import "~/.config/rofi/themes/everforest.rasi"
+@import "~/.config/rofi/themes/latte.rasi"
 
 listview {
     lines: 4;
