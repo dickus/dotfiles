@@ -26,24 +26,51 @@ Snacks.setup({
     },
 })
 
-local function open_image_picker()
+local function open_obsidian_image_picker()
     Snacks.picker.files({
         cwd = vim.fn.expand("$HOME/.docs/files"),
         ft = { "png", "jpg", "jpeg", "webp" },
     })
 end
 
-local function open_file_picker()
+local function open_obsidian_file_picker()
     Snacks.picker.files({
-        cwd = vim.fn.expand("$HOME/.docs"),
+        cwd = vim.fn.expand("$HOME/.docs")
     })
 end
 
+local function open_image_picker()
+    Snacks.picker.files({
+        ft = { "png", "jpg", "jpeg", "webp" },
+    })
+end
+
+local function open_obsidian_content_picker()
+    Snacks.picker.grep({
+        cwd = vim.fn.expand("$HOME/.docs")
+    })
+end
+
+local function open_file_picker()
+    Snacks.picker.files()
+end
+
+local function open_content_picker()
+    Snacks.picker.grep()
+end
+
+local function open_explorer()
+    Snacks.explorer()
+end
+
+
+vim.keymap.set("n", "<leader>oi", open_obsidian_image_picker, { desc = "Find Obsidian images" })
+vim.keymap.set("n", "<leader>of", open_obsidian_file_picker, { desc = "Find Obsidian files" })
+vim.keymap.set("n", "<leader>og", open_obsidian_content_picker, { desc = "Find Obsidian files by content" })
 
 vim.keymap.set("n", "<leader>fi", open_image_picker, { desc = "Find images" })
-
 vim.keymap.set("n", "<leader>ff", open_file_picker, { desc = "Find files" })
-vim.keymap.set("n", "<leader>fg", function () Snacks.picker.grep() end, { desc = "Find content" })
+vim.keymap.set("n", "<leader>fg", open_content_picker, { desc = "Find files by content" })
 
-vim.keymap.set("n", "<C-e>", function () Snacks.explorer() end)
+vim.keymap.set("n", "<C-e>", open_explorer)
 
