@@ -54,21 +54,21 @@
 
 [urgency_low]
     background  = "#eff1f5"
-    foreground  = "#4c4f69"
+    foreground  = "#303446"
     frame_color = "#40a02b"
     timeout     = 5
     icon        = /usr/share/icons/Nordzy/actions/24/view-calendar-day.svg
 
 [urgency_normal]
     background  = "#eff1f5"
-    foreground  = "#4c4f69"
+    foreground  = "#303446"
     frame_color = "#1e66f5"
     timeout     = 5
     icon        = /usr/share/icons/Nordzy/actions/24/chronometer.svg
 
 [urgency_critical]
     background  = "#eff1f5"
-    foreground  = "#4c4f69"
+    foreground  = "#303446"
     frame_color = "#d20f39"
     timeout     = 120
     icon        = /usr/share/icons/Nordzy/actions/24/button_cancel.svg

@@ -11,10 +11,10 @@ configuration {
 }
 
 * {
-    black0:      #4c4f69;
-    black1:      #51576d;
-    black2:      #626880;
-    black3:      #737994;
+    black0:      #303446;
+    black1:      #4c4f69;
+    black2:      #51576d;
+    black3:      #626880;
 
     white0:      #b5bfe2;
     white1:      #c6d0f5;

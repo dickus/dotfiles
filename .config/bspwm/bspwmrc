@@ -26,6 +26,7 @@ bspc rule -a steamwebhelper desktop='^4'
 bspc rule -a "SDL Application" desktop='^4'
 
 bspc rule -a Gimp-2.10 desktop='^7'
+bspc rule -a Gimp-3.0 desktop='^7'
 bspc rule -a Blender desktop='^7'
 
 bspc rule -a vesktop desktop='^8'

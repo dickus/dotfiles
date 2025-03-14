@@ -53,21 +53,21 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background  = "#4c4f69"
+    background  = "#303446"
     foreground  = "#eff1f5"
     frame_color = "#a6d189"
     timeout     = 5
     icon        = /usr/share/icons/Nordzy/actions/24/view-calendar-day.svg
 
 [urgency_normal]
-    background  = "#4c4f69"
+    background  = "#303446"
     foreground  = "#eff1f5"
     frame_color = "#8caaee"
     timeout     = 5
     icon        = /usr/share/icons/Nordzy/actions/24/chronometer.svg
 
 [urgency_critical]
-    background  = "#4c4f69"
+    background  = "#303446"
     foreground  = "#eff1f5"
     frame_color = "#e78284"
     timeout     = 120

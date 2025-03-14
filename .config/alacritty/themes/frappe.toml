@@ -9,7 +9,7 @@ white   = "#a5adce"
 yellow  = "#e5c890"
 
 [colors.normal]
-black   = "#4c4f69"
+black   = "#303446"
 blue    = "#8caaee"
 cyan    = "#81c8be"
 green   = "#a6d189"
@@ -19,5 +19,5 @@ white   = "#b5bfe2"
 yellow  = "#e5c890"
 
 [colors.primary]
-background = "#4c4f69"
+background = "#303446"
 foreground = "#eff1f5"
