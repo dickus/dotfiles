@@ -1,0 +1,16 @@
+[manager]
+# General
+ratio     = [1, 3, 3]
+linemode  = "size_and_mtime"
+scrolloff = 200
+
+# Sort
+sort_by        = "natural"
+sort_sensitive = false
+sort_dir_first = true
+sort_translit  = true
+
+[preview]
+tab_size     = 4
+image_filter = "lanczos3"
+

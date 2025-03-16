@@ -45,14 +45,14 @@ cmd setbg ${{
 cmd mkfile ${{
     printf "File name: "
     read -r ans
-    touch "$ans"
+    touch "$target"
 }}
 
 # Make new directory
 cmd mkdir ${{
     printf "Directory name: "
     read -r ans
-    mkdir "$ans"
+    mkdir -p "$ans"
 }}
 
 # Copy/cut and paste
@@ -117,7 +117,7 @@ cmd isomount ${{
 }}
 
 # fzf
-# file
+## file
 cmd fzf_file ${{
     selected_file=$(fzf --preview="bat {}")
 
@@ -126,7 +126,7 @@ cmd fzf_file ${{
     fi
 }}
 
-# file by content
+## file by content
 cmd fzf_cont ${{
     selected_file=$(rg --files --hidden --no-ignore /home 2>/dev/null | fzf --preview="bat {}" --bind "change:reload(rg --ignore-case --hidden --no-ignore --line-number --color always {q} || true)" | sed "s/:.*//" | sed "s/\x1b\[[0-9;]*m//g")
 
@@ -137,7 +137,7 @@ cmd fzf_cont ${{
     fi
 }}
 
-# directory
+## directory
 cmd fzf_dir ${{
     ~/.config/lf/scripts/fzf_dir.sh
 }}
@@ -174,7 +174,7 @@ cmd trash %{{
     IFS=$'\n'
     set -f
 
-    trash_dir="$HOME/.trash"
+    trash_dir="$HOME/.local/Trash"
 
     errors_flag=0
 
@@ -204,7 +204,7 @@ cmd trash %{{
 
 # checking .trash and restoring files/directories
 cmd trash-restore %{{
-    trash_dir="$HOME/.trash"
+    trash_dir="$HOME/.local/Trash"
     IFS=$'\n'
 
     for file in $fx; do
@@ -229,7 +229,7 @@ cmd trash-restore %{{
 }}
 
 cmd trash-clean %{{
-    find "$HOME/.trash" -mtime +7 -exec rm -rf {} +
+    find "$HOME/.local/share/Trash" -mtime +7 -exec rm -rf {} +
     echo "Trash cleaned."
 }}
 
