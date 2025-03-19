@@ -120,7 +120,7 @@ super + n
     rofi -show calc -no-show-match -no-sort
 
 super + g
-    steam -console
+    mangohud steam -console
 
 super + a
     jamesdsp

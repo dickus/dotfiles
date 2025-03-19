@@ -7,6 +7,40 @@ local d = ls.dynamic_node
 
 ls.add_snippets("markdown", {
     s({
+        trig = "metadata",
+        name = "Add default metadata",
+        desc = "---\nid: {{id}}\naliases:\n\t- $1\ntags:\n- $2\n---\n\n# {{title}}\n",
+    }, {
+        t({
+            "---",
+            "id: {{id}}",
+            "aliases:",
+            "\t- ",
+        }),
+        i(1),
+        t({
+            "",
+            "tags:",
+            "\t- ",
+        }),
+        i(2),
+        t({
+            "",
+            "---",
+            "",
+            "# {{title}}",
+            "",
+        }),
+        i(3),
+        t({
+            "",
+            "",
+        }),
+    })
+})
+
+ls.add_snippets("markdown", {
+    s({
         trig = "link",
         name = "Add external link from clipboard",
         desc = "[$1](clipboard)",

@@ -45,6 +45,7 @@ alias pe="python -m venv"
 
 export SUDO_EDITOR="nvim"
 export EDITOR="nvim"
+export VISUAL="nvim"
 
 
 eval "$(zoxide init --cmd cd zsh)"

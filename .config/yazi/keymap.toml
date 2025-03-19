@@ -90,6 +90,21 @@ keymap = [
     { on = [ "s", "b" ], run = "shell 'feh --no-fehbg --bg-fill $@'", desc = "Set wallpaper" },
     { on = [ "m", "e" ], run = "shell 'chmod +x $@'",                 desc = "Make file executable" },
     { on = [ "D", "T" ], run = "shell 'find $HOME/.local/share/Trash -mtime +7 -exec rm -rf {} +'", desc = "Clean trash" },
+    { on = [ "w" ],      run = "tasks_show", desc = "Show task manager" },
+    { on = [ "~" ],      run = "help",       desc = "Open help" },
+]
+
+[tasks]
+keymap = [
+    { on = "w", run = "close", desc = "Close task manager" },
+    
+    { on = "k", run = "arrow -1", desc = "Move cursor up" },
+    { on = "j", run = "arrow 1",  desc = "Move cursor down" },
+
+    { on = "<Enter>", run = "inspect", desc = "Inspect the task" },
+    { on = "x",       run = "cancel",  desc = "Cancel the task" },
+
+    { on = "~", run = "help", desc = "Open help" },
 ]
 
 [spot]

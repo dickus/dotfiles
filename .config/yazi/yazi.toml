@@ -15,7 +15,17 @@ tab_size     = 4
 image_filter = "lanczos3"
 
 [opener]
-open = [
-    { run = 'zathura "$@"', orphan = true },
+edit = [
+    { run = 'nvim "$@"', block = true },
+]
+
+pdfs = [
+    { run = 'zathura "$@"' },
+]
+
+[open]
+prepend_rules = [
+    { name = "*.pdf", use = "pdfs" },
+    { name = "*.ini", use = "edit" },
 ]
 
