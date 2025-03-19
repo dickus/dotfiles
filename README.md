@@ -1,6 +1,6 @@
 My dotfiles for a bunch of apps with Xorg.
 
-**[[Scripts](SCRIPTS.md)] × [[Screenshots](#screenshots)] × [[Software list](#software-list)] × [[Important](IMPORTANT.md)] × [[Installation](#installation)]**
+**[[Screenshots](#screenshots)] × [[Software list](#software-list)] × [[Important](IMPORTANT.md)] × [[Installation](#installation)]**
 
 
 ## Screenshots
