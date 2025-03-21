@@ -8,8 +8,8 @@ window {
     background-color: @white2;
     border: 0px;
     padding: 0;
-    width: 160px;
-    height: 136px;
+    width: 170px;
+    height: 150px;
     location: center;
 }
 

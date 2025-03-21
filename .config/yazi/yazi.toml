@@ -20,7 +20,7 @@ edit = [
 ]
 
 pdfs = [
-    { run = 'zathura "$@"' },
+    { run = 'zathura "$@"', orphan = true },
 ]
 
 [open]

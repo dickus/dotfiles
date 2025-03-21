@@ -1,12 +1,14 @@
 #!/bin/env bash
 
 # Options for powermenu
-lock="Lock"
-shutdown="Shutdown"
-reboot="Reboot"
+lock="⏾ Lock"
+logout="⏼ Logout"
+shutdown="⏻ Shutdown"
+reboot="⟳ Reboot"
 
 # Get answer from user via rofi
 selected_option=$(echo "$lock
+$logout
 $reboot
 $shutdown" | rofi -dmenu\
                   -i\
@@ -19,6 +21,9 @@ $shutdown" | rofi -dmenu\
 if [ "$selected_option" == "$lock" ]
 then
     ~/.config/bspwm/scripts/i3lock-fancy/i3lock-fancy.sh
+elif [ "$selected_option" == "$logout" ]
+then
+    bspc quit
 elif [ "$selected_option" == "$shutdown" ]
 then
     systemctl poweroff

@@ -4,6 +4,15 @@ local t = ls.text_node
 local i = ls.insert_node
 local sn = ls.snippet_node
 local d = ls.dynamic_node
+local f = ls.function_node
+
+local function get_current_date()
+    return os.date('%Y-%m-%d')
+end
+
+local function get_current_filename()
+    return vim.fn.expand("%:t"):match("(.+)%.[^.]+$") or vim.fn.expand("%:t")
+end
 
 ls.add_snippets("markdown", {
     s({
@@ -13,7 +22,11 @@ ls.add_snippets("markdown", {
     }, {
         t({
             "---",
-            "id: {{id}}",
+            "id: ",
+        }),
+        f(get_current_filename, {}),
+        t({
+            "",
             "aliases:",
             "\t- ",
         }),
@@ -28,7 +41,6 @@ ls.add_snippets("markdown", {
             "",
             "---",
             "",
-            "# {{title}}",
             "",
         }),
         i(3),
