@@ -48,6 +48,7 @@ bspc config active_border_color  $ACTIVE_BORDER
 #
 # Set display from arandr saved script
 # sh ~/.screenlayout/monitor.sh &
+xset s off -dpms
 
 # Picom
 picom -b

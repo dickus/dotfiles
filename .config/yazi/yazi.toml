@@ -23,9 +23,27 @@ pdfs = [
     { run = 'zathura "$@"', orphan = true },
 ]
 
+images = [
+    { run = 'nsxiv "$@"', orphan = true },
+]
+
+gifs = [
+    { run = 'nsxiv -a "$@"', orphan = true },
+]
+
 [open]
 prepend_rules = [
+    # docs
     { name = "*.pdf", use = "pdfs" },
+
+    # configs
     { name = "*.ini", use = "edit" },
+
+    # images/gifs
+    { name = "*.png",  use = "images" },
+    { name = "*.jpg",  use = "images" },
+    { name = "*.jpeg", use = "images" },
+    { name = "*.webp", use = "images" },
+    { name = "*.gif",  use = "gifs" },
 ]
 
