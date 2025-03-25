@@ -64,7 +64,7 @@ dunst -config "$DUNST_THEME" &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Wallpaper
-feh --bg-fill --randomize ~/Pictures/wallpapers/
+~/.config/scripts/wallpaper_changer.sh
 
 # Network Applet
 nm-applet --indicator &
