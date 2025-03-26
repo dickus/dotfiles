@@ -4,8 +4,7 @@ My dotfiles for a bunch of apps with Xorg.
 
 
 ## Screenshots
-![everforest](previews/everforest.png)
-![nord](previews/nord.png)
+![preview](previews/preview.png)
 
 
 ## Software list
