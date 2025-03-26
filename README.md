@@ -1,9 +1,9 @@
 My dotfiles for a bunch of apps with Xorg.
 
-**[[Screenshots](#screenshots)] × [[Software list](#software-list)] × [[Important](IMPORTANT.md)] × [[Installation](#installation)]**
+**[[Preview](#screenshots)] × [[Software list](#software-list)] × [[Important](IMPORTANT.md)] × [[Installation](#installation)]**
 
 
-## Screenshots
+## Preview
 ![preview](previews/preview.png)
 
 
