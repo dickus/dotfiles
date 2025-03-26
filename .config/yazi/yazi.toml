@@ -31,6 +31,10 @@ gifs = [
     { run = 'nsxiv -a "$@"', orphan = true },
 ]
 
+music = [
+    { run = 'kitty -e mpv --no-video "$@"', orphan = true },
+]
+
 [open]
 prepend_rules = [
     # docs
@@ -45,5 +49,9 @@ prepend_rules = [
     { name = "*.jpeg", use = "images" },
     { name = "*.webp", use = "images" },
     { name = "*.gif",  use = "gifs" },
+
+    # music
+    { name = "*.mp3",  use = "music" },
+    { name = "*.flac", use = "music" },
 ]
 
