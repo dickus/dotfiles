@@ -2,7 +2,7 @@
 @reboot DISPLAY=:0 bspc wm -r
 @reboot source $HOME/.zshrc
 
-*/10 * * * * $HOME/.config/scripts/wallpaper_changer.sh
+*/10 * * * * $HOME/.config/scripts/wallpapers/wallpaper_changer.sh
 
 00 8 * * * $HOME/.config/scripts/theme_change/theme_schedule.sh light
 00 8 * * * DISPLAY=:0 bspc wm -r

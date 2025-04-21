@@ -42,6 +42,7 @@ alias ww="cd ~/.docs && nvim ."
 alias on="~/.config/scripts/obsidian/new_file.sh"
 alias or="cd ~/.docs && nvim drafts/*.md"
 alias pe="python -m venv"
+alias wall="~/.config/scripts/wallpapers/new_wallpaper.sh"
 
 export SUDO_EDITOR="nvim"
 export EDITOR="nvim"
