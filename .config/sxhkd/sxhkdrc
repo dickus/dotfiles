@@ -130,3 +130,4 @@ super + space
 
 super + p
     kitty -e ~/.config/scripts/vpn.sh
+
