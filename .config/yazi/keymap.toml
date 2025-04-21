@@ -20,8 +20,7 @@ keymap = [
 
     # Toggle
     { on = "<Space>", run = [ "toggle", "arrow 1" ],      desc = "Toggle the current selection state" },
-    { on = [ "m", "k" ],   run = "toggle_all --state=on", desc = "Select all files" },
-    { on = [ "m", "i" ],   run = "toggle_all",            desc = "Invert selection of all files" },
+    { on = [ "m", "k" ],   run = "toggle_all",            desc = "Select all files" },
 
     # Spotting
     { on = "<Tab>", run = "spot", desc = "Spot hovered file" },
@@ -82,7 +81,7 @@ keymap = [
     { on = [ "g", "l" ],       run = "cd ~/.local/share",                  desc = "Goto ~/.local/share" },
     { on = [ "g", "p" ],       run = "cd ~/Pictures",                      desc = "Goto ~/Pictures" },
     { on = [ "g", "s" ],       run = "cd ~/.steam/steam/steamapps/common", desc = "Goto Steam games" },
-    { on = [ "g", "t" ],       run = "cd ~/.local/share/Trash",                        desc = "Goto ~/.trash" },
+    { on = [ "g", "t" ],       run = "cd ~/.local/share/Trash",                        desc = "Goto ~/.local/share/Trash" },
     { on = [ "g", "w" ],       run = "cd ~/.docs",                         desc = "Goto ~/.docs" },
     { on = [ "g", "<Space>" ], run = "cd --interactive",                   desc = "Jump interactively" },
 
