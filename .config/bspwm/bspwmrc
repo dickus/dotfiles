@@ -19,14 +19,15 @@ bspc config focus_follows_pointer   true
 bspc rule -a TelegramDesktop desktop='^1'
 
 bspc rule -a LibreWolf desktop='^2'
+bspc rule -a librewolf desktop='^2'
 
 bspc rule -a Steam desktop='^4'
 bspc rule -a steam desktop='^4'
 bspc rule -a steamwebhelper desktop='^4'
 bspc rule -a "SDL Application" desktop='^4'
 
-bspc rule -a Gimp-2.10 desktop='^7'
-bspc rule -a Gimp-3.0 desktop='^7'
+bspc rule -a Gimp desktop='^7'
+bspc rule -a gimp desktop='^7'
 bspc rule -a Blender desktop='^7'
 
 bspc rule -a vesktop desktop='^8'
@@ -54,7 +55,7 @@ xset s off -dpms
 picom -b
 
 # Layout
-setxkbmap -option grp:caps_toggle us,ru &
+setxkbmap -option grp:caps_toggle us,ru,by &
 
 # Notifications
 killall -q dunst
