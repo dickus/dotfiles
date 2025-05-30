@@ -81,16 +81,17 @@ keymap = [
     { on = [ "g", "l" ],       run = "cd ~/.local/share",                  desc = "Goto ~/.local/share" },
     { on = [ "g", "p" ],       run = "cd ~/Pictures",                      desc = "Goto ~/Pictures" },
     { on = [ "g", "s" ],       run = "cd ~/.steam/steam/steamapps/common", desc = "Goto Steam games" },
-    { on = [ "g", "t" ],       run = "cd ~/.local/share/Trash",                        desc = "Goto ~/.local/share/Trash" },
+    { on = [ "g", "t" ],       run = "cd ~/.local/share/Trash",            desc = "Goto ~/.local/share/Trash" },
     { on = [ "g", "w" ],       run = "cd ~/.docs",                         desc = "Goto ~/.docs" },
     { on = [ "g", "<Space>" ], run = "cd --interactive",                   desc = "Jump interactively" },
 
     # Extra
-    { on = [ "s", "b" ], run = "shell 'feh --no-fehbg --bg-fill $@'", desc = "Set wallpaper" },
-    { on = [ "m", "e" ], run = "shell 'chmod +x $@'",                 desc = "Make file executable" },
-    { on = [ "D", "T" ], run = "shell 'find $HOME/.local/share/Trash -mtime +7 -exec rm -rf {} +'", desc = "Clean trash" },
-    { on = [ "w" ],      run = "tasks_show", desc = "Show task manager" },
-    { on = [ "~" ],      run = "help",       desc = "Open help" },
+    { on = [ "s", "b" ], run = "shell 'feh --no-fehbg --bg-fill $@'",                                desc = "Set wallpaper" },
+    { on = [ "m", "e" ], run = "shell 'chmod +x $@'",                                                desc = "Make file executable" },
+    { on = [ "D", "T" ], run = "shell 'find $HOME/.local/share/Trash/ -mtime +7 -exec rm -rf {} +'", desc = "Clean trash" },
+    { on = [ "w" ],      run = "tasks_show",                                                         desc = "Show task manager" },
+    { on = [ "~" ],      run = "help",                                                               desc = "Open help" },
+    { on = [ "m", "i" ], run = "shell 'mkisofs -J -r -o \"$@.iso\" \"$@\"'",                         desc = "Create an iso file" },
 ]
 
 [tasks]
