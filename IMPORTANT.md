@@ -13,6 +13,7 @@ If you want to use just a part of these dots, you'll have to change some setting
 * [imagemagick](#imagemagick)
 * [lf](#lf)
 * [librewolf](#librewolf)
+* [mkisofs](#mkisofs)
 * [mpv](#mpv)
 * [nordzy](#nordzy)
 * [nvim](#nvim)
@@ -94,6 +95,9 @@ If you want to use just a part of these dots, you'll have to change some setting
 2. .config/dunst/*
 3. .config/lf/lfrc
 4. .config/sxhkd/sxhkdrc
+
+### mkisofs
+1. .config/yazi/keymap.toml
 
 ### mpv
 1. .config/lf/lfrc

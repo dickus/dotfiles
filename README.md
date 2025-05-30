@@ -24,6 +24,7 @@ My dotfiles for a bunch of apps with Xorg.
 * [kitty](https://github.com/kovidgoyal/kitty) for main terminal emulator.
 * [lf](https://github.com/gokcehan/lf) for file manager.
 * `librewolf` for browser.
+* `mkisofs` for .iso images creation.
 * [mpv](https://github.com/mpv-player/mpv) for media.
 * `nordzy` for [icons](https://github.com/alvatip/Nordzy-icon) and [cursor](https://github.com/alvatip/Nordzy-cursors).
 * [nvim](https://github.com/neovim/neovim) for text and code editor.
@@ -42,7 +43,6 @@ My dotfiles for a bunch of apps with Xorg.
 * [xclip](https://github.com/astrand/xclip) for system clipboard.
 * `xsetroot` to fix cursor changing on desktop.
 * [zathura](https://github.com/pwmt/zathura) for reading .pdf files.
-* [zellij](https://github.com/zellij-org/zellij) for using ssh and flex fancy look on /r/unixporn.
 * [zoxide](https://github.com/ajeetdsouza/zoxide) for `cd` replacement.
 * [zsh](https://github.com/ohmyzsh/ohmyzsh) for shell.
 
