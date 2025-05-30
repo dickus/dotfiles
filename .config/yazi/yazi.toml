@@ -35,6 +35,10 @@ music = [
     { run = 'kitty -e mpv --no-video "$@"', orphan = true },
 ]
 
+jars = [
+    { run = 'kitty -e java -jar "$@"', orphan = true },
+]
+
 [open]
 prepend_rules = [
     # docs
