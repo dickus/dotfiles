@@ -34,9 +34,10 @@
             "keyColor": "34"
         },
         {
+            "type": "command",
             "key": "pkgs",
-            "format": "{1}",
-            "type": "packages",
+            "shell": "/bin/bash",
+            "text": "$HOME/.config/scripts/pkgs.sh",
             "keyColor": "34"
         },
         {
