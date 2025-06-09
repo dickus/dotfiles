@@ -46,6 +46,7 @@ alias wall="~/.config/scripts/wallpapers/new_wallpaper.sh"
 alias upd="yay; flatpak update"
 
 alias ayy="echo 'limao'"
+alias fuck="touch $HOME/.config/scripts/fuck"
 
 export SUDO_EDITOR="nvim"
 export EDITOR="nvim"
