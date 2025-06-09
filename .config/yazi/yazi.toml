@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 # General
 ratio     = [1, 3, 3]
 linemode  = "size_and_mtime"
