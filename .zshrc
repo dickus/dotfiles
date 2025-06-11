@@ -47,6 +47,7 @@ alias upd="yay; flatpak update"
 
 alias ayy="echo 'limao'"
 alias fuck="touch $HOME/.config/scripts/fuck"
+alias rng="~/.config/scripts/random.sh"
 
 export SUDO_EDITOR="nvim"
 export EDITOR="nvim"
