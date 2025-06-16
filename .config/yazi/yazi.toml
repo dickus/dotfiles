@@ -39,6 +39,10 @@ jars = [
     { run = 'kitty -e java -jar "$@"', orphan = true },
 ]
 
+runs = [
+    { run = 'kitty -e "$@"', orphan = true },
+]
+
 [open]
 prepend_rules = [
     # docs
@@ -57,5 +61,8 @@ prepend_rules = [
     # music
     { name = "*.mp3",  use = "music" },
     { name = "*.flac", use = "music" },
+
+    # runs
+    { name = "*.run", use = "runs" },
 ]
 
