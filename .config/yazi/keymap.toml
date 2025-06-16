@@ -82,6 +82,7 @@ keymap = [
     { on = [ "g", "p" ],       run = "cd ~/Pictures",                      desc = "Goto ~/Pictures" },
     { on = [ "g", "s" ],       run = "cd ~/.steam/steam/steamapps/common", desc = "Goto Steam games" },
     { on = [ "g", "t" ],       run = "cd ~/.local/share/Trash",            desc = "Goto ~/.local/share/Trash" },
+    { on = [ "g", "v" ],       run = "cd ~/.var/app",                      desc = "Goto flatpaks dir" },
     { on = [ "g", "w" ],       run = "cd ~/.docs",                         desc = "Goto ~/.docs" },
     { on = [ "g", "<Space>" ], run = "cd --interactive",                   desc = "Jump interactively" },
 
