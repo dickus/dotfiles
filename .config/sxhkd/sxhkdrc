@@ -88,26 +88,26 @@ super + shift + ctrl + {h,j,k,l}
 
 # System volume up
 super + equal
-    ./.config/scripts/volume.sh up
+    ./.config/scripts/system/volume.sh up
 
 # System volume down
 super + minus
-    ./.config/scripts/volume.sh down
+    ./.config/scripts/system/volume.sh down
     
 # System mute toggle
 ctrl + alt + equal
-    ./.config/scripts/volume.sh mute
+    ./.config/scripts/system/volume.sh mute
 
 # Microphone mute toggle
 ctrl + alt + minus
-    ./.config/scripts/microphone.sh
+    ./.config/scripts/system/microphone.sh
 
 # Screenshot
 Print
-    ~/.config/scripts/screenshoter.sh screen
+    ~/.config/scripts/system/screenshoter.sh screen
 
 super + shift + s
-    ~/.config/scripts/screenshoter.sh region
+    ~/.config/scripts/system/screenshoter.sh region
 
 # Shortcuts
 super + w 
@@ -129,5 +129,5 @@ super + space
     rofimoji --action=copy-unicode --files=$HOME/.local/share/rofimoji/data/symbols.additional.csv
 
 super + p
-    kitty -e ~/.config/scripts/vpn.sh
+    kitty -e ~/.config/scripts/system/vpn.sh
 

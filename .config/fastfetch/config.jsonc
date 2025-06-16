@@ -37,7 +37,7 @@
             "type": "command",
             "key": "pkgs",
             "shell": "/bin/bash",
-            "text": "$HOME/.config/scripts/pkgs.sh",
+            "text": "$HOME/.config/scripts/system/pkgs.sh",
             "keyColor": "34"
         },
         {
@@ -50,7 +50,7 @@
             "type": "command",
             "key": "exists",
             "shell": "/bin/bash",
-            "text": "$HOME/.config/scripts/creation_time.sh",
+            "text": "$HOME/.config/scripts/system/creation_time.sh",
             "keyColor": "34"
         },
         {
