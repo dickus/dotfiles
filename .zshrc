@@ -85,7 +85,13 @@ alias fuck="touch $HOME/.config/scripts/fuck"
 alias rng="~/.config/scripts/random.sh"
 
 # flatpaks management
-alias fpi="flatpak remote-ls flathub --columns=application | fzf --multi --preview 'flatpak remote-info flathub {1}' --preview-window=down:75% | xargs -ro flatpak install -y"
+fpi() {
+    flatpak remote-ls flathub --columns=application,branch |
+    awk '!x[$1]++' |
+    fzf --multi --preview 'flatpak remote-info flathub {1}/x86_64/{2}' --preview-window=down:75% --with-nth 1 |
+    xargs -ro flatpak install -y
+}
+
 alias fpr="flatpak list --app --columns=application | fzf --multi --preview 'flatpak info {1}' --preview-window=down:75% | xargs -ro flatpak uninstall -y"
 
 export SUDO_EDITOR="nvim"
