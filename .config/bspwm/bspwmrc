@@ -21,6 +21,8 @@ bspc rule -a TelegramDesktop desktop='^1'
 bspc rule -a LibreWolf desktop='^2'
 bspc rule -a librewolf desktop='^2'
 
+bspc rule -a resolve desktop='^3'
+
 bspc rule -a Steam desktop='^4'
 bspc rule -a steam desktop='^4'
 bspc rule -a steamwebhelper desktop='^4'
