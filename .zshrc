@@ -65,9 +65,6 @@ alias or="cd ~/.docs && nvim drafts/*.md"
 # create a python environment
 alias pe="python -m venv"
 
-# add new wallpaper
-alias wall="~/.config/scripts/wallpapers/new_wallpaper.sh"
-
 # system update
 alias upd="yay; flatpak update"
 
@@ -89,6 +86,7 @@ fpi() {
     flatpak remote-ls flathub --columns=application,branch |
     awk '!x[$1]++' |
     fzf --multi --preview 'flatpak remote-info flathub {1}/x86_64/{2}' --preview-window=down:75% --with-nth 1 |
+    awk '{print $1}' |
     xargs -ro flatpak install -y
 }
 
