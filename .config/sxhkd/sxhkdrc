@@ -131,3 +131,5 @@ super + space
 super + p
     kitty -e ~/.config/scripts/system/vpn.sh
 
+super + shift + b
+    ~/.config/scripts/wallpapers/new_wallpaper.sh
