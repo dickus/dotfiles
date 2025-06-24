@@ -18,20 +18,10 @@ require("obsidian").setup({
         min_chars = 2,
     },
 
-    mappings = {
-        ["<CR>"] = {
-            action = function()
-                return require("obsidian").util.gf_passthrough()
-            end,
-            opts = { noremap = false, expr = true, buffer = true },
-        },
-
-        ["<leader>ch"] = {
-            action = function()
-                return require("obsidian").util.toggle_checkbox()
-            end,
-            opts = { buffer = true },
-        },
+    callbacks = {
+        enter_note = function(_, note)
+            vim.keymap.set("n", "<leader>ch", "<cmd>Obsidian toggle_checkbox<CR>", { buffer = note.bufnr, desc = "Toggle checkbox" })
+        end,
     },
 
     wiki_link_func = function(opts)
