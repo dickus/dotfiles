@@ -1,0 +1,125 @@
+@define-color bg-color-0 rgba(60, 56, 54, 0.9);
+@define-color bg-color-1 rgba(69, 133, 136, 0.8);
+@define-color bg-color-2 rgba(157, 0, 6, 0.9);
+@define-color text rgba(251, 241, 199, 1);
+@define-color green rgba(121, 116, 14, 0.8);
+@define-color blue rgba(69, 133, 136, 1);
+@define-color shadow rgba(60, 56, 54, 1);
+@define-color disabled rgba(213, 196, 161, 1);
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: SFMono Nerd Font Mono;
+    font-size: 14px;
+    min-height: 22px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty #window {
+    background: transparent;
+    box-shadow: none;
+}
+
+#window {
+    background: @green;
+    padding: 0px 12px;
+    margin: 0px 8px 5px 0px;
+    color: @text;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-apps {
+    padding: 0px 12px;
+    margin: 0px 8px 5px 6px;
+    background: @bg-color-1;
+    color: @text;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#workspaces {
+    transition: none;
+    background: @bg-color-0;
+    margin: 0px 8px 5px 0px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#workspaces button:hover {
+    background: @disabled;
+}
+
+#workspaces button.persistent {
+    color: @blue;
+}
+
+#workspaces button.empty {
+    color: @alt-text;
+}
+
+#workspaces button.active {
+    color: @text;
+    background-color: @bg-color-1;
+}
+
+#workspaces button.urgent {
+    color: @text;
+    background-color: @bg-color-2;
+}
+
+#language {
+    transition: none;
+    padding: 0px 12px;
+    color: @text;
+    background: @bg-color-1;
+    margin: 0px 8px 5px 0px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#clock {
+    padding: 0px 12px;
+    transition: none;
+    color: @text;
+    background: @bg-color-1;
+    margin: 0px 8px 5px 0px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#pulseaudio {
+    padding: 0px 12px;
+    transition: none;
+    color: @text;
+    background: @bg-color-1;
+    margin: 0px 8px 5px 0px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#pulseaudio.muted,
+#pulseaudio.source-muted {
+    background-color: @bg-color-2;
+    color: @text;
+}
+
+#tray {
+    padding: 0px 12px;
+    transition: none;
+    color: @blue;
+    background: @bg-color-0;
+    margin: 0px 8px 5px 0px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-powermenu {
+    padding: 0px 12px;
+    margin: 0px 6px 5px 0px;
+    background: @bg-color-1;
+    color: @text;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+

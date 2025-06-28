@@ -1,0 +1,110 @@
+{
+    "layer": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "position": "top",
+    "height": 30,
+    "margin-top": 10,
+    "margin-left": 2,
+    "margin-right": 2,
+    "spacing": "4",
+    "modules-left": ["custom/apps", "hyprland/workspaces", "hyprland/window"],
+
+    "modules-center": ["clock"],
+
+    "modules-right": ["pulseaudio", "hyprland/language", "tray", "custom/powermenu"],
+
+    "custom/apps": {
+        "format": "",
+
+        "on-click": "rofi -modi drun -show drun -line-padding 4 -columns 2 -padding 50 -hide-scrollbar -font 'Source Code Pro 10'",
+
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "0",
+            "default": "×"
+        },
+
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+
+    "hyprland/window": {
+        "max-length": 50,
+        "separate-outputs": true
+    },
+
+    "hyprland/language": {
+        "format": "{short}",
+        "max-length": 18
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 5
+    },
+
+    "clock": {
+        "format": "{:%H%M | %Y-%m-%d}"
+    },
+
+    "network": {
+        "interface": "wlan0", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 10, // %, can be a float
+        "format": "{volume}%{icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/powermenu": {
+        "format": "⏻",
+        "on-click": "$HOME/.config/rofi/powermenu.sh &"
+    }
+}
