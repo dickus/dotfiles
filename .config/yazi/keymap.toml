@@ -19,32 +19,32 @@ keymap = [
     { on = "l", run = "enter", desc = "Enter the child directory" },
 
     # Toggle
-    { on = "<Space>", run = [ "toggle", "arrow 1" ],      desc = "Toggle the current selection state" },
+    { on = "<Space>",      run = [ "toggle", "arrow 1" ], desc = "Toggle the current selection state" },
     { on = [ "m", "k" ],   run = "toggle_all",            desc = "Select all files" },
 
     # Spotting
     { on = "<Tab>", run = "spot", desc = "Spot hovered file" },
 
     # Operation
-    { on = "o",          run = "open",                           desc = "Open selected files" },
-    { on = "O",          run = "open --interactive",             desc = "Open selected files interactively" },
-    { on = [ "d", "c" ], run = "yank",                           desc = "Yank selected files to copy" },
-    { on = [ "d", "m" ], run = "yank --cut",                     desc = "Yank selected files to cut" },
-    { on = "p",          run = "paste",                          desc = "Paste yanked files" },
-    { on = "P",          run = "paste --force",                  desc = "Paste yanked files (overwrite if the destination exists)" },
-    { on = "-",          run = "link",                           desc = "Symlink the absolute path of yanked files" },
-    { on = "_",          run = "hardlink",                       desc = "Hardlink yanked files" },
-    { on = "<Esc>",      run = "unyank",                         desc = "Cancel the yank status" },
-    { on = [ "d", "d" ], run = "remove",                         desc = "Trash selected files" },
-    { on = [ "D", "D" ], run = "remove --permanently",           desc = "Permanently delete selected files" },
-    { on = "a",          run = "create",                         desc = "Create a file (ends with / for directories)" },
-    { on = "r",          run = "rename --cursor=before_ext",     desc = "Rename selected file(s)" },
-    { on = ":",          run = "shell --interactive",            desc = "Run a shell command" },
-    { on = ";",          run = "shell --block --interactive",    desc = "Run a shell command (block until finishes)" },
-    { on = ".",          run = "hidden toggle",                  desc = "Toggle the visibility of hidden files" },
-    { on = [ "s", "f" ], run = "search --via=fd",                desc = "Search files by name via fd" },
-    { on = [ "s", "c" ], run = "search --via=rg",                desc = "Search files by content via ripgrep" },
-    { on = [ "s", "d" ], run = "plugin zoxide",                  desc = "Jump to a directory via zoxide" },
+    { on = "o",          run = "open",                        desc = "Open selected files" },
+    { on = "O",          run = "open --interactive",          desc = "Open selected files interactively" },
+    { on = [ "d", "c" ], run = "yank",                        desc = "Yank selected files to copy" },
+    { on = [ "d", "m" ], run = "yank --cut",                  desc = "Yank selected files to cut" },
+    { on = "p",          run = "paste",                       desc = "Paste yanked files" },
+    { on = "P",          run = "paste --force",               desc = "Paste yanked files (overwrite if the destination exists)" },
+    { on = "-",          run = "link",                        desc = "Symlink the absolute path of yanked files" },
+    { on = "_",          run = "hardlink",                    desc = "Hardlink yanked files" },
+    { on = "<Esc>",      run = "unyank",                      desc = "Cancel the yank status" },
+    { on = [ "d", "d" ], run = "remove",                      desc = "Trash selected files" },
+    { on = [ "D", "D" ], run = "remove --permanently",        desc = "Permanently delete selected files" },
+    { on = "a",          run = "create",                      desc = "Create a file (ends with / for directories)" },
+    { on = "r",          run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" },
+    { on = ":",          run = "shell --interactive",         desc = "Run a shell command" },
+    { on = ";",          run = "shell --block --interactive", desc = "Run a shell command (block until finishes)" },
+    { on = ".",          run = "hidden toggle",               desc = "Toggle the visibility of hidden files" },
+    { on = [ "s", "f" ], run = "search --via=fd",             desc = "Search files by name via fd" },
+    { on = [ "s", "c" ], run = "search --via=rg",             desc = "Search files by content via ripgrep" },
+    { on = [ "s", "d" ], run = "plugin zoxide",               desc = "Jump to a directory via zoxide" },
 
     # Copy
     { on = [ "c", "c" ], run = "copy path",             desc = "Copy the file path" },
@@ -87,14 +87,13 @@ keymap = [
     { on = [ "g", "<Space>" ], run = "cd --interactive",                   desc = "Jump interactively" },
 
     # Extra
-    { on = [ "s", "b" ], run = "shell 'feh --no-fehbg --bg-fill $@'",                                  desc = "Set wallpaper" },
     { on = [ "m", "e" ], run = "shell 'chmod +x $@'",                                                  desc = "Make file executable" },
     { on = [ "D", "T" ], run = "shell 'rm -rf $HOME/.local/share/Trash/*'",                            desc = "Clean trash" },
     { on = [ "w" ],      run = "tasks_show",                                                           desc = "Show task manager" },
     { on = [ "~" ],      run = "help",                                                                 desc = "Open help" },
     { on = [ "m", "i" ], run = "shell 'mkisofs -J -r -o \"$@.iso\" \"$@\"'",                           desc = "Create an iso file" },
-    { on = [ "m", "m" ], run = "shell '$HOME/.config/scripts/yazi/isomount.sh \"$@\"' &> /dev/null &", desc = "Mount an iso file to $HOME/mnt" },
-    { on = [ "m", "u" ], run = "shell '$HOME/.config/scripts/yazi/isounmount.sh'",                     desc = "Unmount iso file from $HOME/mnt" },
+    { on = [ "m", "m" ], run = "shell '$HOME/.config/yazi/scripts/isomount.sh \"$@\"' &> /dev/null &", desc = "Mount an iso file to $HOME/mnt" },
+    { on = [ "m", "u" ], run = "shell '$HOME/.config/yazi/scripts/isounmount.sh'",                     desc = "Unmount iso file from $HOME/mnt" },
 ]
 
 [tasks]
