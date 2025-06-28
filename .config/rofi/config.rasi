@@ -1,1 +1,14 @@
 @theme "~/.config/rofi/themes/latte.rasi"
+
+configuration {
+    font:        "SFMono Nerd Font Mono 10";
+    line-margin: 10;
+
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   ">";
+    display-window: "";
+    display-combi:  "";
+    show-icons:     true;
+}
+
