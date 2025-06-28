@@ -79,3 +79,5 @@ xsetroot -cursor_name left_ptr &
 killall -q polybar
 polybar
 
+fcrontab ~/.config/cron/xcrontab
+
