@@ -1,12 +1,10 @@
 #!/bin/env bash
 
-# Options for powermenu
 lock="⏾ Lock"
 logout="⏼ Logout"
 shutdown="⏻ Shutdown"
 reboot="⟳ Reboot"
 
-# Get answer from user via rofi
 selected_option=$(echo "$lock
 $logout
 $reboot
@@ -15,15 +13,23 @@ $shutdown" | rofi -dmenu\
                   -p "Power"\
                   -config "~/.config/rofi/powermenu.rasi"\
                   -font "SFMono Nerd Font Mono 10"\
-                  -scrollbar-width "0" )
+                  -scrollbar-width "0"
+)
 
-# Do something based on selected option
 if [ "$selected_option" == "$lock" ]
 then
-    ~/.config/bspwm/scripts/i3lock-fancy/i3lock-fancy.sh
+    if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+        hyprlock
+    else
+        ~/.config/bspwm/scripts/i3lock-fancy/i3lock-fancy.sh
+    fi
 elif [ "$selected_option" == "$logout" ]
 then
-    bspc quit
+    if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+        hyprctl dispatch exit
+    else
+        bspc quit
+    fi
 elif [ "$selected_option" == "$shutdown" ]
 then
     systemctl poweroff
