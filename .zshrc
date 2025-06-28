@@ -59,7 +59,6 @@ alias theme="~/.config/scripts/theme_change/theme_changer.sh"
 
 # notes workflow
 alias ww="cd ~/.docs && nvim ."
-alias on="~/.config/scripts/obsidian/new_file.sh"
 alias or="cd ~/.docs && nvim drafts/*.md"
 
 # create a python environment
