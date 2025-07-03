@@ -1,8 +1,0 @@
-@reboot $HOME/.config/scripts/theme_change/check_time.sh
-
-*/10 * * * * $HOME/.config/scripts/wallpapers/wayland_wrapper.sh
-
-00 8 * * * $HOME/.config/scripts/theme_change/theme_schedule.sh light
-
-30 19 * * * $HOME/.config/scripts/theme_change/theme_schedule.sh dark
-
