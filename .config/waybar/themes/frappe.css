@@ -1,6 +1,7 @@
 @define-color bg-color-0 rgba(48, 52, 70, 0.9);
 @define-color bg-color-1 rgba(140, 170, 238, 0.8);
 @define-color bg-color-2 rgba(231, 130, 132, 0.9);
+@define-color bg-color-3 rgba(229, 200, 144, 0.9);
 @define-color text rgba(48, 52, 70, 1);
 @define-color alt-text rgba(239, 241, 245, 1);
 @define-color green rgba(166, 209, 137, 0.8);
@@ -16,44 +17,15 @@
     min-height: 22px;
 }
 
-window#waybar {
-    background: transparent;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-window#waybar.empty #window {
-    background: transparent;
-    box-shadow: none;
-}
-
-#window {
-    background: @green;
-    padding: 0px 12px;
-    margin: 0px 8px 5px 0px;
-    color: @text;
-    box-shadow: 1px 1px 3px 0px @shadow;
-}
-
-#custom-apps {
-    padding: 0px 12px;
-    margin: 0px 8px 5px 6px;
-    background: @bg-color-1;
-    color: @text;
-    box-shadow: 1px 1px 3px 0px @shadow;
-}
-
 #workspaces {
     transition: none;
     background: @bg-color-0;
-    margin: 0px 8px 5px 0px;
+    margin: 0px 4px 5px 4px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #workspaces button:hover {
-    background: @green;
+    background: @disabled;
 }
 
 #workspaces button.persistent {
@@ -74,12 +46,24 @@ window#waybar.empty #window {
     background-color: @bg-color-2;
 }
 
-#language {
-    transition: none;
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty #window {
+    background: transparent;
+    box-shadow: none;
+}
+
+#window {
+    background: @green;
     padding: 0px 12px;
+    margin: 0px 4px 5px 4px;
     color: @text;
-    background: @bg-color-1;
-    margin: 0px 8px 5px 0px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
@@ -88,7 +72,7 @@ window#waybar.empty #window {
     transition: none;
     color: @text;
     background: @bg-color-1;
-    margin: 0px 8px 5px 0px;
+    margin: 0px 4px 5px 4px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
@@ -97,7 +81,7 @@ window#waybar.empty #window {
     transition: none;
     color: @text;
     background: @bg-color-1;
-    margin: 0px 8px 5px 0px;
+    margin: 0px 4px 5px 4px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
@@ -107,20 +91,159 @@ window#waybar.empty #window {
     color: @text;
 }
 
+#language {
+    transition: none;
+    padding: 0px 12px;
+    color: @alt-text;
+    background: @bg-color-0;
+    margin: 0px 4px 5px 4px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
 #tray {
     padding: 0px 12px;
     transition: none;
     color: @blue;
     background: @bg-color-0;
-    margin: 0px 8px 5px 0px;
+    margin: 0px 4px 5px 4px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-apps {
+    padding: 0px 12px;
+    margin: 0px 4px 5px 6px;
+    background: @bg-color-1;
+    color: @text;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-powermenu {
     padding: 0px 12px;
-    margin: 0px 6px 5px 0px;
+    margin: 0px 6px 5px 4px;
     background: @bg-color-1;
     color: @text;
     box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-notifications {
+    padding: 0px 12px;
+    margin: 0px 4px 5px 4px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-notifications.enabled {
+    color: @text;
+    background: @green;
+}
+
+#custom-notifications.disabled {
+    color: @text;
+    background: @disabled;
+}
+
+#custom-network {
+    padding: 0px 12px;
+    font-size: 20px;
+    margin: 0px 4px 5px 4px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-network.connected {
+    color: @text;
+    background: @green;
+}
+
+#custom-network.disconnected {
+    color: @alt-text;
+    background: @disabled;
+}
+
+#custom-network.vpn {
+    color: @alt-text;
+    background: @bg-color-3;
+}
+
+#custom-daylight {
+    padding: 0px 12px;
+    margin: 0px 4px 5px 4px;
+    color: @text;
+    background: @bg-color-3;
+    font-size: 20px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-daylight.on {
+    background: @bg-color-2;
+}
+
+#custom-record {
+    padding: 0px 12px;
+    margin: 0px 4px 5px 4px;
+    font-size: 20px;
+    background: @bg-color-1;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-record.on {
+    color: @bg-color-2;
+}
+
+#custom-record.off {
+    color: @text;
+}
+
+#custom-gamepad {
+    padding: 0px 12px;
+    margin: 0px 4px 5px 4px;
+    font-size: 20px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-gamepad.high {
+    background: @green;
+}
+
+#custom-gamepad.mid {
+    background: @bg-color-3;
+}
+
+#custom-gamepad.low {
+    background: @bg-color-2;
+    animation: blink 2s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    0% {
+        color: @alt-text;
+        background: @bg-color-0;
+    }
+    50% {
+        background: @bg-color-2;
+    }
+    100% {
+        color: @alt-text;
+        background: @bg-color-0;
+    }
+}
+
+#custom-pomodoro {
+    padding: 0px 12px;
+    margin: 0px 4px 5px 4px;
+    color: @text;
+    background: @disabled;
+    font-size: 20px;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-pomodoro.on_work {
+    color: @text;
+    font-size: 18px;
+    background: @bg-color-2;
+}
+
+#custom-pomodoro.on_chill {
+    color: @text;
+    font-size: 18px;
+    background: @green;
 }
 
