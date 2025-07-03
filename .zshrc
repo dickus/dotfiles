@@ -65,14 +65,11 @@ alias or="cd ~/.docs && nvim drafts/*.md"
 alias pe="python -m venv"
 
 # system update
-alias upd="yay; flatpak update"
+alias upd="paru; flatpak update"
 
-# stop misspelling yay you shithead
-alias ayy="echo 'limao'"
-
-# yay management
-alias yai="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
-alias yar="yay -Qq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -Rns"
+# paru management
+alias pai="paru -Slq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75% | xargs -ro paru -S"
+alias par="paru -Qq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75% | xargs -ro paru -Rns"
 
 # in case if something breaks
 alias fuck="touch $HOME/.config/scripts/fuck"
