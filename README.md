@@ -51,8 +51,9 @@ My dotfiles for a bunch of apps.
 * [hyprsunset](https://github.com/hyprwm/hyprsunset)
 * [swww](https://github.com/LGFae/swww)
 * [waybar](https://github.com/Alexays/Waybar)
+* [wf-recorder](https://github.com/ammen99/wf-recorder)
 * [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
-* `xdg-desktop-portal-hyprland` + `xdg-desktop-portal-gtk`
+* `xdg-desktop-portal-wlr` + `xdg-desktop-portal-hyprland` + `xdg-desktop-portal-gtk`
 
 
 ## Installation
