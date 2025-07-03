@@ -11,17 +11,9 @@
     "spacing": "4",
     "modules-left": ["custom/apps", "hyprland/workspaces", "hyprland/window"],
 
-    "modules-center": ["clock"],
+    "modules-center": ["clock", "custom/notifications"],
 
-    "modules-right": ["pulseaudio", "hyprland/language", "tray", "custom/powermenu"],
-
-    "custom/apps": {
-        "format": "",
-
-        "on-click": "rofi -modi drun -show drun -line-padding 4 -columns 2 -padding 50 -hide-scrollbar -font 'Source Code Pro 10'",
-
-        "tooltip": false
-    },
+    "modules-right": ["custom/gamepad", "custom/pomodoro", "custom/daylight", "custom/record", "pulseaudio", "hyprland/language", "custom/network", "tray", "custom/powermenu"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -56,7 +48,24 @@
 
     "hyprland/window": {
         "max-length": 50,
-        "separate-outputs": true
+        "separate-outputs": true,
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%H%M | %Y-%m-%d}",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 10, // %, can be a float
+        "format": "{volume}% {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "on-click": "~/.config/scripts/system/volume.sh mute",
+        "on-click-right": "~/.config/scripts/system/microphone.sh",
+        "tooltip": false
     },
 
     "hyprland/language": {
@@ -69,42 +78,68 @@
         "spacing": 5
     },
 
-    "clock": {
-        "format": "{:%H%M | %Y-%m-%d}"
-    },
-
-    "network": {
-        "interface": "wlan0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-
-    "pulseaudio": {
-        // "scroll-step": 10, // %, can be a float
-        "format": "{volume}%{icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}%",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+    "custom/apps": {
+        "format": "",
+        "on-click": "rofi -modi drun -show drun -line-padding 4 -columns 2 -padding 50 -hide-scrollbar -font 'Source Code Pro 10'",
+        "tooltip": false
     },
 
     "custom/powermenu": {
         "format": "⏻",
-        "on-click": "$HOME/.config/rofi/powermenu.sh &"
-    }
+        "on-click": "$HOME/.config/rofi/powermenu.sh &",
+        "tooltip": false
+    },
+
+    "custom/notifications": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/dunst.sh",
+        "on-click": "dunstctl set-paused toggle",
+        "restart-interval": 1,
+        "return-type": "json"
+    },
+
+    "custom/network": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/network.sh",
+        "restart-interval": 1,
+        "on-click": "~/.config/waybar/scripts/network.sh toggle",
+        "on-click-right": "~/.config/scripts/system/vpn.sh",
+        "return-type": "json"
+    },
+
+    "custom/daylight": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/daylight.sh",
+        "restart-interval": 1,
+        "on-click": "~/.config/waybar/scripts/daylight.sh toggle",
+        "return-type": "json"
+    },
+
+    "custom/record": {
+        "format": "󰑊",
+        "exec": "~/.config/waybar/scripts/record/record_status.sh",
+        "restart-interval": 1,
+        "on-click": "~/.config/waybar/scripts/record/record.sh",
+        "return-type": "json",
+        "tooltip": false
+    },
+
+    "custom/gamepad": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/gamepad.sh",
+        "restart-interval": 1,
+        "return-type": "json"
+    },
+
+    "custom/pomodoro": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/pomodoro/pom_status.sh",
+        "restart-interval": 1,
+        "tooltip": true,
+        "on-click": "~/.config/waybar/scripts/pomodoro/pom.sh start",
+        "on-scroll-up": "~/.config/waybar/scripts/pomodoro/pom.sh set_plus",
+        "on-scroll-down": "~/.config/waybar/scripts/pomodoro/pom.sh set_minus",
+        "on-click-right": "~/.config/waybar/scripts/pomodoro/pom.sh reset",
+        "return-type": "json"
+    },
 }
