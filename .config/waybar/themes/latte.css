@@ -20,7 +20,7 @@
 #workspaces {
     transition: none;
     background: @bg-color-0;
-    margin: 0px 4px 5px 4px;
+    margin: 0px 4px 5px 2px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
@@ -112,7 +112,7 @@ window#waybar.empty #window {
 
 #custom-apps {
     padding: 0px 12px;
-    margin: 0px 4px 5px 6px;
+    margin: 0px 7px 5px 6px;
     background: @bg-color-1;
     color: @text;
     box-shadow: 1px 1px 3px 0px @shadow;
@@ -243,5 +243,104 @@ window#waybar.empty #window {
     color: @text;
     font-size: 18px;
     background: @green;
+}
+
+#custom-todo {
+    padding: 0px 12px;
+    margin: 0px 4px 5px 4px;
+    color: @text;
+    font-size: 18px;
+    background: @bg-color-1;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-color {
+    padding: 0px 12px;
+    margin: 0px 4px 5px 4px;
+    color: @text;
+    font-size: 18px;
+    background: @bg-color-3;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-web {
+    padding: 5px 11px;
+    margin: 4px 4px 4px 4px;
+    color: @text;
+    font-size: 20px;
+    background: @bg-color-3;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-steam {
+    padding: 5px 11px;
+    margin: 4px 4px 4px 4px;
+    color: @text;
+    font-size: 20px;
+    background: @green;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-telegram {
+    padding: 5px 11px;
+    margin: 4px 4px 4px 4px;
+    color: @text;
+    font-size: 20px;
+    background: @green;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-discord {
+    padding: 5px 11px;
+    margin: 4px 4px 4px 4px;
+    color: @text;
+    font-size: 20px;
+    background: @green;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-davinci {
+    padding: 5px 11px;
+    margin: 4px 4px 4px 4px;
+    color: @text;
+    font-size: 20px;
+    background: @bg-color-3;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-gimp {
+    padding: 5px 11px;
+    margin: 4px 4px 4px 4px;
+    color: @text;
+    font-size: 20px;
+    background: @bg-color-3;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-battlenet {
+    padding: 5px 11px;
+    margin: 4px 4px 4px 4px;
+    color: @text;
+    font-size: 20px;
+    background: @green;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-notes {
+    padding: 5px 11px;
+    margin: 4px 4px 4px 4px;
+    color: @text;
+    font-size: 20px;
+    background: @bg-color-3;
+    box-shadow: 1px 1px 3px 0px @shadow;
+}
+
+#custom-sessionreload {
+    padding: 5px 11px;
+    margin: 4px 4px 4px 4px;
+    color: @text;
+    font-size: 20px;
+    background: @bg-color-2;
+    box-shadow: 1px 1px 3px 0px @shadow;
 }
 
