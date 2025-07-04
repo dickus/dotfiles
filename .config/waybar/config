@@ -1,19 +1,20 @@
-{
+[{
     "layer": "top",
+    "position": "top",
+    "height": 30,
     "mode": "dock",
     "exclusive": true,
     "gtk-layer-shell": true,
-    "position": "top",
-    "height": 30,
     "margin-top": 10,
     "margin-left": 2,
     "margin-right": 2,
     "spacing": "4",
+
     "modules-left": ["custom/apps", "hyprland/workspaces", "hyprland/window"],
 
-    "modules-center": ["clock", "custom/notifications"],
+    "modules-center": ["custom/todo", "clock", "custom/notifications"],
 
-    "modules-right": ["custom/gamepad", "custom/pomodoro", "custom/daylight", "custom/record", "pulseaudio", "hyprland/language", "custom/network", "tray", "custom/powermenu"],
+    "modules-right": ["custom/gamepad", "custom/pomodoro", "custom/color", "custom/daylight", "custom/record", "pulseaudio", "hyprland/language", "custom/network", "custom/sessionreload", "tray", "custom/powermenu"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -49,7 +50,7 @@
     "hyprland/window": {
         "max-length": 50,
         "separate-outputs": true,
-        "tooltip": false
+        "tooltip": true
     },
 
     "clock": {
@@ -81,13 +82,13 @@
     "custom/apps": {
         "format": "",
         "on-click": "rofi -modi drun -show drun -line-padding 4 -columns 2 -padding 50 -hide-scrollbar -font 'Source Code Pro 10'",
-        "tooltip": false
+        "tooltip-format": "App launcher."
     },
 
     "custom/powermenu": {
         "format": "⏻",
         "on-click": "$HOME/.config/rofi/powermenu.sh &",
-        "tooltip": false
+        "tooltip-format": "Shutdow, reboot, logout and lock screen."
     },
 
     "custom/notifications": {
@@ -95,7 +96,8 @@
         "exec": "~/.config/waybar/scripts/dunst.sh",
         "on-click": "dunstctl set-paused toggle",
         "restart-interval": 1,
-        "return-type": "json"
+        "return-type": "json",
+        "tooltip-format": "LMB to turn off notifications."
     },
 
     "custom/network": {
@@ -104,7 +106,8 @@
         "restart-interval": 1,
         "on-click": "~/.config/waybar/scripts/network.sh toggle",
         "on-click-right": "~/.config/scripts/system/vpn.sh",
-        "return-type": "json"
+        "return-type": "json",
+        "tooltip-format": "LMB to connect/disconnect from default Ethernet.\nRMB to connect/disconnect from VPN."
     },
 
     "custom/daylight": {
@@ -112,7 +115,8 @@
         "exec": "~/.config/waybar/scripts/daylight.sh",
         "restart-interval": 1,
         "on-click": "~/.config/waybar/scripts/daylight.sh toggle",
-        "return-type": "json"
+        "return-type": "json",
+        "tooltip-format": "Daylight switcher."
     },
 
     "custom/record": {
@@ -121,14 +125,15 @@
         "restart-interval": 1,
         "on-click": "~/.config/waybar/scripts/record/record.sh",
         "return-type": "json",
-        "tooltip": false
+        "tooltip-format": "Screen recorder."
     },
 
     "custom/gamepad": {
         "format": "{}",
         "exec": "~/.config/waybar/scripts/gamepad.sh",
         "restart-interval": 1,
-        "return-type": "json"
+        "return-type": "json",
+        "tooltip": true
     },
 
     "custom/pomodoro": {
@@ -142,4 +147,103 @@
         "on-click-right": "~/.config/waybar/scripts/pomodoro/pom.sh reset",
         "return-type": "json"
     },
-}
+
+    "custom/todo": {
+        "format": "",
+        "exec": "~/.config/waybar/scripts/todos/todos.sh",
+        "on-click": "~/.config/waybar/scripts/todos/open_todo.sh",
+        "restart-interval": 1,
+        "tooltip": true,
+        "return-type": "json"
+    },
+
+    "custom/color": {
+        "format": "",
+        "on-click": "hyprpicker -a -f hex -r; dunstify -t 5000 \"Color picked\" \"$(wl-paste)\"",
+        "tooltip-format": "Color picker."
+    },
+
+    "custom/sessionreload": {
+        "format": "󰑓",
+        "on-click": "hyprctl reload",
+        "tooltip-format": "Reload session"
+    },
+},
+{
+    "layer": "top",
+    "position": "left",
+    "width": 10,
+    "mode": "dock",
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "margin-top": 4,
+    "margin-left": 4,
+    "margin-bottom": 4,
+
+    "modules-left": ["custom/web", "custom/davinci", "custom/gimp", "custom/notes"],
+
+    "modules-center": ["custom/steam", "custom/telegram", "custom/discord", "custom/battlenet"],
+
+    "modules-right": ["custom/yabrowser", "custom/zoom"],
+
+    "custom/web": {
+        "format": "",
+        "on-click": "librewolf",
+        "tooltip-format": "LibreWolf"
+    },
+
+    "custom/steam": {
+        "format": "",
+        "on-click": "~/.config/waybar/runners/steam.sh",
+        "tooltip-format": "Steam"
+    },
+
+    "custom/telegram": {
+        "format": "",
+        "on-click": "org.telegram.desktop",
+        "tooltip-format": "Telegram"
+    },
+
+    "custom/discord": {
+        "format": "",
+        "on-click": "dev.vencord.Vesktop",
+        "tooltip-format": "Discord"
+    },
+
+    "custom/davinci": {
+        "format": "",
+        "on-click": "~/.config/scripts/run/resolve.sh",
+        "tooltip-format": "DaVinci Resolve"
+    },
+
+    "custom/gimp": {
+        "format": "",
+        "on-click": "org.gimp.GIMP",
+        "tooltip-format": "GIMP"
+    },
+
+    "custom/battlenet": {
+        "format": "",
+        "on-click": "~/.config/waybar/runners/battlenet.sh",
+        "tooltip-format": "Battle.net"
+    },
+
+    "custom/notes": {
+        "format": "󱓧",
+        "on-click": "~/.config/waybar/runners/notes.sh",
+        "tooltip-format": "Notes"
+    },
+
+    "custom/yabrowser": {
+        "format": "󰖟",
+        "on-click": "ru.yandex.Browser",
+        "tooltip-format": "Yandex Browser"
+    },
+
+    "custom/zoom": {
+        "format": "",
+        "on-click": "~/.config/waybar/runners/zoom.sh",
+        "tooltip-format": "Zoom"
+    },
+}]
+
