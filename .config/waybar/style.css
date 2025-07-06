@@ -336,8 +336,8 @@ window#waybar.empty #window {
 }
 
 #custom-sessionreload {
-    padding: 5px 11px;
-    margin: 0px 4px 5px 4px;
+    padding: 0px 12px;
+    margin: 0px 4px 4px 4px;
     color: @text;
     font-size: 20px;
     background: @bg-color-3;
