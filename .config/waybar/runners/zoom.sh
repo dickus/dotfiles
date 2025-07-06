@@ -1,4 +1,4 @@
 #!/bin/bash
 
-env XDG_SESSION_TYPE="" us.zoom.Zoom
+XDG_SESSION_TYPE="" us.zoom.Zoom
 
