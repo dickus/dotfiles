@@ -4,6 +4,8 @@ TIMER=$1
 CHILL_TIME=5
 
 while true; do
+    dunstify -t 2000 -u criticial "Time to work!"
+
     for (( work = TIMER; work >= 0; work-- )); do
         minutes=$((work / 60))
         seconds=$((work % 60))
@@ -23,7 +25,5 @@ while true; do
 
         sleep 1
     done
-
-    dunstify -t 2000 -u criticial "Time to work!"
 done
 
