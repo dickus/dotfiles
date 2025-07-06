@@ -5,3 +5,4 @@
 .config/nvim/lazy-lock.json
 .local/share/rofimoji/frecency
 .local/share/rofimoji/recent*
+.config/waybar/scripts/pomodoro/status
