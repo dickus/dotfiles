@@ -23,7 +23,7 @@ function precmd() {
 }
 
 
-alias dfs="df -h / /home"
+alias dfs="./.config/scripts/df.sh"
 
 alias vi="nvim"
 
@@ -76,6 +76,9 @@ alias fuck="touch $HOME/.config/scripts/fuck"
 
 # rng, literally
 alias rng="~/.config/scripts/random.sh"
+
+# yt-dlp
+alias yt="yt-dlp"
 
 # flatpaks management
 fpi() {
