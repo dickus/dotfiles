@@ -2,8 +2,8 @@
     monitor = 0
     width = (0, 300)
     height = (0, 300)
-    origin = top-center
-    offset = (0, 18)
+    origin = top-right
+    offset = (200, 18)
 
     follow = none
     indicate_hidden = yes
