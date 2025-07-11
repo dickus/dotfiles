@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STATUS=$(pidof ffmpeg)
+STATUS=$(pidof wf-recorder)
 
 if [[ -z $STATUS ]]; then
     printf '{"class": "off"}'
