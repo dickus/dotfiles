@@ -24,11 +24,7 @@ pdfs = [
 ]
 
 images = [
-    { run = 'nsxiv "$@"', orphan = true },
-]
-
-gifs = [
-    { run = 'nsxiv -a "$@"', orphan = true },
+    { run = 'pwd | swayimg', orphan = true },
 ]
 
 music = [
@@ -56,7 +52,7 @@ prepend_rules = [
     { name = "*.jpg",  use = "images" },
     { name = "*.jpeg", use = "images" },
     { name = "*.webp", use = "images" },
-    { name = "*.gif",  use = "gifs" },
+    { name = "*.gif",  use = "images" },
 
     # music
     { name = "*.mp3",  use = "music" },
