@@ -19,8 +19,8 @@ keymap = [
     { on = "l", run = "enter", desc = "Enter the child directory" },
 
     # Toggle
-    { on = "<Space>",      run = [ "toggle", "arrow 1" ], desc = "Toggle the current selection state" },
-    { on = [ "m", "k" ],   run = "toggle_all",            desc = "Select all files" },
+    { on = "<Space>",    run = [ "toggle", "arrow 1" ], desc = "Toggle the current selection state" },
+    { on = [ "m", "k" ], run = "toggle_all",            desc = "Select all files" },
 
     # Spotting
     { on = "<Tab>", run = "spot", desc = "Spot hovered file" },
@@ -87,13 +87,20 @@ keymap = [
     { on = [ "g", "<Space>" ], run = "cd --interactive",                   desc = "Jump interactively" },
 
     # Extra
-    { on = [ "m", "e" ], run = "shell 'chmod +x $@'",                                                  desc = "Make file executable" },
-    { on = [ "D", "T" ], run = "shell 'rm -rf $HOME/.local/share/Trash/*'",                            desc = "Clean trash" },
-    { on = [ "w" ],      run = "tasks_show",                                                           desc = "Show task manager" },
-    { on = [ "~" ],      run = "help",                                                                 desc = "Open help" },
+    { on = [ "m", "e" ], run = "shell 'chmod +x $@'",                       desc = "Make file executable" },
+    { on = [ "D", "T" ], run = "shell 'rm -rf $HOME/.local/share/Trash/*'", desc = "Clear trash" },
+    { on = [ "~" ],      run = "help",                                      desc = "Open help" },
+
+    # ISO files
     { on = [ "m", "i" ], run = "shell 'mkisofs -J -r -o \"$@.iso\" \"$@\"'",                           desc = "Create an iso file" },
-    { on = [ "m", "m" ], run = "shell '$HOME/.config/yazi/scripts/isomount.sh \"$@\"' &> /dev/null &", desc = "Mount an iso file to $HOME/mnt" },
-    { on = [ "m", "u" ], run = "shell '$HOME/.config/yazi/scripts/isounmount.sh'",                     desc = "Unmount iso file from $HOME/mnt" },
+    { on = [ "m", "m" ], run = "shell '$HOME/.config/scripts/yazi/isomount.sh \"$@\"' &> /dev/null &", desc = "Mount an iso file to $HOME/mnt" },
+    { on = [ "m", "u" ], run = "shell '$HOME/.config/scripts/yazi/isounmount.sh'",                     desc = "Unmount iso file from $HOME/mnt" },
+
+    # Images
+    { on = [ "i", "r" ],     run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" rotate'",      desc = "Rotate image for 90 clockwise" },
+    { on = [ "i", "<S-r>" ], run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" rotate_back'", desc = "Rotate image for 90 counter clockwise" },
+    { on = [ "i", "f" ],     run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" flip'",        desc = "Flip image vertically" },
+    { on = [ "i", "<S-f>" ], run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" flop'",        desc = "Flip image horizontally" },
 ]
 
 [tasks]
