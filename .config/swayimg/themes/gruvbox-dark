@@ -1,0 +1,99 @@
+[general]
+mode       = viewer
+size       = image
+position   = auto
+overlay    = no
+decoration = no
+sigusr1    = reload
+sigusr2    = next_file
+app_id     = swayimg
+
+[viewer]
+window       = #303446e6
+transparency = #303446e6
+scale        = optimal
+position     = center
+antialiasing = mks13
+loop         = yes
+history      = 1
+preload      = 1
+
+[slideshow]
+time         = 3
+window       = auto
+transparency = #303446e6
+scale        = fit
+position     = center
+antialiasing = mks13
+
+[gallery]
+size         = 200
+cache        = 100
+preload      = no
+pstore       = no
+fill         = yes
+antialiasing = mks13
+window       = #303446e6
+background   = #303446e6
+select       = #303446e6
+border       = #458588
+shadow       = #303446
+
+[list]
+order     = alpha
+reverse   = no
+recursive = no
+all       = no
+fsmon     = yes
+
+[font]
+name   = SFMono Nerd Font Mono
+size   = 16
+color  = #fbf1c7
+shadow = #303446
+
+[info]
+show = no
+
+[keys.viewer]
+F1           = help
+k            = prev_file
+j            = next_file
+s            = mode slideshow
+f            = fullscreen
+a            = mode gallery
+Equal        = zoom +10
+Minus        = zoom -10
+z            = zoom fit
+0            = zoom real
+bracketleft  = rotate_left
+bracketright = rotate_right
+v            = flip_vertical
+Shift+v      = flip_horizontal
+i            = info
+q            = exit
+
+[keys.slideshow]
+F1    = help
+k     = prev_file
+j     = next_file
+s     = mode viewer
+f     = fullscreen
+Space = pause
+i     = info
+q     = exit
+
+[keys.gallery]
+F1      = help
+g       = first_file
+Shift+g = last_file
+h       = step_left
+l       = step_right
+k       = step_up
+j       = step_down
+s       = mode slideshow
+f       = fullscreen
+a       = mode viewer
+i       = info
+q       = exit
+
