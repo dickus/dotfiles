@@ -27,6 +27,7 @@ My dotfiles for a bunch of apps.
 * [rofi](https://github.com/davatorium/rofi)
 * [rofi-calc](https://github.com/svenstaro/rofi-calc)
 * [sf-mono-nerd](https://github.com/epk/SF-Mono-Nerd-Font)
+* [swayimg](https://github.com/artemsen/swayimg)
 * [swww](https://github.com/LGFae/swww)
 * [waybar](https://github.com/Alexays/Waybar)
 * [wf-recorder](https://github.com/ammen99/wf-recorder)
