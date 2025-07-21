@@ -37,10 +37,6 @@ alias fetch="fastfetch"
 # proper calendar
 alias cal="cal -m"
 
-# cat to bat
-alias bat="bat --theme gruvbox-light"
-alias cat="bat"
-
 alias grep="rg"
 
 # copying, moving, removing
