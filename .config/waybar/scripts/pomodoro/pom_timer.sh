@@ -1,10 +1,10 @@
 #!/bin/bash
 
 TIMER=$1
-CHILL_TIME=5
+CHILL_TIME=300
 
 while true; do
-    dunstify -t 2000 -u criticial "Time to work!"
+    dunstify -a work -t 2000 -u criticial "Time to work!"
 
     for (( work = TIMER; work >= 0; work-- )); do
         minutes=$((work / 60))
@@ -15,9 +15,9 @@ while true; do
         sleep 1
     done
 
-    dunstify -t 2000 "Time to chill!"
+    dunstify -a chill -t 2000 "Time to chill!"
 
-    for (( chill = TIMER; chill >= 0; chill-- )); do
+    for (( chill = CHILL_TIME; chill >= 0; chill-- )); do
         minutes=$((chill / 60))
         seconds=$((chill % 60))
 
