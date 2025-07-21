@@ -12,6 +12,7 @@ require("plugins.obsidian")
 require("plugins.footnote")
 require("plugins.snacks")
 require("plugins.luasnip")
+require("plugins.comfy-line-numbers")
 
 --colorscheme
 require("themes.latte")
