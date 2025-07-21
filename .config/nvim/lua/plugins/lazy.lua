@@ -87,6 +87,8 @@ local plugins = {
         priority = 1000,
         lazy = false,
     },
+
+    "mluders/comfy-line-numbers.nvim",
 }
 local opts = {}
 
