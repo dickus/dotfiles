@@ -1,4 +1,4 @@
 #!/bin/bash
 
-kitty -e nvim $HOME/.docs
+kitty -T "Notes" -e nvim $HOME/.docs
 
