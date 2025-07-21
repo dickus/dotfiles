@@ -1,4 +1,8 @@
 require("obsidian").setup({
+    legacy_commands = false,
+
+    statusline = { enabled = false },
+
     disable_frontmatter = true,
 
     ui = { enable = false },
@@ -48,11 +52,11 @@ require("obsidian").setup({
 vim.opt_local.conceallevel = 1
 
 --use template in current note
-vim.keymap.set("n", "<leader>oi", ":ObsidianTemplate<CR>", { desc = "Use note template", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ot", ":Obsidian template<CR>", { desc = "Use note template", noremap = true, silent = true })
 --show links within current buffer
-vim.keymap.set("n", "<leader>ol", ":ObsidianLinks<CR>", { desc = "Open links" })
+vim.keymap.set("n", "<leader>ol", ":Obsidian links<CR>", { desc = "Open links" })
 --show backlinks
-vim.keymap.set("n", "<leader>ob", ":ObsidianBacklinks<CR>", { desc = "Open backlinks" })
+vim.keymap.set("n", "<leader>ob", ":Obsidian backlinks<CR>", { desc = "Open backlinks" })
 --open tags search
-vim.keymap.set({ "n", "v" }, "<leader>ot", ":ObsidianTags<CR>", { desc = "Open tags search" })
+vim.keymap.set({ "n", "v" }, "<leader>oh", ":Obsidian tags<CR>", { desc = "Open tags search" })
 
