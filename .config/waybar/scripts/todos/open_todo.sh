@@ -1,4 +1,4 @@
 #!/bin/bash
 
-kitty -T "notes" -e nvim $HOME/.docs/todos.md
+kitty -T "todos" -e nvim $HOME/.docs/todos.md
 
