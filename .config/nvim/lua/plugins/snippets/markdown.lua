@@ -61,7 +61,7 @@ ls.add_snippets("markdown", {
         i(1),
         t("]("),
         d(2, function ()
-            local handle = io.popen("xclip -o -selection clipboard")
+            local handle = io.popen("wl-paste")
             if not handle then return sn(nil, i(1)) end
             local clip = handle:read("*a") or ""
             handle:close()
@@ -82,7 +82,7 @@ ls.add_snippets("markdown", {
     }, {
         t("![["),
         d(2, function ()
-            local handle = io.popen("xclip -o -selection clipboard 2>/dev/null")
+            local handle = io.popen("wl-paste")
 
             if not handle then return sn(nil, i(i)) end
 
@@ -92,7 +92,7 @@ ls.add_snippets("markdown", {
             clip = clip:gsub("%s+$", "")
 
             local pathToRemove = "/home/" .. os.getenv("USER") .. "/.docs/"
-            clip = clip:gsub("^" .. pathToRemove, "")
+            clip = clip:gsub("^" .. pathToRemove, "../")
 
             return sn(nil, i(2, clip))
         end),
@@ -109,7 +109,7 @@ ls.add_snippets("markdown", {
     }, {
         t("[["),
         d(2, function ()
-            local handle = io.popen("xclip -o -selection clipboard 2>/dev/null")
+            local handle = io.popen("wl-paste")
 
             if not handle then return sn(nil, i(i)) end
 
