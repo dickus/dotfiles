@@ -100,6 +100,10 @@ keymap = [
     { on = [ "i", "<S-r>" ], run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" rotate_back'", desc = "Rotate image for 90 counter clockwise" },
     { on = [ "i", "f" ],     run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" flip'",        desc = "Flip image vertically" },
     { on = [ "i", "<S-f>" ], run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" flop'",        desc = "Flip image horizontally" },
+
+    # Archives
+    { on = [ "u", "a" ], run = "shell '7z a \"archive\" -r \"$@\"'",       desc = "Archive to .7z" },
+    { on = [ "u", "z" ], run = "shell '7z a -tzip \"archive\" -r \"$@\"'", desc = "Archive to .zip" },
 ]
 
 [tasks]
