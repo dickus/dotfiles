@@ -39,6 +39,10 @@ runs = [
     { run = 'kitty -e "$@"', orphan = true },
 ]
 
+exes = [
+    { run = 'portproton "$@"', orphan = true },
+]
+
 [open]
 prepend_rules = [
     # docs
@@ -60,5 +64,8 @@ prepend_rules = [
 
     # runs
     { name = "*.run", use = "runs" },
+
+    # exes
+    { name = "*.exe", use = "exes" },
 ]
 
