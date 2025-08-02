@@ -24,7 +24,7 @@ pdfs = [
 ]
 
 images = [
-    { run = 'pwd | swayimg', orphan = true },
+    { run = 'ls | xargs -r swayimg "$@"', orphan = true },
 ]
 
 music = [
