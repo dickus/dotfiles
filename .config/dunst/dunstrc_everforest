@@ -3,7 +3,7 @@
     width = (0, 300)
     height = (0, 300)
     origin = top-right
-    offset = (200, 18)
+    offset = (300, 100)
 
     follow = none
     indicate_hidden = yes
