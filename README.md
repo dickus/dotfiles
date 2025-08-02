@@ -4,10 +4,13 @@ My dotfiles for a bunch of apps.
 
 
 ## Preview
+### Catpuccin latte/frappe
 ![preview](previews/preview_latte_frappe.png)
 
+### Gruvbox/Gruvbox
 ![preview](previews/preview_gruvbox_gruvbox.png)
 
+### Everforest/Nord
 ![preview](previews/preview_everforest_nord.png)
 
 ## Dependencies
