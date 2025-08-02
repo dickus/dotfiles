@@ -10,7 +10,7 @@ while true; do
         minutes=$((work / 60))
         seconds=$((work % 60))
 
-        printf '{"text": "%02d:%02d ", "class": "on_work"}' "$minutes" "$seconds" > $HOME/.config/waybar/scripts/pomodoro/status
+        printf '{"text": "", "class": "on_work"}' "$minutes" "$seconds" > $HOME/.config/waybar/scripts/pomodoro/status
 
         sleep 1
     done
@@ -21,7 +21,7 @@ while true; do
         minutes=$((chill / 60))
         seconds=$((chill % 60))
 
-        printf '{"text": "%02d:%02d ", "class": "on_chill"}' "$minutes" "$seconds" > $HOME/.config/waybar/scripts/pomodoro/status
+        printf '{"text": "", "class": "on_chill"}' "$minutes" "$seconds" > $HOME/.config/waybar/scripts/pomodoro/status
 
         sleep 1
     done

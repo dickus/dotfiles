@@ -10,22 +10,25 @@
 @define-color disabled rgba(213, 196, 161, 1);
 
 * {
-    border: none;
-    border-radius: 0;
-    font-family: SFMono Nerd Font Mono;
-    font-size: 14px;
-    min-height: 22px;
+    border:        none;
+    border-radius: 10;
+    font-family:   SFMono Nerd Font Mono;
+    font-size:     14px;
+    min-height:    22px;
 }
 
 #workspaces {
     transition: none;
     background: @bg-color-0;
-    margin: 0px 4px 5px 2px;
+    margin:     0px 4px 5px 4px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #workspaces button:hover {
-    background: @disabled;
+    color:       @text;
+    background:  @disabled;
+    box-shadow:  inherit;
+    text-shadow: inherit;
 }
 
 #workspaces button.persistent {
@@ -37,12 +40,12 @@
 }
 
 #workspaces button.active {
-    color: @text;
+    color:            @text;
     background-color: @bg-color-1;
 }
 
 #workspaces button.urgent {
-    color: @text;
+    color:            @text;
     background-color: @bg-color-2;
 }
 
@@ -59,126 +62,120 @@ window#waybar.empty #window {
     box-shadow: none;
 }
 
-#window {
-    background: @green;
-    padding: 0px 12px;
-    margin: 0px 4px 5px 4px;
-    color: @text;
-    box-shadow: 1px 1px 3px 0px @shadow;
-}
-
 #clock {
-    padding: 0px 12px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
     transition: none;
-    color: @text;
+    color:      @text;
     background: @bg-color-1;
-    margin: 0px 4px 5px 4px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #pulseaudio {
-    padding: 0px 12px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
     transition: none;
-    color: @text;
+    color:      @text;
     background: @bg-color-1;
-    margin: 0px 4px 5px 4px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #pulseaudio.muted,
 #pulseaudio.source-muted {
     background-color: @bg-color-2;
-    color: @text;
+    color:            @text;
 }
 
 #language {
     transition: none;
-    padding: 0px 12px;
-    color: @text;
-    font-size: 16px;
-    background: @bg-color-1;
-    margin: 0px 4px 5px 4px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
+    color:      @text;
+    background: @green;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #tray {
-    padding: 0px 12px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
     transition: none;
-    color: @blue;
+    color:      @blue;
     background: @bg-color-0;
-    margin: 0px 4px 5px 4px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-apps {
-    padding: 0px 12px;
-    margin: 0px 7px 5px 6px;
+    padding:    5px 8px;
+    margin:     4px 4px 4px 4px;
     background: @bg-color-1;
-    color: @text;
+    color:      @text;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-powermenu {
-    padding: 0px 12px;
-    margin: 0px 6px 5px 4px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
     background: @bg-color-1;
-    color: @text;
+    color:      @text;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-notifications {
-    padding: 0px 12px;
-    font-size: 20px;
-    margin: 0px 4px 5px 4px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-notifications.enabled {
-    color: @text;
+    color:      @text;
     background: @green;
 }
 
 #custom-notifications.disabled {
-    color: @alt-text;
+    color:      @alt-text;
     background: @disabled;
 }
 
 #custom-network {
-    padding: 0px 12px;
-    font-size: 20px;
-    margin: 0px 4px 5px 4px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
+    font-size:  20px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-network.connected {
-    color: @text;
+    color:      @text;
     background: @green;
 }
 
 #custom-network.disconnected {
-    color: @alt-text;
+    color:      @alt-text;
     background: @disabled;
 }
 
 #custom-network.vpn {
-    color: @alt-text;
+    color:      @alt-text;
     background: @bg-color-3;
 }
 
 #custom-daylight {
-    padding: 0px 12px;
-    margin: 0px 4px 5px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @bg-color-3;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
+#custom-daylight.on {
+    background: @bg-color-2;
+}
+
 #custom-record {
-    padding: 0px 12px;
-    margin: 0px 4px 5px 4px;
-    font-size: 20px;
-    background: @bg-color-0;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    font-size:  20px;
+    background: @bg-color-1;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
@@ -187,13 +184,13 @@ window#waybar.empty #window {
 }
 
 #custom-record.off {
-    color: @alt-text;
+    color: @text;
 }
 
 #custom-gamepad {
-    padding: 0px 12px;
-    margin: 0px 4px 5px 4px;
-    font-size: 22px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
+    font-size:  22px;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
@@ -207,157 +204,157 @@ window#waybar.empty #window {
 
 #custom-gamepad.low {
     background: @bg-color-2;
-    animation: blink 2s steps(2, start) infinite;
+    animation:  blink 2s steps(2, start) infinite;
 }
 
 @keyframes blink {
     0% {
-        color: @alt-text;
+        color:      @alt-text;
         background: @bg-color-0;
     }
     50% {
         background: @bg-color-2;
     }
     100% {
-        color: @alt-text;
+        color:      @alt-text;
         background: @bg-color-0;
     }
 }
 
 #custom-pomodoro {
-    padding: 0px 12px;
-    margin: 0px 4px 5px 4px;
-    color: @bg-color-2;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @bg-color-2;
+    font-size:  20px;
     background: @disabled;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-pomodoro.on_work {
-    color: @text;
-    font-size: 18px;
+    color:      @text;
+    font-size:  18px;
     background: @bg-color-2;
 }
 
 #custom-pomodoro.on_chill {
-    color: @text;
-    font-size: 18px;
+    color:      @text;
+    font-size:  18px;
     background: @green;
 }
 
 #custom-todo {
-    padding: 0px 12px;
-    margin: 0px 4px 5px 4px;
-    color: @text;
-    font-size: 18px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
+    color:      @text;
+    font-size:  18px;
     background: @bg-color-1;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-color {
-    padding: 0px 12px;
-    margin: 0px 4px 5px 4px;
-    color: @text;
-    font-size: 18px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  18px;
     background: @bg-color-3;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-web {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @bg-color-3;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-steam {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @green;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-telegram {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @green;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-discord {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @green;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-davinci {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @bg-color-3;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-gimp {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @bg-color-3;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-battlenet {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @green;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-notes {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @bg-color-3;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-sessionreload {
-    padding: 0px 12px;
-    margin: 0px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 8px;
+    margin:     0px 4px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @bg-color-3;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-yabrowser {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @bg-color-2;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
 #custom-zoom {
-    padding: 5px 11px;
-    margin: 4px 4px 4px 4px;
-    color: @text;
-    font-size: 20px;
+    padding:    5px 10px;
+    margin:     4px 7px 4px 4px;
+    color:      @text;
+    font-size:  20px;
     background: @bg-color-2;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
