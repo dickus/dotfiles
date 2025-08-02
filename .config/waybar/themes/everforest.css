@@ -175,7 +175,7 @@ window#waybar.empty #window {
     padding:    5px 10px;
     margin:     4px 7px 4px 4px;
     font-size:  20px;
-    background: @bg-color-0;
+    background: @bg-color-1;
     box-shadow: 1px 1px 3px 0px @shadow;
 }
 
@@ -184,7 +184,7 @@ window#waybar.empty #window {
 }
 
 #custom-record.off {
-    color: @alt-text;
+    color: @text;
 }
 
 #custom-gamepad {
