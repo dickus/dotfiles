@@ -22,15 +22,17 @@
     foreground:       @blue;
     background-color: @white2;
 
-    back:             @white2;
-    text:             @black0;
-    alt-text:         @white2;
+    back:     @white2;
+    text:     @black0;
+    alt-text: @white2;
 }
 
 window {
-    location: center;
-    anchor:   center;
-    border:   0px;
+    location:      center;
+    anchor:        center;
+    border:        2px;
+    border-radius: 10px;
+    border-color:  @blue;
 
     background-color: @white2;
     spacing:          0;
@@ -40,6 +42,7 @@ window {
 }
 
 mainbox {
+    border:   2px;
     spacing:  0;
     children: [inputbar, listview];
 }
@@ -49,7 +52,7 @@ inputbar {
     padding:          8px;
     background-color: @white2;
 
-    border:       2px;
+    border:       0px 0px 2px 0px;
     border-color: @blue;
 }
 
@@ -64,8 +67,7 @@ prompt {
 
 listview {
     padding:          8px;
-    border-color:     @blue;
-    border:           0px 2px 2px 2px;
+    border:           0px;
     background-color: @white2;
     dynamic:          false;
     lines:            10;

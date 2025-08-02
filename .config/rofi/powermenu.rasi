@@ -6,67 +6,67 @@ listview {
 
 window {
     background-color: @white2;
-    border: 0px;
-    padding: 0;
-    width: 170px;
-    height: 150px;
-    location: center;
+    border:           2px;
+    border-radius:    10px;
+    padding:          0;
+    width:            170px;
+    height:           150px;
+    location:         center;
 }
 
 mainbox {
-    border: 0;
+    border:  0;
     padding: 0;
 }
 
 listview {
-    padding: 8px;
-    border-color: @blue;
-    border: 0px 2px 2px 2px;
+    padding:          8px;
+    border-color:     @blue;
     background-color: @back;
-    dynamic: false;
-    scrollbar: false;
+    dynamic:          false;
+    scrollbar:        false;
 }
 
 element {
-    padding: 3px;
-    vertical-align: 0.5;
+    padding:          3px;
+    vertical-align:   0.5;
     background-color: @white2;
-    text-color: @text;
+    text-color:       @text;
 }
 
 element.normal.normal {
     background-color: @back;
-    text-color: @text;
+    text-color:       @text;
 }
 
 element.selected.normal {
     background-color: @blue;
-    text-color: @alt-text;
+    text-color:       @alt-text;
 }
 
 element.alternate.normal {
     background-color: @back;
-    text-color: @text;
+    text-color:       @text;
 }
 
 inputbar {
-    spacing: 0px;
+    spacing:    0px;
     text-color: @blue;
-    padding: 8px;
+    padding:    8px;
 }
 
 case-indicator {
-    spacing: 0;
+    spacing:    0;
     text-color: @blue;
 }
 
 entry {
-    spacing: 0;
+    spacing:    0;
     text-color: @blue;
 }
 
 prompt {
-    spacing: 0;
+    spacing:    0;
     text-color: @blue;
 }
 
@@ -75,8 +75,8 @@ inputbar {
 }
 
 textbox-prompt-colon {
-    expand: false;
-    str: ":";
-    margin: 0px 0.3em 0em 0em ;
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
     text-color: @blue;
 }
