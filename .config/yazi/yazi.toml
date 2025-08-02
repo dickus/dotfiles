@@ -57,6 +57,7 @@ prepend_rules = [
     { name = "*.jpeg", use = "images" },
     { name = "*.webp", use = "images" },
     { name = "*.gif",  use = "images" },
+    { name = "*.svg",  use = "images" },
 
     # music
     { name = "*.mp3",  use = "music" },
