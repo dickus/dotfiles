@@ -4,7 +4,11 @@ My dotfiles for a bunch of apps.
 
 
 ## Preview
-![preview](previews/preview.png)
+![preview](previews/preview_latte_frappe.png)
+
+![preview](previews/preview_gruvbox_gruvbox.png)
+
+![preview](previews/preview_everforest_nord.png)
 
 ## Dependencies
 * [bat](https://github.com/sharkdp/bat)
