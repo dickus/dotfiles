@@ -73,9 +73,6 @@ alias fuck="touch $HOME/.config/scripts/fuck"
 # rng, literally
 alias rng="~/.config/scripts/random.sh"
 
-# yt-dlp
-alias yt="yt-dlp"
-
 # flatpaks management
 fpi() {
     flatpak remote-ls flathub --columns=application,branch |
