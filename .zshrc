@@ -50,9 +50,6 @@ alias ls="exa -F"
 # create dirs faster
 alias mkdir="mkdir -vp"
 
-# set system themes
-alias theme="~/.config/scripts/theme_change/theme_changer.sh"
-
 # notes workflow
 alias ww="cd ~/.docs && nvim ."
 alias or="cd ~/.docs && nvim drafts/*.md"
