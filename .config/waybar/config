@@ -210,6 +210,7 @@
         "exec": "~/.config/waybar/scripts/daylight.sh",
         "restart-interval": 1,
         "on-click": "~/.config/waybar/scripts/daylight.sh toggle",
+        "on-click-right": "~/.config/waybar/scripts/daylight.sh light",
         "return-type": "json",
         "tooltip-format": "Daylight switcher."
     },
