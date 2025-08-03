@@ -6,3 +6,5 @@
 .local/share/rofimoji/frecency
 .local/share/rofimoji/recent*
 .config/waybar/scripts/pomodoro/status
+.config/kitty/kitty.conf.bak
+.config/kitty/current-theme.conf
