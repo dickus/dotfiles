@@ -32,7 +32,6 @@ My dotfiles for a bunch of apps.
 * `7zip`, `unzip`
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [rofi](https://github.com/davatorium/rofi)
-* [rofi-calc](https://github.com/svenstaro/rofi-calc)
 * [sf-mono-nerd](https://github.com/epk/SF-Mono-Nerd-Font)
 * [swayimg](https://github.com/artemsen/swayimg)
 * [swww](https://github.com/LGFae/swww)
