@@ -132,7 +132,7 @@
     "margin-left": 4,
     "margin-bottom": 4,
 
-    "modules-left": ["custom/powermenu", "custom/apps", "custom/web", "custom/davinci", "custom/gimp", "custom/notes", "custom/steam", "custom/telegram", "custom/discord", "custom/battlenet"],
+    "modules-left": ["custom/powermenu", "custom/apps", "custom/web", "custom/davinci", "custom/audacity", "custom/gimp", "custom/notes", "custom/steam", "custom/telegram", "custom/discord", "custom/battlenet"],
 
     "modules-center": ["custom/pomodoro", "custom/color", "custom/daylight", "custom/record"],
 
@@ -239,6 +239,13 @@
         "on-scroll-down": "~/.config/waybar/scripts/pomodoro/pom.sh set_minus",
         "on-click-right": "~/.config/waybar/scripts/pomodoro/pom.sh reset",
         "return-type": "json"
+    },
+
+    "custom/audacity": {
+    "format": "󱡭",
+    "on-click": "~/.config/waybar/runners/audacity.sh",
+    "tooltip": true,
+    "tooltip-format": "Audacity"
     },
 }]
 
