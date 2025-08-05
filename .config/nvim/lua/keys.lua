@@ -4,8 +4,8 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<Esc>", ":noh<CR>", { noremap = true })
 
 --find and replace
-vim.keymap.set("n", "<leader>ss", ":s//g<Left><Left>", { noremap = true })
-vim.keymap.set("n", "<leader>sg", ":%s//g<Left><Left>", { noremap = true })
+vim.keymap.set("n", "<leader>ss", ":s//gc<Left><Left><Left>", { noremap = true })
+vim.keymap.set("n", "<leader>sg", ":%s//gc<Left><Left><Left>", { noremap = true })
 
 --move between nvim windows
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { noremap = true })
