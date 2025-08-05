@@ -72,6 +72,7 @@ v            = flip_vertical
 Shift+v      = flip_horizontal
 i            = info
 q            = exit
+o            = exec ~/.config/scripts/wallpapers/wall_set.sh %
 
 [keys.slideshow]
 F1    = help
@@ -82,6 +83,7 @@ f     = fullscreen
 Space = pause
 i     = info
 q     = exit
+o     = exec ~/.config/scripts/wallpapers/wall_set.sh %
 
 [keys.gallery]
 F1      = help
@@ -96,4 +98,5 @@ f       = fullscreen
 a       = mode viewer
 i       = info
 q       = exit
+o       = exec ~/.config/scripts/wallpapers/wall_set.sh %
 
