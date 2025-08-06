@@ -187,8 +187,8 @@
     },
 
     "custom/notes": {
-        "format": "󱓧",
-        "on-click": "~/.config/waybar/runners/notes.sh",
+        "format": "",
+        "on-click": "kitty -e nvim",
         "tooltip-format": "Notes"
     },
 
