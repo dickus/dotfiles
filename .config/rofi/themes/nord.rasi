@@ -75,19 +75,20 @@ listview {
 }
 
 element {
-    padding:          3px;
+    padding:          3px 5px;
     vertical-align:   0.5;
     background-color: @black0;
     text-color:       @white2;
 }
 
 element selected.normal {
-    background-color: @blue;
-    text-color:       @white2;
+    text-color:    @blue;
+    border:        2px;
+    border-radius: 5px;
+    border-color:  @blue;
 }
 
 element-text, element-icon {
-    background-color: inherit;
     text-color:       inherit;
 }
 

@@ -75,15 +75,17 @@ listview {
 }
 
 element {
-    padding:          3px;
+    padding:          3px 5px;
     vertical-align:   0.5;
     background-color: @white2;
     text-color:       @black0;
 }
 
 element selected.normal {
-    background-color: @blue;
-    text-color:       @white2;
+    text-color:    @blue;
+    border:        2px;
+    border-radius: 5px;
+    border-color:  @blue;
 }
 
 element-text, element-icon {
