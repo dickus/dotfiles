@@ -149,7 +149,7 @@ window#waybar.empty #window {
 }
 
 #custom-network.disconnected {
-    color:      @alt-text;
+    color:      @text;
     background: @disabled;
 }
 
