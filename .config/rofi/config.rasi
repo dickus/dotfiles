@@ -9,6 +9,5 @@ configuration {
     display-drun:   ">";
     display-window: "";
     display-combi:  "";
-    show-icons:     true;
 }
 
