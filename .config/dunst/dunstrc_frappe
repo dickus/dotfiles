@@ -41,7 +41,7 @@
     class = Dunst
     startup_notification = false
     verbosity = mesg
-    corner_radius = 0
+    corner_radius = 10
     force_xinerama = false
     mouse_left_click   = close_current
     mouse_middle_click = do_action
@@ -58,22 +58,22 @@
 
 [urgency_low]
     background  = "#303446"
-    foreground  = "#eff1f5"
-    frame_color = "#a6d189"
+    foreground  = "#C6D0F5"
+    frame_color = "#A6D189"
     timeout     = 5
     icon        = /usr/share/icons/Nordzy/actions/24/view-calendar-day.svg
 
 [urgency_normal]
     background  = "#303446"
-    foreground  = "#eff1f5"
-    frame_color = "#8caaee"
+    foreground  = "#C6D0F5"
+    frame_color = "#8CAAEE"
     timeout     = 5
     icon        = /usr/share/icons/Nordzy/actions/24/chronometer.svg
 
 [urgency_critical]
     background  = "#303446"
-    foreground  = "#eff1f5"
-    frame_color = "#e78284"
+    foreground  = "#C6D0F5"
+    frame_color = "#E78284"
     timeout     = 120
     icon        = /usr/share/icons/Nordzy/actions/24/button_cancel.svg
 
