@@ -92,7 +92,7 @@
         "exec": "~/.config/waybar/scripts/network.sh",
         "restart-interval": 1,
         "on-click": "~/.config/waybar/scripts/network.sh toggle",
-        "on-click-right": "~/.config/scripts/rofi_scripts/vpn.sh",
+        "on-click-right": "~/.config/scripts/system/vpn.sh",
         "return-type": "json",
         "tooltip-format": "LMB to connect/disconnect from default Ethernet.\nRMB to connect/disconnect from VPN."
     },
@@ -206,10 +206,10 @@
 
     "custom/daylight": {
         "format": "{}",
-        "exec": "~/.config/waybar/scripts/daylight.sh",
+        "exec": "~/.config/waybar/scripts/daylight/daylight.sh",
         "restart-interval": 1,
-        "on-click": "~/.config/waybar/scripts/daylight.sh toggle",
-        "on-click-right": "~/.config/waybar/scripts/daylight.sh light",
+        "on-click": "~/.config/waybar/scripts/daylight/daylight.sh toggle",
+        "on-click-right": "~/.config/waybar/scripts/daylight/daylight.sh light",
         "return-type": "json",
         "tooltip-format": "Daylight switcher."
     },
