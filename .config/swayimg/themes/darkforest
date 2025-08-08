@@ -1,0 +1,102 @@
+[general]
+mode       = viewer
+size       = image
+position   = auto
+overlay    = no
+decoration = no
+sigusr1    = reload
+sigusr2    = next_file
+app_id     = swayimg
+
+[viewer]
+window       = #2D353BE6
+transparency = #2D353BE6
+scale        = optimal
+position     = center
+antialiasing = mks13
+loop         = yes
+history      = 1
+preload      = 1
+
+[slideshow]
+time         = 3
+window       = auto
+transparency = #2D353BE6
+scale        = fit
+position     = center
+antialiasing = mks13
+
+[gallery]
+size         = 200
+cache        = 100
+preload      = no
+pstore       = no
+fill         = yes
+antialiasing = mks13
+window       = #2D353BE6
+background   = #2D353BE6
+select       = #2D353BE6
+border       = #7FBBB3
+shadow       = #2D353B
+
+[list]
+order     = alpha
+reverse   = no
+recursive = no
+all       = no
+fsmon     = yes
+
+[font]
+name   = SFMono Nerd Font Mono
+size   = 16
+color  = #D3C6AA
+shadow = #2D353B
+
+[info]
+show = no
+
+[keys.viewer]
+F1           = help
+k            = prev_file
+j            = next_file
+s            = mode slideshow
+f            = fullscreen
+a            = mode gallery
+Equal        = zoom +10
+Minus        = zoom -10
+z            = zoom fit
+0            = zoom real
+bracketleft  = rotate_left
+bracketright = rotate_right
+v            = flip_vertical
+Shift+v      = flip_horizontal
+i            = info
+q            = exit
+o            = exec ~/.config/scripts/wallpapers/wall_set.sh %
+
+[keys.slideshow]
+F1    = help
+k     = prev_file
+j     = next_file
+s     = mode viewer
+f     = fullscreen
+Space = pause
+i     = info
+q     = exit
+o     = exec ~/.config/scripts/wallpapers/wall_set.sh %
+
+[keys.gallery]
+F1      = help
+g       = first_file
+Shift+g = last_file
+h       = step_left
+l       = step_right
+k       = step_up
+j       = step_down
+s       = mode slideshow
+f       = fullscreen
+a       = mode viewer
+i       = info
+q       = exit
+o       = exec ~/.config/scripts/wallpapers/wall_set.sh %
+
