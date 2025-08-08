@@ -1,30 +1,14 @@
 * {
-    black0:      #282828;
-    black1:      #3C3836;
-    black2:      #504945;
-    black3:      #665C54;
-
-    white0:      #D5C4A1;
-    white1:      #EBDBB2;
-    white2:      #FBF1C7;
-
-    aqua:        #427B58;
-    lightblue:   #458588;
-    blue:        #076678;
-    lightaqua:   #689D6A;
-    lightred:    #CC241D;
-
-    lightorange: #D65D0E;
-    lightyellow: #D79921;
-    lightgreen:  #98971A;
-    lightpurple: #B16286;
+    black: #282828;
+    white: #FBF1C7;
+    blue:  #076678;
 
     foreground:       @blue;
-    background-color: @white2;
+    background-color: @white;
 
-    back:     @white2;
-    text:     @black0;
-    alt-text: @white2;
+    back:     @white;
+    text:     @black;
+    alt-text: @white;
 }
 
 window {
@@ -34,7 +18,7 @@ window {
     border-radius: 10px;
     border-color:  @blue;
 
-    background-color: @white2;
+    background-color: @white;
     spacing:          0;
     children:         [mainbox];
     orientation:      horizontal;
@@ -50,7 +34,7 @@ mainbox {
 inputbar {
     color:            @blue;
     padding:          8px;
-    background-color: @white2;
+    background-color: @white;
 
     border:       0px 0px 2px 0px;
     border-color: @blue;
@@ -68,7 +52,7 @@ prompt {
 listview {
     padding:          8px;
     border:           0px;
-    background-color: @white2;
+    background-color: @white;
     dynamic:          false;
     lines:            10;
     columns:          2;
@@ -77,8 +61,8 @@ listview {
 element {
     padding:          3px 5px;
     vertical-align:   0.5;
-    background-color: @white2;
-    text-color:       @black0;
+    background-color: @white;
+    text-color:       @black;
 }
 
 element selected.normal {
