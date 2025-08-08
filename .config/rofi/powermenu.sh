@@ -8,12 +8,12 @@ reboot="⟳ Reboot"
 selected_option=$(echo "$lock
 $logout
 $reboot
-$shutdown" | rofi -dmenu\
-                  -i\
-                  -p "Power"\
-                  -config "~/.config/rofi/powermenu.rasi"\
-                  -font "SFMono Nerd Font Mono 10"\
-                  -scrollbar-width "0"
+$shutdown" | \
+    rofi -dmenu \
+    -p "Power:" \
+    -i \
+    -theme-str "window { width: 7%; }" \
+    -theme-str "listview { lines: 4; }"
 )
 
 if [ "$selected_option" == "$lock" ]
