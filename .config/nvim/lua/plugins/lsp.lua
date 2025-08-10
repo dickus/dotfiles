@@ -1,6 +1,6 @@
 require("mason").setup({})
 require("mason-lspconfig").setup({
-    ensure_installed = { "bashls", "clangd", "lua_ls", "marksman", "pyright" },
+    ensure_installed = { "bashls", "clangd", "lua_ls", "marksman", "pyright", "gopls" },
 })
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -21,11 +21,16 @@ lspconfig.marksman.setup({
 lspconfig.pyright.setup({
     capabilities = capabilities,
 })
+lspconfig.gopls.setup({
+    capabilities = capabilities,
+})
 
 vim.lsp.enable("bashls")
 vim.lsp.enable("clangd")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("marksman")
+vim.lsp.enable("pyright")
+vim.lsp.enable("gopls")
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true })
