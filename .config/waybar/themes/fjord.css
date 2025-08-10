@@ -377,3 +377,20 @@ window#waybar.empty #window {
     box-shadow: 1px 1px 3px 0px @text;
 }
 
+#custom-time {
+    padding: 10px;
+    margin-top: 150px;
+    color: @alt-text;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px @text;
+}
+
+#custom-date {
+    padding: 10px;
+    margin-top: 275px;
+    margin-left: -75px;
+    color: @alt-text;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px @text;
+}
+

@@ -1,4 +1,4 @@
-@theme "~/.config/rofi/themes/latte.rasi"
+@theme "~/.config/rofi/themes/fjord.rasi"
 
 configuration {
     font:        "SFMono Nerd Font Mono 10";

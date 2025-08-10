@@ -15,7 +15,7 @@ require("plugins.luasnip")
 require("plugins.comfy-line-numbers")
 
 --colorscheme
-require("themes.latte")
+require("themes.fjord")
 
 --basic settings
 vim.o.cmdheight = 2
