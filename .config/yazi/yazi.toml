@@ -24,7 +24,7 @@ pdfs = [
 ]
 
 images = [
-    { run = 'ls | xargs -r swayimg "$@"', orphan = true },
+    { run = 'find . -maxdepth 1 -type f | xargs -r swayimg "$@"', orphan = true },
 ]
 
 music = [
