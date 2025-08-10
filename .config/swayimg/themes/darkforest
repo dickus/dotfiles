@@ -9,8 +9,8 @@ sigusr2    = next_file
 app_id     = swayimg
 
 [viewer]
-window       = #2D353BE6
-transparency = #2D353BE6
+window       = #2D353B55
+transparency = #2D353B55
 scale        = optimal
 position     = center
 antialiasing = mks13
@@ -21,7 +21,7 @@ preload      = 1
 [slideshow]
 time         = 3
 window       = auto
-transparency = #2D353BE6
+transparency = #2D353B55
 scale        = fit
 position     = center
 antialiasing = mks13
@@ -33,9 +33,9 @@ preload      = no
 pstore       = no
 fill         = yes
 antialiasing = mks13
-window       = #2D353BE6
-background   = #2D353BE6
-select       = #2D353BE6
+window       = #2D353B55
+background   = #2D353B55
+select       = #7FBBB3
 border       = #7FBBB3
 shadow       = #2D353B
 
@@ -47,10 +47,11 @@ all       = no
 fsmon     = yes
 
 [font]
-name   = SFMono Nerd Font Mono
-size   = 16
-color  = #D3C6AA
-shadow = #2D353B
+name       = SFMono Nerd Font Mono
+size       = 16
+color      = #D3C6AA
+background = #2D353BAA
+shadow     = #2D353B
 
 [info]
 show = no
