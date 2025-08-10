@@ -1,0 +1,23 @@
+[{
+    "layer": "bottom",
+    "position": "top",
+    "mode": "overlay",
+    "exclusive": false,
+
+    "modules-center": ["custom/time", "custom/date"],
+
+    "custom/time": {
+        "format": "{text}",
+        "exec": "~/.config/waybar/scripts/datetime/time.sh",
+        "interval": 1,
+        "return-type": "json",
+    },
+
+    "custom/date": {
+        "format": "{text}",
+        "exec": "~/.config/waybar/scripts/datetime/date.sh",
+        "interval": 1,
+        "return-type": "json"
+    }
+}]
+
