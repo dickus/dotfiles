@@ -8,3 +8,4 @@
 .config/waybar/scripts/pomodoro/status
 .config/kitty/kitty.conf.bak
 .config/kitty/current-theme.conf
+.config/waybar/scripts/daylight/daylight
