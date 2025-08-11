@@ -18,6 +18,7 @@ My dotfiles for a bunch of apps.
 ## Dependencies
 * [bat](https://github.com/sharkdp/bat)
 * [dunst](https://github.com/dunst-project/dunst)
+* [eww](https://github.com/elkowar/eww)
 * [exa](https://github.com/ogham/exa)
 * [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 * [fuseiso](https://sourceforge.net/projects/fuseiso/)
