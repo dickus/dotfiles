@@ -9,11 +9,11 @@
     "margin-left": 4,
     "margin-bottom": 4,
 
-    "modules-left": ["custom/apps", "hyprland/workspaces", "hyprland/language"],
+    "modules-left": ["hyprland/workspaces", "hyprland/language"],
 
-    "modules-center": ["custom/todo", "clock", "custom/notifications"],
+    "modules-center": ["custom/todo", "custom/notifications"],
 
-    "modules-right": ["custom/gamepad", "pulseaudio", "custom/network", "tray", "custom/sessionreload"],
+    "modules-right": ["custom/gamepad", "pulseaudio", "custom/network", "tray"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -30,25 +30,7 @@
             "9": "9",
             "10": "0",
             "default": "×"
-        },
-
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
         }
-    },
-
-    "clock": {
-        "format": "{:%H\n%M\n--\n%m\n%d}",
-        "tooltip": false
     },
 
     "pulseaudio": {
@@ -70,12 +52,6 @@
     "tray": {
         // "icon-size": 21,
         "spacing": 5
-    },
-
-    "custom/apps": {
-        "format": "",
-        "on-click": "rofi -modi drun -show drun -line-padding 4 -columns 2 -padding 50 -hide-scrollbar -font 'Source Code Pro 10'",
-        "tooltip-format": "App launcher."
     },
 
     "custom/notifications": {
@@ -112,12 +88,6 @@
         "restart-interval": 1,
         "tooltip": true,
         "return-type": "json"
-    },
-
-    "custom/sessionreload": {
-        "format": "󰑓",
-        "on-click": "hyprctl reload",
-        "tooltip-format": "Reload session"
     },
 }]
 

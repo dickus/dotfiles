@@ -9,65 +9,11 @@
     "margin-left": 4,
     "margin-bottom": 4,
 
-    "modules-left": ["custom/powermenu", "custom/apps", "custom/web", "custom/davinci", "custom/audacity", "custom/gimp", "custom/notes", "custom/steam", "custom/telegram", "custom/discord", "custom/battlenet"],
+    "modules-left": ["custom/color", "custom/daylight"],
 
-    "modules-center": ["custom/pomodoro", "custom/color", "custom/daylight", "custom/record"],
+    "modules-center": ["custom/pomodoro", "custom/record"],
 
     "modules-right": ["custom/yabrowser", "custom/zoom"],
-
-    "custom/powermenu": {
-        "format": "⏻",
-        "on-click": "$HOME/.config/rofi/powermenu.sh &",
-        "tooltip-format": "Shutdow, reboot, logout and lock screen."
-    },
-
-    "custom/web": {
-        "format": "",
-        "on-click": "librewolf",
-        "tooltip-format": "LibreWolf"
-    },
-
-    "custom/steam": {
-        "format": "",
-        "on-click": "~/.config/waybar/runners/steam.sh",
-        "tooltip-format": "Steam"
-    },
-
-    "custom/telegram": {
-        "format": "",
-        "on-click": "org.telegram.desktop",
-        "tooltip-format": "Telegram"
-    },
-
-    "custom/discord": {
-        "format": "",
-        "on-click": "dev.vencord.Vesktop",
-        "tooltip-format": "Discord"
-    },
-
-    "custom/davinci": {
-        "format": "",
-        "on-click": "~/.config/scripts/run/resolve.sh",
-        "tooltip-format": "DaVinci Resolve"
-    },
-
-    "custom/gimp": {
-        "format": "",
-        "on-click": "org.gimp.GIMP",
-        "tooltip-format": "GIMP"
-    },
-
-    "custom/battlenet": {
-        "format": "",
-        "on-click": "~/.config/waybar/runners/battlenet.sh",
-        "tooltip-format": "Battle.net"
-    },
-
-    "custom/notes": {
-        "format": "",
-        "on-click": "kitty -e nvim",
-        "tooltip-format": "Notes"
-    },
 
     "custom/yabrowser": {
         "format": "󰖟",
@@ -116,13 +62,6 @@
         "on-scroll-down": "~/.config/waybar/scripts/pomodoro/pom.sh set_minus",
         "on-click-right": "~/.config/waybar/scripts/pomodoro/pom.sh reset",
         "return-type": "json"
-    },
-
-    "custom/audacity": {
-    "format": "󱡭",
-    "on-click": "~/.config/waybar/runners/audacity.sh",
-    "tooltip": true,
-    "tooltip-format": "Audacity"
     },
 }]
 
