@@ -2,12 +2,12 @@
 
 * {
   all:         unset;
-  color:       @text;
+  color:       $text;
   font-family: SFMono Nerd Font Mono;
 }
 
 .timedate {
-  text-shadow: 2px 2px 4px @shadow;
+  text-shadow: 2px 2px 4px $shadow;
 }
 
 .clock {
