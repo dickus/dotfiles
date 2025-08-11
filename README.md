@@ -4,14 +4,9 @@ My dotfiles for a bunch of apps.
 
 
 ## Preview
-### Catpuccin latte/frappe
-![preview](previews/preview_latte_frappe.png)
+![preview](previews/preview_fjord_nord.png) ![preview](previews/preview_latte_frappe.png)
 
-### Gruvbox/Gruvbox
-![preview](previews/preview_gruvbox_gruvbox.png)
-
-### Everforest/Nord
-![preview](previews/preview_everforest_nord.png)
+![preview](previews/preview_everforest_darkforest.png) ![preview](previews/preview_gruvbox_gruvbox.png)
 
 ## Dependencies
 * [bat](https://github.com/sharkdp/bat)
