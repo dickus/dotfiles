@@ -4,9 +4,16 @@ My dotfiles for a bunch of apps.
 
 
 ## Preview
-![preview](previews/preview_fjord_nord.png) ![preview](previews/preview_latte_frappe.png)
-
-![preview](previews/preview_everforest_darkforest.png) ![preview](previews/preview_gruvbox_gruvbox.png)
+<table>
+    <tr>
+        <td><img src="previews/preview_fjord_nord.png" width="50%"></td>
+        <td><img src="previews/preview_latte_frappe.png" width="50%"></td>
+    </tr>
+    <tr>
+        <td><img src="previews/preview_everforest_darkforest.png" width="50%"></td>
+        <td><img src="previews/preview_lightbox_gruvbox.png" width="50%"></td>
+    </tr>
+</table>
 
 ## Dependencies
 * [bat](https://github.com/sharkdp/bat)
