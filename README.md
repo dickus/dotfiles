@@ -6,12 +6,12 @@ My dotfiles for a bunch of apps.
 ## Preview
 <table>
     <tr>
-        <td><img src="previews/preview_fjord_nord.png" width="50%"></td>
-        <td><img src="previews/preview_latte_frappe.png" width="50%"></td>
+        <td><img src="previews/preview_fjord_nord.png"></td>
+        <td><img src="previews/preview_latte_frappe.png"></td>
     </tr>
     <tr>
-        <td><img src="previews/preview_everforest_darkforest.png" width="50%"></td>
-        <td><img src="previews/preview_lightbox_gruvbox.png" width="50%"></td>
+        <td><img src="previews/preview_everforest_darkforest.png"></td>
+        <td><img src="previews/preview_lightbox_gruvbox.png"></td>
     </tr>
 </table>
 
