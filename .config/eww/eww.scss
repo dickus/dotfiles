@@ -1,0 +1,24 @@
+@import 'themes/fjord';
+
+* {
+  all:         unset;
+  color:       @text;
+  font-family: SFMono Nerd Font Mono;
+}
+
+.timedate {
+  text-shadow: 2px 2px 4px @shadow;
+}
+
+.clock {
+  margin-right: 229px;
+  font-size:    50px;
+}
+
+.date {
+  margin-top:   5px;
+  margin-left:  100px;
+  margin-right: 5px;
+  font-size:    30px;
+}
+

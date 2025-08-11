@@ -1,0 +1,38 @@
+(defwindow main
+    :monitor 0
+    :geometry
+    (
+        geometry
+        :anchor "top center"
+        :y "168"
+    )
+
+    :stacking "bg"
+    :focusable "false"
+
+    (timedate)
+)
+
+(defwidget timedate []
+    (box :class "timedate"
+         :orientation "v"
+         :space-evenly false
+         :halign "end"
+         (clock)
+         (date))
+)
+
+(defwidget clock []
+    (label :class "clock"
+           :text {formattime(EWW_TIME, "%H:%M")})
+)
+
+(defpoll date :interval "60s" 
+    :initial "loading"
+    `date +"%B %d, %Y"`)
+
+(defwidget date []
+    (label :class "date"
+           :text "${date}")
+)
+
