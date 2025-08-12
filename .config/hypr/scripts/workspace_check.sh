@@ -19,6 +19,8 @@ resume() {
     if [[ "${windows}" == "0" ]]; then
         hyprctl reload
     fi
+
+    hyprctl keyword cursor:inactive_timeout 0
 }
 
 [[ "${action}" == "idle" ]] && idle
