@@ -1,7 +1,7 @@
 #!/bin/bash
 
 zen() {
-    pkill -f "waybar/config-left"
+    pkill -f "waybar/config-left" &
     pkill -f "waybar/config-right"
 
     hyprctl keyword general:gaps_out 8
