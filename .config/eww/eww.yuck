@@ -13,13 +13,20 @@
     (timedate)
 )
 
+(defvar open_timedate false)
+(defvar ANIM_DURATION "500ms")
+
 (defwidget timedate []
-    (box :class "timedate"
-         :orientation "v"
-         :space-evenly false
-         :halign "end"
-         (clock)
-         (date))
+    (revealer :transition "slidebot"
+              :reveal {open_timedate}
+              :duration {ANIM_DURATION}
+              (box :class "timedate"
+                  :orientation "v"
+                  :space-evenly false
+                  :halign "end"
+                  (clock)
+                  (date))
+    )
 )
 
 (defwidget clock []
