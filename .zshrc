@@ -84,6 +84,7 @@ alias fpr="flatpak list --app --columns=application | fzf --multi --preview 'fla
 export SUDO_EDITOR="nvim"
 export EDITOR="nvim"
 export VISUAL="nvim"
+export SYSTEMD_EDITOR="nvim"
 
 
 eval "$(zoxide init --cmd cd zsh)"
