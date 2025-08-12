@@ -6,21 +6,22 @@ idle() {
     windows=$(hyprctl activeworkspace -j | jq '.windows')
 
     if [[ "${windows}" == "0" ]]; then
-        pkill -f "waybar/config-left"
+        pkill -f "waybar/config-left" &
         pkill -f "waybar/config-right"
-    fi
 
-    hyprctl keyword cursor:inactive_timeout 0.1
+        hyprctl keyword cursor:inactive_timeout 0.1
+    fi
 }
 
 resume() {
     windows=$(hyprctl activeworkspace -j | jq '.windows')
 
     if [[ "${windows}" == "0" ]]; then
-        hyprctl reload
-    fi
+        WAYBAR_CONFIG=~/.config/waybar/config-left waybar -c ~/.config/waybar/config-left -s ~/.config/waybar/style.css &
+        WAYBAR_CONFIG=~/.config/waybar/config-right waybar -c ~/.config/waybar/config-right -s ~/.config/waybar/style.css &
 
-    hyprctl keyword cursor:inactive_timeout 0
+        hyprctl keyword cursor:inactive_timeout 0
+    fi
 }
 
 [[ "${action}" == "idle" ]] && idle
