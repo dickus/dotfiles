@@ -16,7 +16,7 @@ image_filter = "lanczos3"
 
 [opener]
 edit = [
-    { run = 'nvim "$@"', block = true },
+    { run = 'cd "$@"; nvim "$@"', block = true },
 ]
 
 pdfs = [
