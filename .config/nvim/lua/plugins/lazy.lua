@@ -20,14 +20,9 @@ local plugins = {
     "neanias/everforest-nvim",
     "catppuccin/nvim",
 
-    "brenoprata10/nvim-highlight-colors",
-
-    "mbbill/undotree",
-
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-    },
+    require("plugins.nvim-treesitter"),
+    require("plugins.highlight-colors"),
+    require("plugins.undotree"),
 
     {
         "VonHeikemen/lsp-zero.nvim",
@@ -89,6 +84,33 @@ local plugins = {
     },
 
     "mluders/comfy-line-numbers.nvim",
+
+    {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+        }
+    },
+
+    {
+        "christoomey/vim-tmux-navigator",
+        cmd = {
+            "TmuxNavigateLeft",
+            "TmuxNavigateDown",
+            "TmuxNavigateUp",
+            "TmuxNavigateRight",
+            "TmuxNavigatePrevious",
+            "TmuxNavigatorProcessList",
+        },
+        keys = {
+            { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+            { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+            { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+            { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+            { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+        },
+    }
 }
 local opts = {}
 
