@@ -4,7 +4,7 @@ zen() {
     pkill -f "waybar/config-left" &
     pkill -f "waybar/config-right"
 
-    hyprctl keyword general:gaps_out 8
+    hyprctl keyword general:gaps_out 100, 200
 }
 
 nozen() {
