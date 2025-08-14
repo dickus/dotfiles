@@ -1,6 +1,6 @@
 #!/bin/bash
 
-action=$1
+action=${1}
 
 idle() {
     windows=$(hyprctl activeworkspace -j | jq '.windows')

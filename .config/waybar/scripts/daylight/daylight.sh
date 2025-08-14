@@ -8,24 +8,24 @@ NIGHT="󰖔"
 THEME_SCRIPT="${HOME}/.config/scripts/theme_change/theme_schedule.sh"
 
 get_current_theme() {
-    grep -oP "$1=\"\K[^\"]+" "${THEME_SCRIPT}" | tail -n 1
+    grep -oP "${1}=\"\K[^\"]+" "${THEME_SCRIPT}" | tail -n 1
 }
 
 if [[ $(grep "6000" ${HOME}/.config/waybar/scripts/daylight/daylight) ]]; then
-    printf '{"text": "%s"}' "$DAY"
+    printf '{"text": "%s"}' "${DAY}"
 else
-    printf '{"text": "%s", "class": "on"}' "$NIGHT"
+    printf '{"text": "%s", "class": "on"}' "${NIGHT}"
 fi
 
-if [[ "$1" == "toggle" ]]; then
+if [[ "${1}" == "toggle" ]]; then
     if [[ -z $(grep "dark" ${HOME}/.config/scripts/system/microphone.sh) ]]; then
-        $HOME/.config/scripts/theme_change/theme_schedule.sh dark
+        ${HOME}/.config/scripts/theme_change/theme_schedule.sh dark
     else
-        $HOME/.config/scripts/theme_change/theme_schedule.sh light
+        ${HOME}/.config/scripts/theme_change/theme_schedule.sh light
     fi
 fi
 
-if [[ "$1" == "light" ]]; then
+if [[ "${1}" == "light" ]]; then
     if [[ -z $(grep "6000" ${HOME}/.config/waybar/scripts/daylight/daylight) ]]; then
         hyprctl hyprsunset identity
 

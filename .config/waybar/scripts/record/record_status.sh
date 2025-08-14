@@ -2,7 +2,7 @@
 
 STATUS=$(pidof wf-recorder)
 
-if [[ -z $STATUS ]]; then
+if [[ -z ${STATUS} ]]; then
     printf '{"class": "off"}'
 else
     printf '{"class": "on"}'

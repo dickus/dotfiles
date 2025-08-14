@@ -1,14 +1,11 @@
-#!/bin/env bash
+#!/bin/bash
 
 lock="⏾ Lock"
 logout="⏼ Logout"
 shutdown="⏻ Shutdown"
 reboot="⟳ Reboot"
 
-selected_option=$(echo "$lock
-$logout
-$reboot
-$shutdown" | \
+selected_option=$(echo -e "${lock}\n${logout}\n${reboot}\n${shutdown}" | \
     rofi -dmenu \
     -p "Power:" \
     -i \
@@ -16,26 +13,10 @@ $shutdown" | \
     -theme-str "listview { lines: 4; }"
 )
 
-if [ "$selected_option" == "$lock" ]
-then
-    if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
-        hyprlock
-    else
-        ~/.config/bspwm/scripts/i3lock-fancy/i3lock-fancy.sh
-    fi
-elif [ "$selected_option" == "$logout" ]
-then
-    if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
-        hyprctl dispatch exit
-    else
-        bspc quit
-    fi
-elif [ "$selected_option" == "$shutdown" ]
-then
-    systemctl poweroff
-elif [ "$selected_option" == "$reboot" ]
-then
-    systemctl reboot
-else
-    echo "No match"
-fi
+case "${selected_option}" in
+    "${lock}") hyprlock ;;
+    "${logout}") hyprctl dispatch exit ;;
+    "${shutdown}") systemctl poweroff ;;
+    "${reboot}") systemctl reboot ;;
+esac
+

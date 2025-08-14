@@ -2,7 +2,7 @@
 
 STATUS=$(pidof wf-recorder)
 
-if [[ -z $STATUS ]]; then
+if [[ -z ${STATUS} ]]; then
     MIC_SOURCE=$(pactl get-default-source)
     SYS_SOURCE=$(pactl get-default-sink).monitor
 
