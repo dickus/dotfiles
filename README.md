@@ -38,6 +38,7 @@ My dotfiles for a bunch of apps.
 * [sf-mono-nerd](https://github.com/epk/SF-Mono-Nerd-Font)
 * [swayimg](https://github.com/artemsen/swayimg)
 * [swww](https://github.com/LGFae/swww)
+* [tmux](https://github.com/tmux/tmux)
 * [waybar](https://github.com/Alexays/Waybar)
 * [wf-recorder](https://github.com/ammen99/wf-recorder)
 * [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
