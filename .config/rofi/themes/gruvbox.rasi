@@ -6,9 +6,7 @@
     foreground:       @blue;
     background-color: @black;
 
-    back:     @black;
-    text:     @white;
-    alt-text: @white;
+    text: @white;
 }
 
 window {
@@ -16,9 +14,9 @@ window {
     anchor:        center;
     border:        2px;
     border-radius: 10px;
-    border-color:  @blue;
+    border-color:  @foreground;
 
-    background-color: @black;
+    background-color: @background-color;
     spacing:          0;
     children:         [mainbox];
     orientation:      horizontal;
@@ -32,12 +30,12 @@ mainbox {
 }
 
 inputbar {
-    color:            @blue;
+    color:            @foreground;
     padding:          8px;
-    background-color: @black;
+    background-color: @background-color;
 
     border:       0px 0px 2px 0px;
-    border-color: @blue;
+    border-color: @foreground;
 }
 
 entry, prompt, case-indicator {
@@ -50,42 +48,29 @@ prompt {
 }
 
 listview {
-    padding:          8px;
-    border:           0px;
-    background-color: @black;
-    dynamic:          false;
-    lines:            10;
-    columns:          2;
+    padding: 8px;
+    border:  0px;
+    dynamic: false;
+    lines:   10;
+    columns: 2;
 }
 
 element {
-    padding:          3px 5px;
-    vertical-align:   0.5;
-    background-color: @black;
-    text-color:       @white;
+    padding:        3px 5px;
+    vertical-align: 0.5;
+    text-color:     @text;
 }
 
-element selected.normal {
-    text-color:    @blue;
-    border:        2px;
-    border-radius: 5px;
-    border-color:  @blue;
+element.selected {
+    text-color:       @background-color;
+    border:           2px;
+    border-radius:    5px;
+    border-color:     @foreground;
+    background-color: @foreground;
 }
 
 element-text, element-icon {
-    background-color: inherit;
     text-color:       inherit;
-}
-
-button {
-    padding:          6px;
-    color:            @foreground;
-    horizontal-align: 0.5;
-
-    border-color: @foreground;
-}
-
-button selected normal {
-    border-color: @foreground;
+    background-color: inherit;
 }
 
