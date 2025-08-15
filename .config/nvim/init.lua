@@ -2,16 +2,6 @@ require("settings")
 require("keys")
 
 require("plugins.lazy")
-require("plugins.lsp")
-require("plugins.lualine")
-require("plugins.which-keys")
-require("plugins.cmps")
-require("plugins.obsidian")
-require("plugins.footnote")
-require("plugins.snacks")
-require("plugins.luasnip")
-require("plugins.comfy-line-numbers")
-require("plugins.noice")
 
 --colorscheme
 require("themes.fjord")

@@ -23,94 +23,18 @@ local plugins = {
     require("plugins.nvim-treesitter"),
     require("plugins.highlight-colors"),
     require("plugins.undotree"),
-
-    {
-        "VonHeikemen/lsp-zero.nvim",
-        dependencies = {
-            "neovim/nvim-lspconfig",
-            "williamboman/mason.nvim",
-            "williamboman/mason-lspconfig.nvim",
-        },
-    },
-
-    {
-        "L3MON4D3/LuaSnip",
-        dependencies = {
-            "hrsh7th/nvim-cmp",
-            "hrsh7th/cmp-cmdline",
-            "hrsh7th/cmp-nvim-lsp",
-            "saadparwaiz1/cmp_luasnip",
-            "rafamadriz/friendly-snippets",
-        },
-    },
-
-    "folke/which-key.nvim",
-
-    {
-        "nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-    },
-
-    {
-        "obsidian-nvim/obsidian.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim",
-        },
-        lazy = true,
-        ft = "markdown",
-    },
-
-    {
-        "hedyhli/outline.nvim",
-        lazy = true,
-        cmd = { "Outline", "OutlineOpen" },
-        keys = {
-            { "<C-o>", "<cmd>Outline<CR>", desc = "Toggle outline" }
-        },
-        opts = {  },
-    },
-
-    {
-        "chenxin-yan/footnote.nvim",
-        ft = "markdown",
-    },
-
-    {
-        "folke/snacks.nvim",
-        dependencies = { "echasnovski/mini.icons", version = false },
-        priority = 1000,
-        lazy = false,
-    },
-
-    "mluders/comfy-line-numbers.nvim",
-
-    {
-        "folke/noice.nvim",
-        event = "VeryLazy",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-        }
-    },
-
-    {
-        "christoomey/vim-tmux-navigator",
-        cmd = {
-            "TmuxNavigateLeft",
-            "TmuxNavigateDown",
-            "TmuxNavigateUp",
-            "TmuxNavigateRight",
-            "TmuxNavigatePrevious",
-            "TmuxNavigatorProcessList",
-        },
-        keys = {
-            { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-            { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-            { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-            { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-            { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-        },
-    }
+    require("plugins.lsp"),
+    require("plugins.luasnip"),
+    require("plugins.which-keys"),
+    require("plugins.lualine"),
+    require("plugins.obsidian"),
+    require("plugins.outline"),
+    require("plugins.footnote"),
+    require("plugins.snacks"),
+    require("plugins.comfy-line-numbers"),
+    require("plugins.noice"),
+    require("plugins.vim-tmux-navigator"),
+    require("plugins.cmps"),
 }
 local opts = {}
 
