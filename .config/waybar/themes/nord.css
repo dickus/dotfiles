@@ -90,7 +90,7 @@ window#waybar.empty #window {
 
 #tray {
     padding:    5px 8px;
-    margin:     0px 4px 5px 4px;
+    margin:     0px 4px 4px 4px;
     transition: none;
     color:      @text;
     background: @bg;
