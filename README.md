@@ -48,7 +48,7 @@ My dotfiles for a bunch of apps.
 
 ## Installation
 ```
-git clone git@github.com:dickus/dotfiles.git .dotfiles
+git clone https://github.com/dickus/dotfiles.git .dotfiles
 ```
 
 If you don't need some configs, remove them from repo after you clone it.
