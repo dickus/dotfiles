@@ -61,13 +61,9 @@ return {
 
         vim.opt_local.conceallevel = 1
 
-        --use template in current note
         vim.keymap.set("n", "<leader>ot", ":Obsidian template<CR>", { desc = "Use note template", noremap = true, silent = true })
-        --show links within current buffer
         vim.keymap.set("n", "<leader>ol", ":Obsidian links<CR>", { desc = "Open links" })
-        --show backlinks
         vim.keymap.set("n", "<leader>ob", ":Obsidian backlinks<CR>", { desc = "Open backlinks" })
-        --open tags search
         vim.keymap.set({ "n", "v" }, "<leader>oh", ":Obsidian tags<CR>", { desc = "Open tags search" })
     end
 }
