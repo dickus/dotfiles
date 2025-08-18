@@ -35,6 +35,7 @@ local plugins = {
     require("plugins.noice"),
     require("plugins.vim-tmux-navigator"),
     require("plugins.cmps"),
+    require("plugins.avante"),
 }
 local opts = {}
 
