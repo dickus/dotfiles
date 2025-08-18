@@ -1,4 +1,6 @@
 #!/bin/bash
 
-kitty -T "todos" -e nvim ${HOME}/.docs/todos.md
+TERMINAL="kitty"
+
+"${TERMINAL}" -T "todos" -e nvim ${HOME}/.docs/todos.md
 
