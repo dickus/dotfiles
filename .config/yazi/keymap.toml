@@ -105,6 +105,10 @@ keymap = [
     # Archives
     { on = [ "u", "a" ], run = "shell '7z a \"archive\" -r \"$@\"'",       desc = "Archive to .7z" },
     { on = [ "u", "z" ], run = "shell '7z a -tzip \"archive\" -r \"$@\"'", desc = "Archive to .zip" },
+
+    # tmux
+    { on = [ "t", "s" ], run = "shell '$HOME/.config/tmux/layouts/sidenvim.sh \"kitty\" \"\" \"$@\"'", desc = "Open tmux \"sidenvim\" layout in selected directory" },
+    { on = [ "t", "c" ], run = "shell '$HOME/.config/tmux/layouts/coding.sh \"kitty\" \"\" \"$@\"'", desc = "Open tmux \"coding\" layout in selected directory" },
 ]
 
 [tasks]
