@@ -4,6 +4,7 @@ TERMINAL="${1}"
 session_name="${2}"
 path="${3}"
 
+[[ -z "${session_name}" ]] && session_name="coding"
 tmux has-session -t "${session_name}"
 
 if [[ $? != 0 ]]; then
