@@ -61,7 +61,7 @@ alias pe="python -m venv"
 alias upd="paru; flatpak update"
 
 # paru management
-alias pai="paru -Slq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75% | xargs -ro paru -S"
+alias pai="paru -Slq | fzf --multi --preview 'paru -Sii --needed {1}' --preview-window=down:75% | xargs -ro paru -S"
 alias par="paru -Qq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75% | xargs -ro paru -Rns"
 
 # in case if something breaks
