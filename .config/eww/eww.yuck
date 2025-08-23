@@ -13,24 +13,40 @@
     (timedate)
 )
 
+(defwindow zen
+    :monitor 0
+    :geometry
+    (
+        geometry
+        :anchor "top center"
+        :y "20"
+    )
+
+    :stacking "bg"
+    :focusable "false"
+
+    (zentime)
+)
+
 (defvar open_timedate false)
+(defvar open_zentime false)
 (defvar ANIM_DURATION "500ms")
 
 (defwidget timedate []
-    (revealer :transition "slidebot"
+    (revealer :transition "slidedown"
               :reveal {open_timedate}
               :duration {ANIM_DURATION}
               (box :class "timedate"
                   :orientation "v"
                   :space-evenly false
                   :halign "end"
-                  (clock)
+                  (mainclock)
                   (date))
     )
 )
 
-(defwidget clock []
-    (label :class "clock"
+(defwidget mainclock []
+    (label :class "mainclock"
            :text {formattime(EWW_TIME, "%H:%M")})
 )
 
@@ -41,5 +57,22 @@
 (defwidget date []
     (label :class "date"
            :text "${date}")
+)
+
+(defwidget zentime []
+    (revealer :transition "slidedown"
+              :reveal {open_zentime}
+              :duration {ANIM_DURATION}
+              (box :class "zentime"
+                   :orientation "v"
+                   :space-evenly false
+                   :halign "end"
+                   (zenclock))
+    )
+)
+
+(defwidget zenclock []
+    (label :class "zenclock"
+           :text {formattime(EWW_TIME, "%H:%M")})
 )
 

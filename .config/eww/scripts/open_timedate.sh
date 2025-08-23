@@ -1,9 +1,7 @@
 #!/bin/bash
 
 while true; do
-    timedate="$(eww get open_timedate)"
-
-    windows=1
+    floating_windows="true"
 
     workspace=$(hyprctl activeworkspace | \
         grep "[w]orkspace" | \
@@ -13,18 +11,32 @@ while true; do
 
     mapfile -t floating < <(hyprctl clients | grep "[w]orkspace: ${workspace}" -A 1 | grep "floating" | sed "s|.*: ||")
 
-    for item in "${floating[@]}"; do
-        if [[ "${item}" == "0" ]]; then
-            windows=0
+    if [[ "${floating}" ]]; then
+        for item in "${floating[@]}"; do
+            if [[ "${item}" == "0" ]]; then
+                floating_windows="false"
 
-            break
-        fi
-    done
-
-    if [[ ${windows} -eq 1 ]]; then
-        eww update open_timedate=true
+                break
+            fi
+        done
     else
-        eww update open_timedate=false
+        floating_windows="true"
+    fi
+
+    if [[ ${floating_windows} == "true" ]]; then
+        eww update open_timedate=true
+
+        eww update open_zentime=false
+    else
+        if [[ -z $(ps aux | grep "[w]aybar") ]]; then
+            eww update open_zentime=true
+
+            eww update open_timedate=false
+        else
+            eww update open_zentime=false
+
+            eww update open_timedate=false
+        fi
     fi
 
     sleep 1
