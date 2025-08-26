@@ -1,0 +1,7 @@
+[Unit]
+Description=Handle eww widgets
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/eww/scripts/open_timedate.sh
+

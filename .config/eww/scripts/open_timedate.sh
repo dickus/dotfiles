@@ -1,44 +1,42 @@
 #!/bin/bash
 
-while true; do
-    floating_windows="true"
+workspace=$(hyprctl activeworkspace | \
+    grep "[w]orkspace" | \
+    head -n 1 | \
+    sed "s|.*ID ||; s|(.*||"
+)
 
-    workspace=$(hyprctl activeworkspace | \
-        grep "[w]orkspace" | \
-        head -n 1 | \
-        sed "s|.*ID ||; s|(.*||"
-    )
+windows=$(hyprctl activeworkspace | \
+    grep "[w]indows" | \
+    sed "s|.*: ||"
+)
 
-    mapfile -t floating < <(hyprctl clients | grep "[w]orkspace: ${workspace}" -A 1 | grep "floating" | sed "s|.*: ||")
+mapfile -t floating < <(hyprctl clients | grep "[w]orkspace: ${workspace}" -A 1 | grep "floating" | sed "s|.*: ||")
 
-    if [[ "${floating}" ]]; then
-        for item in "${floating[@]}"; do
-            if [[ "${item}" == "0" ]]; then
-                floating_windows="false"
+non_float=false
+if [[ "${floating}" ]]; then
+    for item in "${floating[@]}"; do
+        if [[ "${item}" == "0" ]]; then
+            non_float=true
 
-                break
-            fi
-        done
+            break
+        fi
+    done
+fi
+
+if [[ ${windows} -eq 0 ]] || ! [[ ${non_float} ]]; then
+    eww update open_timedate=true
+
+    eww update open_zentime=false
+else
+    if ! pgrep -x "waybar" > /dev/null; then
+        eww update open_timedate=false
+
+        eww update open_zentime=true
     else
-        floating_windows="true"
-    fi
-
-    if [[ ${floating_windows} == "true" ]]; then
-        eww update open_timedate=true
+        eww update open_timedate=false
 
         eww update open_zentime=false
-    else
-        if [[ -z $(ps aux | grep "[w]aybar") ]]; then
-            eww update open_zentime=true
-
-            eww update open_timedate=false
-        else
-            eww update open_zentime=false
-
-            eww update open_timedate=false
-        fi
     fi
-
-    sleep 1
-done
+fi
 

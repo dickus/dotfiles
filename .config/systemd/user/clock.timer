@@ -1,0 +1,11 @@
+[Unit]
+Description=Handle eww widgets
+
+[Timer]
+OnCalendar=*-*-* *:*:*
+AccuracySec=1us
+Unit= clock.service
+
+[Install]
+WantedBy=timers.target
+
