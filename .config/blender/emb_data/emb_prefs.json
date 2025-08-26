@@ -1,0 +1,8 @@
+{
+  "interval": 600,
+  "global_disable": false,
+  "volume": 0.2,
+  "notification_sound": "/home/dickus/.config/blender/emb_data/message_update.wav",
+  "never_notify": false,
+  "show_dev_message_generator": false
+}
