@@ -1,0 +1,7 @@
+[Unit]
+Description=Set dark theme at 1930
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/scripts/theme_change/theme_schedule.sh dark
+

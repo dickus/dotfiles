@@ -1,0 +1,7 @@
+[Unit]
+Description=Check theme at boot
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/scripts/theme_change/check_time.sh
+

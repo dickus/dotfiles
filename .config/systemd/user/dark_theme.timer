@@ -1,0 +1,10 @@
+[Unit]
+Description=Set dark theme at 1930
+
+[Timer]
+OnCalendar=*-*-* 19:30:00
+Unit= dark_theme.service
+
+[Install]
+WantedBy=default.target
+

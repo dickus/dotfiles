@@ -1,0 +1,10 @@
+[Unit]
+Description=Set light theme at 0800
+
+[Timer]
+OnCalendar=*-*-* 08:00:00
+Unit= light_theme.service
+
+[Install]
+WantedBy=default.target
+

@@ -1,0 +1,10 @@
+[Unit]
+Description=Check theme at boot
+
+[Timer]
+OnBootSec=0sec
+Unit=theme_changer.service
+
+[Install]
+WantedBy=default.target
+

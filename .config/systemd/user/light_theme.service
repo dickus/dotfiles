@@ -1,0 +1,7 @@
+[Unit]
+Description=Set light theme at 0800
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/scripts/theme_change/theme_schedule.sh light
+
