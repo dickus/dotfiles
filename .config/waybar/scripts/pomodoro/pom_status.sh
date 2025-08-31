@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 STATUS=$(pidof -x pom_timer.sh)
 TIMER=1500

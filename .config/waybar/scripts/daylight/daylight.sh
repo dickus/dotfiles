@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TEMP=$(hyprctl hyprsunset temperature)
 

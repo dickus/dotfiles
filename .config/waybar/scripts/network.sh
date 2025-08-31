@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 STATUS=$(nmcli device status | grep '^enp.* connected')
 VPN=$(ifconfig | grep "vpn")

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TERMINAL="${1}"
 session_name="${2}"
