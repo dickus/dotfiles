@@ -17,8 +17,7 @@ resume() {
     windows=$(hyprctl activeworkspace -j | jq '.windows')
 
     if [[ "${windows}" == "0" ]]; then
-        WAYBAR_CONFIG=~/.config/waybar/config-left waybar -c ~/.config/waybar/config-left -s ~/.config/waybar/style.css &
-        WAYBAR_CONFIG=~/.config/waybar/config-right waybar -c ~/.config/waybar/config-right -s ~/.config/waybar/style.css &
+        hyprctl reload
 
         hyprctl keyword cursor:inactive_timeout 0
     fi
