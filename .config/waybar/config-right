@@ -11,20 +11,18 @@
 
     "modules-left": ["custom/color", "custom/daylight"],
 
-    "modules-center": ["custom/pomodoro", "custom/record"],
-
     "modules-right": ["custom/yabrowser", "custom/zoom"],
 
     "custom/yabrowser": {
         "format": "󰖟",
         "on-click": "ru.yandex.Browser",
-        "tooltip-format": "Yandex Browser"
+        "tooltip": false
     },
 
     "custom/zoom": {
         "format": "",
         "on-click": "~/.config/waybar/runners/zoom.sh",
-        "tooltip-format": "Zoom"
+        "tooltip": false
     },
 
     "custom/daylight": {
@@ -34,7 +32,7 @@
         "on-click": "~/.config/waybar/scripts/daylight/daylight.sh toggle",
         "on-click-right": "~/.config/waybar/scripts/daylight/daylight.sh light",
         "return-type": "json",
-        "tooltip-format": "Daylight switcher."
+        "tooltip": false
     },
 
     "custom/record": {
@@ -43,13 +41,13 @@
         "restart-interval": 1,
         "on-click": "~/.config/waybar/scripts/record/record.sh",
         "return-type": "json",
-        "tooltip-format": "Screen recorder."
+        "tooltip": false
     },
 
     "custom/color": {
         "format": "",
         "on-click": "~/.config/scripts/colorpicker.sh",
-        "tooltip-format": "Color picker."
+        "tooltip": false
     },
 
     "custom/pomodoro": {
