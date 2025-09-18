@@ -7,41 +7,31 @@ return {
         "hrsh7th/cmp-nvim-lsp",
     },
 
-    config = function()
+    opts = {
+        servers = {
+            bashls = {},
+            clangd = {},
+            lua_ls = {},
+            marksman = {},
+            pyright = {},
+            gopls = {},
+        },
+    },
 
+    config = function(_, opts)
         require("mason").setup({})
         require("mason-lspconfig").setup({
             ensure_installed = { "bashls", "clangd", "lua_ls", "marksman", "pyright", "gopls" },
         })
 
-        local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-        local lspconfig = require("lspconfig")
-        lspconfig.bashls.setup({
-            capabilities = capabilities,
-        })
-        lspconfig.clangd.setup({
-            capabilities = capabilities,
-        })
-        lspconfig.lua_ls.setup({
-            capabilities = capabilities,
-        })
-        lspconfig.marksman.setup({
-            capabilities = capabilities,
-        })
-        lspconfig.pyright.setup({
-            capabilities = capabilities,
-        })
-        lspconfig.gopls.setup({
-            capabilities = capabilities,
+        vim.lsp.config("*", {
+            capabilities = require("cmp_nvim_lsp").default_capabilities(),
         })
 
-        vim.lsp.enable("bashls")
-        vim.lsp.enable("clangd")
-        vim.lsp.enable("lua_ls")
-        vim.lsp.enable("marksman")
-        vim.lsp.enable("pyright")
-        vim.lsp.enable("gopls")
+        for server, cfg in pairs(opts.servers) do
+            vim.lsp.config(server, cfg)
+            vim.lsp.enable(server)
+        end
 
         vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true })
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true })
