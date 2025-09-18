@@ -84,7 +84,6 @@ keymap = [
     { on = [ "g", "t" ],       run = "cd ~/.local/share/Trash",            desc = "Goto ~/.local/share/Trash" },
     { on = [ "g", "v" ],       run = "cd ~/.var/app",                      desc = "Goto flatpaks dir" },
     { on = [ "g", "w" ],       run = "cd ~/.docs",                         desc = "Goto ~/.docs" },
-    { on = [ "g", "<Space>" ], run = "cd --interactive",                   desc = "Jump interactively" },
 
     # Extra
     { on = [ "m", "e" ], run = "shell 'chmod +x $@'",                       desc = "Make file executable" },
