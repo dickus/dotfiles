@@ -34,7 +34,6 @@ return {
 
             callbacks = {
                 enter_note = function(_, note)
-                    vim.keymap.set("n", "<leader>ch", "<cmd>Obsidian toggle_checkbox<CR>", { buffer = note.bufnr, desc = "Toggle checkbox" })
                 end,
             },
 
