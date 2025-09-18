@@ -10,3 +10,4 @@
 .config/kitty/current-theme.conf
 .config/waybar/scripts/daylight/daylight
 .config/tmux/plugins
+.config/hypr/scripts/zen/mode
