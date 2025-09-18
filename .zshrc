@@ -81,6 +81,9 @@ fpi() {
 
 alias fpr="flatpak list --app --columns=application | fzf --multi --preview 'flatpak info {1}' --preview-window=down:75% | xargs -ro flatpak uninstall -y"
 
+alias pushd="pushd ${1} >/dev/null"
+alias popd="popd >/dev/null"
+
 export SUDO_EDITOR="nvim"
 export EDITOR="nvim"
 export VISUAL="nvim"
