@@ -2,9 +2,14 @@
 
 STATUS=$(pidof wf-recorder)
 
+if [[ "${1}" == "game" ]]; then
+    SYS_SOURCE="Games.monitor"
+else
+    SYS_SOURCE=$(pactl get-default-sink).monitor
+fi
+
 if [[ -z ${STATUS} ]]; then
     MIC_SOURCE=$(pactl get-default-source)
-    SYS_SOURCE=$(pactl get-default-sink).monitor
 
     DATE=$(date +%F_%H-%M-%S)
     ACODEC=flac
