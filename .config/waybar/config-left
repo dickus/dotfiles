@@ -11,7 +11,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/language"],
 
-    "modules-center": ["custom/todo", "custom/notifications"],
+    "modules-center": ["custom/pomodoro", "custom/notifications", "custom/record"],
 
     "modules-right": ["custom/gamepad", "pulseaudio", "custom/network", "tray"],
 
@@ -60,7 +60,7 @@
         "on-click": "dunstctl set-paused toggle",
         "restart-interval": 1,
         "return-type": "json",
-        "tooltip-format": "LMB to turn off notifications."
+        "tooltip": false
     },
 
     "custom/network": {
@@ -70,7 +70,7 @@
         "on-click": "~/.config/waybar/scripts/network.sh toggle",
         "on-click-right": "~/.config/scripts/system/vpn.sh",
         "return-type": "json",
-        "tooltip-format": "LMB to connect/disconnect from default Ethernet.\nRMB to connect/disconnect from VPN."
+        "tooltip": false
     },
 
     "custom/gamepad": {
@@ -83,10 +83,29 @@
 
     "custom/todo": {
         "format": "",
-        "exec": "~/.config/waybar/scripts/todos/todos.sh",
         "on-click": "~/.config/waybar/scripts/todos/open_todo.sh",
         "restart-interval": 1,
+        "tooltip": false
+    },
+
+    "custom/record": {
+        "format": "󰑊",
+        "exec": "~/.config/waybar/scripts/record/record_status.sh",
+        "restart-interval": 1,
+        "on-click": "~/.config/waybar/scripts/record/record.sh",
+        "return-type": "json",
+        "tooltip": false
+    },
+
+    "custom/pomodoro": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/pomodoro/pom_status.sh",
+        "restart-interval": 1,
         "tooltip": true,
+        "on-click": "~/.config/waybar/scripts/pomodoro/pom.sh start",
+        "on-scroll-up": "~/.config/waybar/scripts/pomodoro/pom.sh set_plus",
+        "on-scroll-down": "~/.config/waybar/scripts/pomodoro/pom.sh set_minus",
+        "on-click-right": "~/.config/waybar/scripts/pomodoro/pom.sh reset",
         "return-type": "json"
     },
 }]
