@@ -9,7 +9,7 @@ idle() {
         pkill -f "waybar/config-left" &
         pkill -f "waybar/config-right"
 
-        hyprctl keyword cursor:inactive_timeout 0.1
+        hyprctl keyword cursor:invisible true
     fi
 }
 
@@ -19,7 +19,7 @@ resume() {
     if [[ "${windows}" == "0" ]]; then
         hyprctl reload
 
-        hyprctl keyword cursor:inactive_timeout 0
+        hyprctl keyword cursor:invisible false
     fi
 }
 
