@@ -101,6 +101,7 @@ window#waybar.empty #window {
 #custom-notifications {
     padding:    5px 8px;
     margin:     0px 4px 5px 4px;
+    font-size:  20px;
     box-shadow: 1px 1px 3px 0px @bg;
 }
 
@@ -151,8 +152,8 @@ window#waybar.empty #window {
 }
 
 #custom-record {
-    padding:    5px 10px;
-    margin:     4px 7px 4px 4px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
     font-size:  20px;
     background: @bg;
     box-shadow: 1px 1px 3px 0px @bg;
@@ -205,8 +206,8 @@ window#waybar.empty #window {
 }
 
 #custom-pomodoro {
-    padding:    5px 10px;
-    margin:     4px 7px 4px 4px;
+    padding:    5px 8px;
+    margin:     0px 4px 5px 4px;
     color:      @alt-text;
     font-size:  20px;
     background: @bg;
