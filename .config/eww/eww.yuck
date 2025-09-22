@@ -4,7 +4,8 @@
     (
         geometry
         :anchor "top center"
-        :y "168"
+        :y "120"
+        :x "150"
     )
 
     :stacking "bg"
