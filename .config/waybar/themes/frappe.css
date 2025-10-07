@@ -132,7 +132,7 @@ window#waybar.empty #window {
 }
 
 #custom-network.vpn {
-    color:      @alt-text;
+    color:      @text;
     background: @bg-yellow;
 }
 
