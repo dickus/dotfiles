@@ -39,8 +39,8 @@
         "format-muted": "m{format_source}",
         "format-source": "a",
         "format-source-muted": "m",
-        "on-click": "~/.config/scripts/system/volume.sh mute",
-        "on-click-right": "~/.config/scripts/system/microphone.sh",
+        "on-click": "~/.config/scripts/audio/volume.sh mute",
+        "on-click-right": "~/.config/scripts/audio/microphone.sh",
         "tooltip": false
     },
 
