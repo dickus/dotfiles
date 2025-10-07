@@ -4,7 +4,7 @@
     (
         geometry
         :anchor "top center"
-        :y "120"
+        :y "100"
         :x "150"
     )
 
