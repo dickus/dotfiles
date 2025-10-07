@@ -37,10 +37,14 @@ if [[ -z ${STATUS} ]]; then
         -map 0:a -c:a:0 ${ACODEC} \
         -af "pan=mono|c0=c0" \
         ${OUTPUT_DIR}/"${DATE}_mic${ACONT}" &
+
+    dunstify -t 2000 "Recording..."
 else
     pkill -INT wf-recorder
     pkill -INT ffmpeg
 
     sleep 2
+
+    dunstify -t 2000 "Recording stopped"
 fi
 
