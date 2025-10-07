@@ -15,13 +15,14 @@ return {
             marksman = {},
             pyright = {},
             gopls = {},
+            csharp_ls = {},
         },
     },
 
     config = function(_, opts)
         require("mason").setup({})
         require("mason-lspconfig").setup({
-            ensure_installed = { "bashls", "clangd", "lua_ls", "marksman", "pyright", "gopls" },
+            ensure_installed = { "bashls", "clangd", "lua_ls", "marksman", "pyright", "gopls", "csharp_ls" },
         })
 
         vim.lsp.config("*", {
