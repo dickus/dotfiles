@@ -23,7 +23,7 @@ function precmd() {
 }
 
 
-alias dfs="./.config/scripts/df.sh"
+alias dfs="./.config/scripts/misc/df.sh"
 
 alias vi="nvim"
 
@@ -68,7 +68,7 @@ alias par="paru -Qq | fzf --multi --preview 'paru -Sii {1}' --preview-window=dow
 alias fuck="touch $HOME/.config/scripts/fuck"
 
 # rng, literally
-alias rng="~/.config/scripts/random.sh"
+alias rng="~/.config/scripts/misc/random.sh"
 
 # flatpaks management
 fpi() {
