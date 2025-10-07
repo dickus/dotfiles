@@ -13,7 +13,7 @@ return {
 
             statusline = { enabled = false },
 
-            disable_frontmatter = true,
+            frontmatter = { enabled = false },
 
             ui = { enable = false },
 
