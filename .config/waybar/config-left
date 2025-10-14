@@ -11,7 +11,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/language"],
 
-    "modules-center": ["custom/pomodoro", "custom/notifications", "custom/record"],
+    "modules-center": ["custom/notifications", "custom/record"],
 
     "modules-right": ["custom/gamepad", "pulseaudio", "custom/network", "tray"],
 
