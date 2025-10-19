@@ -27,12 +27,7 @@ alias dfs="./.config/scripts/misc/df.sh"
 
 alias vi="nvim"
 
-# find a file by name and edit with nvim
-alias vif="~/.config/scripts/fzf/neofzf_name.sh"
-# find a file by content and edit with nvim
-alias vic="~/.config/scripts/fzf/neofzf_cont.sh"
-
-alias fetch="fastfetch"
+alias ff="fastfetch"
 
 # proper calendar
 alias cal="cal -m"
@@ -50,36 +45,11 @@ alias ls="exa -F"
 # create dirs faster
 alias mkdir="mkdir -vp"
 
-# notes workflow
-alias ww="cd ~/.docs && nvim ."
-alias or="cd ~/.docs && nvim drafts/*.md"
-
 # create a python environment
 alias pe="python -m venv"
 
-# system update
-alias upd="paru; flatpak update"
-
-# paru management
-alias pai="paru -Slq | fzf --multi --preview 'paru -Sii --needed {1}' --preview-window=down:75% | xargs -ro paru -S"
-alias par="paru -Qq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75% | xargs -ro paru -Rns"
-
 # in case if something breaks
 alias fuck="touch $HOME/.config/scripts/fuck"
-
-# rng, literally
-alias rng="~/.config/scripts/misc/random.sh"
-
-# flatpaks management
-fpi() {
-    flatpak remote-ls flathub --columns=application,branch |
-    awk '!x[$1]++' |
-    fzf --multi --preview 'flatpak remote-info flathub {1}/x86_64/{2}' --preview-window=down:75% --with-nth 1 |
-    awk '{print $1}' |
-    xargs -ro flatpak install -y
-}
-
-alias fpr="flatpak list --app --columns=application | fzf --multi --preview 'flatpak info {1}' --preview-window=down:75% | xargs -ro flatpak uninstall -y"
 
 alias pushd="pushd ${1} >/dev/null"
 alias popd="popd >/dev/null"
