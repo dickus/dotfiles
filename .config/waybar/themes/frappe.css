@@ -24,6 +24,7 @@
 
 #workspaces button {
     color: @alt-text;
+    padding: 5px;
 }
 
 #workspaces button:hover {
