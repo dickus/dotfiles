@@ -27,7 +27,7 @@ images = [
     { run = 'find . -maxdepth 1 -type f | xargs -r swayimg "$@"', orphan = true },
 ]
 
-music = [
+audio = [
     { run = 'kitty -e mpv --no-video "$@"', orphan = true },
 ]
 
@@ -59,9 +59,10 @@ prepend_rules = [
     { name = "*.gif",  use = "images" },
     { name = "*.svg",  use = "images" },
 
-    # music
-    { name = "*.mp3",  use = "music" },
-    { name = "*.flac", use = "music" },
+    # audio
+    { name = "*.mp3",  use = "audio" },
+    { name = "*.flac", use = "audio" },
+    { name = "*.wav",  use = "audio" },
 
     # runs
     { name = "*.run", use = "runs" },
