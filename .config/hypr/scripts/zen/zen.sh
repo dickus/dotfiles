@@ -28,7 +28,7 @@ nobars() {
 bars() {
     echo "bars" > "${mode_file}"
 
-    sed -i "2s|.*|exec = WAYBAR_CONFIG=~/.config/waybar/config-left waybar -c ~/.config/waybar/config-left -s ~/.config/waybar/style.css &|" "${theme_conf}"
+    sed -i "2s|.*|exec = WAYBAR_CONFIG=~/.config/waybar/config-left waybar -c ~/.config/waybar/config-left -s ~/.config/waybar/style.css \&|" "${theme_conf}"
 
     sed -i "s|gaps_out =.*|gaps_out = 8, 8, 8, 2|" "${theme_conf}"
 
