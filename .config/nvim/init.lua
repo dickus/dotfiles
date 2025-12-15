@@ -1,5 +1,6 @@
 require("settings")
 require("keys")
+require("ru_keys")
 
 require("plugins.lazy")
 
