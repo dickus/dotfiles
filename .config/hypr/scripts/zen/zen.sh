@@ -10,7 +10,7 @@ zen() {
 
     sed -i "2s|.*||" "${theme_conf}"
 
-    sed -i "s|gaps_out =.*|gaps_out = 150, 250|" "${theme_conf}"
+    sed -i "s|gaps_out =.*|gaps_out = 150, 350|" "${theme_conf}"
 
     hyprctl reload
 }
