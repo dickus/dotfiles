@@ -29,10 +29,10 @@ alias vi="nvim"
 
 alias ff="fastfetch"
 
+alias pg="ps -eo pid,user,pcpu,pmem,comm --sort=-%mem | grep -v grep | grep ${1}"
+
 # proper calendar
 alias cal="cal -m"
-
-alias grep="rg"
 
 # copying, moving, removing
 alias cp="cp -uv"
@@ -46,7 +46,8 @@ alias ls="exa -F"
 alias mkdir="mkdir -vp"
 
 # create a python environment
-alias pe="python -m venv"
+alias pe="source $HOME/.config/scripts/dev/python_venv.sh"
+alias cdp="source $HOME/.config/scripts/dev/cd_python.sh"
 
 # in case if something breaks
 alias fuck="touch $HOME/.config/scripts/fuck"
@@ -59,6 +60,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export SYSTEMD_EDITOR="nvim"
 
+export PATH="$PATH:$HOME/.local/bin"
 
 eval "$(zoxide init --cmd cd zsh)"
 
