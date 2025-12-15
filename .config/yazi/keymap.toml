@@ -4,97 +4,155 @@
 keymap = [
     { on = "<Esc>", run = "escape",  desc = "Exit visual mode, clear selected, or cancel search" },
     { on = "q",     run = "quit",    desc = "Quit the process" },
+    { on = "й",     run = "quit",    desc = "Quit the process" },
     { on = "<C-c>", run = "close",   desc = "Close the current tab, or quit if it's last" },
     { on = "<C-z>", run = "suspend", desc = "Suspend the process" },
 
     # Hopping
     { on = "k", run = "arrow -1", desc = "Move cursor up" },
+    { on = "л", run = "arrow -1", desc = "Move cursor up" },
     { on = "j", run = "arrow 1",  desc = "Move cursor down" },
+    { on = "о", run = "arrow 1",  desc = "Move cursor down" },
 
     { on = [ "g", "g" ], run = "arrow top", desc = "Move cursor to the top" },
+    { on = [ "п", "п" ], run = "arrow top", desc = "Move cursor to the top" },
     { on = "G",          run = "arrow bot", desc = "Move cursor to the bottom" },
+    { on = "П",          run = "arrow bot", desc = "Move cursor to the bottom" },
 
     # Navigation
     { on = "h", run = "leave", desc = "Go back to the parent directory" },
+    { on = "р", run = "leave", desc = "Go back to the parent directory" },
     { on = "l", run = "enter", desc = "Enter the child directory" },
+    { on = "д", run = "enter", desc = "Enter the child directory" },
 
     # Toggle
     { on = "<Space>",    run = [ "toggle", "arrow 1" ], desc = "Toggle the current selection state" },
     { on = [ "m", "k" ], run = "toggle_all",            desc = "Select all files" },
+    { on = [ "ь", "л" ], run = "toggle_all",            desc = "Select all files" },
 
     # Spotting
     { on = "<Tab>", run = "spot", desc = "Spot hovered file" },
 
     # Operation
     { on = "o",          run = "open",                        desc = "Open selected files" },
+    { on = "щ",          run = "open",                        desc = "Open selected files" },
     { on = "O",          run = "open --interactive",          desc = "Open selected files interactively" },
+    { on = "Щ",          run = "open --interactive",          desc = "Open selected files interactively" },
     { on = [ "d", "c" ], run = "yank",                        desc = "Yank selected files to copy" },
+    { on = [ "в", "с" ], run = "yank",                        desc = "Yank selected files to copy" },
     { on = [ "d", "m" ], run = "yank --cut",                  desc = "Yank selected files to cut" },
+    { on = [ "в", "ь" ], run = "yank --cut",                  desc = "Yank selected files to cut" },
     { on = "p",          run = "paste",                       desc = "Paste yanked files" },
+    { on = "з",          run = "paste",                       desc = "Paste yanked files" },
     { on = "P",          run = "paste --force",               desc = "Paste yanked files (overwrite if the destination exists)" },
+    { on = "З",          run = "paste --force",               desc = "Paste yanked files (overwrite if the destination exists)" },
     { on = "-",          run = "link",                        desc = "Symlink the absolute path of yanked files" },
     { on = "_",          run = "hardlink",                    desc = "Hardlink yanked files" },
     { on = "<Esc>",      run = "unyank",                      desc = "Cancel the yank status" },
     { on = [ "d", "d" ], run = "remove",                      desc = "Trash selected files" },
-    { on = [ "D", "D" ], run = "remove --permanently",        desc = "Permanently delete selected files" },
+    { on = [ "в", "в" ], run = "remove",                      desc = "Trash selected files" },
     { on = "a",          run = "create",                      desc = "Create a file (ends with / for directories)" },
+    { on = "ф",          run = "create",                      desc = "Create a file (ends with / for directories)" },
     { on = "r",          run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" },
+    { on = "к",          run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" },
     { on = ":",          run = "shell --interactive",         desc = "Run a shell command" },
+    { on = "Ж",          run = "shell --interactive",         desc = "Run a shell command" },
     { on = ";",          run = "shell --block --interactive", desc = "Run a shell command (block until finishes)" },
+    { on = "ж",          run = "shell --block --interactive", desc = "Run a shell command (block until finishes)" },
     { on = ".",          run = "hidden toggle",               desc = "Toggle the visibility of hidden files" },
+    { on = "ю",          run = "hidden toggle",               desc = "Toggle the visibility of hidden files" },
     { on = [ "s", "f" ], run = "search --via=fd",             desc = "Search files by name via fd" },
+    { on = [ "ы", "а" ], run = "search --via=fd",             desc = "Search files by name via fd" },
     { on = [ "s", "c" ], run = "search --via=rg",             desc = "Search files by content via ripgrep" },
+    { on = [ "ы", "с" ], run = "search --via=rg",             desc = "Search files by content via ripgrep" },
 
     # Copy
     { on = [ "c", "c" ], run = "copy path",             desc = "Copy the file path" },
+    { on = [ "с", "с" ], run = "copy path",             desc = "Copy the file path" },
     { on = [ "c", "d" ], run = "copy dirname",          desc = "Copy the directory path" },
+    { on = [ "с", "в" ], run = "copy dirname",          desc = "Copy the directory path" },
     { on = [ "c", "f" ], run = "copy filename",         desc = "Copy the filename" },
+    { on = [ "с", "а" ], run = "copy filename",         desc = "Copy the filename" },
     { on = [ "c", "n" ], run = "copy name_without_ext", desc = "Copy the filename without extension" },
+    { on = [ "с", "т" ], run = "copy name_without_ext", desc = "Copy the filename without extension" },
 
     # Filter
     { on = "f", run = "filter --smart", desc = "Filter files" },
+    { on = "а", run = "filter --smart", desc = "Filter files" },
 
     # Find
     { on = "/", run = "find --smart",            desc = "Find next file" },
     { on = "?", run = "find --previous --smart", desc = "Find previous file" },
     { on = "n", run = "find_arrow",              desc = "Goto the next found" },
+    { on = "т", run = "find_arrow",              desc = "Goto the next found" },
     { on = "N", run = "find_arrow --previous",   desc = "Goto the previous found" },
+    { on = "Т", run = "find_arrow --previous",   desc = "Goto the previous found" },
 
     # Sorting
     { on = [ ",", "m" ], run = [ "sort mtime --reverse=no", "linemode mtime" ], desc = "Sort by modified time" },
+    { on = [ ",", "ь" ], run = [ "sort mtime --reverse=no", "linemode mtime" ], desc = "Sort by modified time" },
     { on = [ ",", "M" ], run = [ "sort mtime --reverse", "linemode mtime" ],    desc = "Sort by modified time (reverse)" },
+    { on = [ ",", "Ь" ], run = [ "sort mtime --reverse", "linemode mtime" ],    desc = "Sort by modified time (reverse)" },
     { on = [ ",", "b" ], run = [ "sort btime --reverse=no", "linemode btime" ], desc = "Sort by birth time" },
+    { on = [ ",", "и" ], run = [ "sort btime --reverse=no", "linemode btime" ], desc = "Sort by birth time" },
     { on = [ ",", "B" ], run = [ "sort btime --reverse", "linemode btime" ],    desc = "Sort by birth time (reverse)" },
+    { on = [ ",", "И" ], run = [ "sort btime --reverse", "linemode btime" ],    desc = "Sort by birth time (reverse)" },
     { on = [ ",", "a" ], run = "sort alphabetical --reverse=no",                desc = "Sort alphabetically" },
+    { on = [ ",", "ф" ], run = "sort alphabetical --reverse=no",                desc = "Sort alphabetically" },
     { on = [ ",", "A" ], run = "sort alphabetical --reverse",                   desc = "Sort alphabetically (reverse)" },
+    { on = [ ",", "Ф" ], run = "sort alphabetical --reverse",                   desc = "Sort alphabetically (reverse)" },
     { on = [ ",", "n" ], run = "sort natural --reverse=no",                     desc = "Sort naturally" },
+    { on = [ ",", "т" ], run = "sort natural --reverse=no",                     desc = "Sort naturally" },
     { on = [ ",", "N" ], run = "sort natural --reverse",                        desc = "Sort naturally (reverse)" },
+    { on = [ ",", "Т" ], run = "sort natural --reverse",                        desc = "Sort naturally (reverse)" },
     { on = [ ",", "s" ], run = [ "sort size --reverse=no", "linemode size" ],   desc = "Sort by size" },
+    { on = [ ",", "ы" ], run = [ "sort size --reverse=no", "linemode size" ],   desc = "Sort by size" },
     { on = [ ",", "S" ], run = [ "sort size --reverse", "linemode size" ],      desc = "Sort by size (reverse)" },
+    { on = [ ",", "Ы" ], run = [ "sort size --reverse", "linemode size" ],      desc = "Sort by size (reverse)" },
 
     # Goto
     { on = [ "g", "c" ],       run = "cd ~/.config",                       desc = "Goto ~/.config" },
+    { on = [ "п", "с" ],       run = "cd ~/.config",                       desc = "Goto ~/.config" },
     { on = [ "g", "d" ],       run = "cd ~/Downloads",                     desc = "Goto ~/Downloads" },
+    { on = [ "п", "в" ],       run = "cd ~/Downloads",                     desc = "Goto ~/Downloads" },
     { on = [ "g", "D" ],       run = "cd ~/Videos/DVR",                    desc = "Goto ~/Videos/DVR" },
+    { on = [ "п", "В" ],       run = "cd ~/Videos/DVR",                    desc = "Goto ~/Videos/DVR" },
     { on = [ "g", "f" ],       run = "cd ~/.dotfiles",                     desc = "Goto ~/.dotfiles" },
+    { on = [ "п", "а" ],       run = "cd ~/.dotfiles",                     desc = "Goto ~/.dotfiles" },
     { on = [ "g", "h" ],       run = "cd ~",                               desc = "Go home" },
+    { on = [ "п", "р" ],       run = "cd ~",                               desc = "Go home" },
     { on = [ "g", "l" ],       run = "cd ~/.local/share",                  desc = "Goto ~/.local/share" },
+    { on = [ "п", "д" ],       run = "cd ~/.local/share",                  desc = "Goto ~/.local/share" },
     { on = [ "g", "p" ],       run = "cd ~/Pictures",                      desc = "Goto ~/Pictures" },
+    { on = [ "п", "з" ],       run = "cd ~/Pictures",                      desc = "Goto ~/Pictures" },
     { on = [ "g", "s" ],       run = "cd ~/.steam/steam/steamapps/common", desc = "Goto Steam games" },
+    { on = [ "п", "ы" ],       run = "cd ~/.steam/steam/steamapps/common", desc = "Goto Steam games" },
     { on = [ "g", "t" ],       run = "cd ~/.local/share/Trash",            desc = "Goto ~/.local/share/Trash" },
+    { on = [ "п", "е" ],       run = "cd ~/.local/share/Trash",            desc = "Goto ~/.local/share/Trash" },
     { on = [ "g", "v" ],       run = "cd ~/.var/app",                      desc = "Goto flatpaks dir" },
+    { on = [ "п", "м" ],       run = "cd ~/.var/app",                      desc = "Goto flatpaks dir" },
     { on = [ "g", "w" ],       run = "cd ~/.docs",                         desc = "Goto ~/.docs" },
+    { on = [ "п", "ц" ],       run = "cd ~/.docs",                         desc = "Goto ~/.docs" },
+    { on = [ "g", "P" ],       run = "cd ~/projects",                      desc = "Goto ~/projects" },
+    { on = [ "п", "З" ],       run = "cd ~/projects",                      desc = "Goto ~/projects" },
 
     # Extra
     { on = [ "m", "e" ], run = "shell 'chmod +x $@'",                       desc = "Make file executable" },
+    { on = [ "ь", "у" ], run = "shell 'chmod +x $@'",                       desc = "Make file executable" },
     { on = [ "D", "T" ], run = "shell 'rm -rf $HOME/.local/share/Trash/*'", desc = "Clear trash" },
+    { on = [ "В", "Е" ], run = "shell 'rm -rf $HOME/.local/share/Trash/*'", desc = "Clear trash" },
     { on = [ "~" ],      run = "help",                                      desc = "Open help" },
+    { on = [ "ё" ],      run = "help",                                      desc = "Open help" },
     { on = [ "w" ],      run = "shell 'pwd | kitty'",                       desc = "Open a terminal here" },
+    { on = [ "ц" ],      run = "shell 'pwd | kitty'",                       desc = "Open a terminal here" },
 
     # ISO files
     { on = [ "m", "i" ], run = "shell 'mkisofs -J -r -o \"$@.iso\" \"$@\"'",                           desc = "Create an iso file" },
+    { on = [ "ь", "ш" ], run = "shell 'mkisofs -J -r -o \"$@.iso\" \"$@\"'",                           desc = "Create an iso file" },
     { on = [ "m", "m" ], run = "shell '$HOME/.config/scripts/yazi/isomount.sh \"$@\"' &> /dev/null &", desc = "Mount an iso file to $HOME/mnt" },
+    { on = [ "ь", "ь" ], run = "shell '$HOME/.config/scripts/yazi/isomount.sh \"$@\"' &> /dev/null &", desc = "Mount an iso file to $HOME/mnt" },
     { on = [ "m", "u" ], run = "shell '$HOME/.config/scripts/yazi/isounmount.sh'",                     desc = "Unmount iso file from $HOME/mnt" },
+    { on = [ "ь", "г" ], run = "shell '$HOME/.config/scripts/yazi/isounmount.sh'",                     desc = "Unmount iso file from $HOME/mnt" },
 
     # Images
     { on = [ "i", "r" ],     run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" rotate'",      desc = "Rotate image for 90 clockwise" },
@@ -102,26 +160,37 @@ keymap = [
     { on = [ "i", "f" ],     run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" flip'",        desc = "Flip image vertically" },
     { on = [ "i", "<S-f>" ], run = "shell '$HOME/.config/yazi/scripts/images.sh \"$@\" flop'",        desc = "Flip image horizontally" },
 
+    { on = [ "i", "e" ], run = "shell 'org.gimp.GIMP \"$@\"'", desc = "Open image with GIMP" },
+
     # Archives
     { on = [ "u", "a" ], run = "shell '7z a \"archive\" -r \"$@\"'",       desc = "Archive to .7z" },
+    { on = [ "г", "ф" ], run = "shell '7z a \"archive\" -r \"$@\"'",       desc = "Archive to .7z" },
     { on = [ "u", "z" ], run = "shell '7z a -tzip \"archive\" -r \"$@\"'", desc = "Archive to .zip" },
+    { on = [ "г", "я" ], run = "shell '7z a -tzip \"archive\" -r \"$@\"'", desc = "Archive to .zip" },
 
     # tmux
     { on = [ "t", "s" ], run = "shell '$HOME/.config/tmux/layouts/sidenvim.sh \"kitty\" \"\" \"$@\"'", desc = "Open tmux \"sidenvim\" layout in selected directory" },
+    { on = [ "е", "ы" ], run = "shell '$HOME/.config/tmux/layouts/sidenvim.sh \"kitty\" \"\" \"$@\"'", desc = "Open tmux \"sidenvim\" layout in selected directory" },
     { on = [ "t", "c" ], run = "shell '$HOME/.config/tmux/layouts/coding.sh \"kitty\" \"\" \"$@\"'", desc = "Open tmux \"coding\" layout in selected directory" },
+    { on = [ "е", "с" ], run = "shell '$HOME/.config/tmux/layouts/coding.sh \"kitty\" \"\" \"$@\"'", desc = "Open tmux \"coding\" layout in selected directory" },
 ]
 
 [tasks]
 keymap = [
     { on = "w", run = "close", desc = "Close task manager" },
+    { on = "ц", run = "close", desc = "Close task manager" },
     
     { on = "k", run = "arrow -1", desc = "Move cursor up" },
+    { on = "л", run = "arrow -1", desc = "Move cursor up" },
     { on = "j", run = "arrow 1",  desc = "Move cursor down" },
+    { on = "о", run = "arrow 1",  desc = "Move cursor down" },
 
     { on = "<Enter>", run = "inspect", desc = "Inspect the task" },
     { on = "x",       run = "cancel",  desc = "Cancel the task" },
+    { on = "ч",       run = "cancel",  desc = "Cancel the task" },
 
     { on = "~", run = "help", desc = "Open help" },
+    { on = "Ё", run = "help", desc = "Open help" },
 ]
 
 [spot]
@@ -129,15 +198,21 @@ keymap = [
     { on = "<Tab>", run = "close", desc = "Close the spot" },
 
     { on = "k", run = "arrow -1", desc = "Move cursor up" },
+    { on = "л", run = "arrow -1", desc = "Move cursor up" },
     { on = "j", run = "arrow 1",  desc = "Move cursor down" },
+    { on = "о", run = "arrow 1",  desc = "Move cursor down" },
     { on = "h", run = "swipe -1", desc = "Swipe to the previous file" },
+    { on = "р", run = "swipe -1", desc = "Swipe to the previous file" },
     { on = "l", run = "swipe 1",  desc = "Swipe to the next file" },
+    { on = "д", run = "swipe 1",  desc = "Swipe to the next file" },
 
     # Copy
     { on = [ "c", "c" ], run = "copy cell", desc = "Copy selected cell" },
+    { on = [ "с", "с" ], run = "copy cell", desc = "Copy selected cell" },
 
     # Help
     { on = "~", run = "help", desc = "Open help" },
+    { on = "Ё", run = "help", desc = "Open help" },
 ]
 
 [pick]
@@ -147,10 +222,13 @@ keymap = [
     { on = "<Enter>", run = "close --submit", desc = "Submit the pick" },
 
     { on = "k", run = "arrow -1", desc = "Move cursor up" },
+    { on = "л", run = "arrow -1", desc = "Move cursor up" },
     { on = "j", run = "arrow 1",  desc = "Move cursor down" },
+    { on = "о", run = "arrow 1",  desc = "Move cursor down" },
 
     # Help
     { on = "~", run = "help", desc = "Open help" },
+    { on = "Ё", run = "help", desc = "Open help" },
 ]
 
 [input]
@@ -161,21 +239,33 @@ keymap = [
 
     # Mode
     { on = "i", run = "insert",                             desc = "Enter insert mode" },
+    { on = "ш", run = "insert",                             desc = "Enter insert mode" },
     { on = "I", run = [ "move first-char", "insert" ],      desc = "Move to the BOL, and enter insert mode" },
+    { on = "Ш", run = [ "move first-char", "insert" ],      desc = "Move to the BOL, and enter insert mode" },
     { on = "a", run = "insert --append",                    desc = "Enter append mode" },
+    { on = "ф", run = "insert --append",                    desc = "Enter append mode" },
     { on = "A", run = [ "move eol", "insert --append" ],    desc = "Move to the EOL, and enter append mode" },
+    { on = "Ф", run = [ "move eol", "insert --append" ],    desc = "Move to the EOL, and enter append mode" },
     { on = "v", run = "visual",                             desc = "Enter visual mode" },
+    { on = "м", run = "visual",                             desc = "Enter visual mode" },
     { on = "V", run = [ "move bol", "visual", "move eol" ], desc = "Enter visual mode and select all" },
+    { on = "М", run = [ "move bol", "visual", "move eol" ], desc = "Enter visual mode and select all" },
     { on = "r", run = "replace",                            desc = "Replace a single character" },
+    { on = "к", run = "replace",                            desc = "Replace a single character" },
 
     # Character-wise movement
     { on = "h", run = "move -1", desc = "Move back a character" },
+    { on = "р", run = "move -1", desc = "Move back a character" },
     { on = "l", run = "move 1",  desc = "Move forward a character" },
+    { on = "д", run = "move 1",  desc = "Move forward a character" },
 
     # Word-wise movement
     { on = "b", run = "backward",              desc = "Move back to the start of the current or previous word" },
+    { on = "и", run = "backward",              desc = "Move back to the start of the current or previous word" },
     { on = "w", run = "forward",               desc = "Move forward to the start of the next word" },
+    { on = "ц", run = "forward",               desc = "Move forward to the start of the next word" },
     { on = "e", run = "forward --end-of-word", desc = "Move forward to the end of the current or next word" },
+    { on = "у", run = "forward --end-of-word", desc = "Move forward to the end of the current or next word" },
 
     # Line-wise movement
     { on = "0", run = "move bol", desc = "Move to the BOL" },
@@ -192,19 +282,36 @@ keymap = [
     { on = "<A-d>", run = "kill forward",  desc = "Kill forwards to the end of the current word" },
 
     # Cut/Yank/Paste
-    { on = "d", run = "delete --cut",                              desc = "Cut the selected characters" },
-    { on = "D", run = [ "delete --cut", "move eol" ],              desc = "Cut until the EOL" },
-    { on = "x", run = [ "delete --cut", "move 1 --in-operating" ], desc = "Cut the current character" },
-    { on = "y", run = "yank",                                      desc = "Copy the selected characters" },
-    { on = "p", run = "paste",                                     desc = "Paste the copied characters after the cursor" },
-    { on = "P", run = "paste --before",                            desc = "Paste the copied characters before the cursor" },
+    { on = "d", run = "delete --cut",                                      desc = "Cut the selected characters" },
+    { on = "в", run = "delete --cut",                                      desc = "Cut the selected characters" },
+    { on = "D", run = [ "delete --cut", "move eol" ],                      desc = "Cut until the EOL" },
+ 	{ on = "c", run = "delete --cut --insert",                             desc = "Cut selected characters, and enter insert mode" },
+ 	{ on = "с", run = "delete --cut --insert",                             desc = "Cut selected characters, and enter insert mode" },
+	{ on = "C", run = [ "delete --cut --insert", "move eol" ],             desc = "Cut until EOL, and enter insert mode" },
+	{ on = "С", run = [ "delete --cut --insert", "move eol" ],             desc = "Cut until EOL, and enter insert mode" },
+	{ on = "s", run = [ "delete --cut --insert", "move 1" ],               desc = "Cut current character, and enter insert mode" },
+	{ on = "ы", run = [ "delete --cut --insert", "move 1" ],               desc = "Cut current character, and enter insert mode" },
+	{ on = "S", run = [ "move bol", "delete --cut --insert", "move eol" ], desc = "Cut from BOL until EOL, and enter insert mode" },
+    { on = "В", run = [ "delete --cut", "move eol" ],                      desc = "Cut until the EOL" },
+	{ on = "Ы", run = [ "move bol", "delete --cut --insert", "move eol" ], desc = "Cut from BOL until EOL, and enter insert mode" },
+    { on = "В", run = [ "delete --cut", "move eol" ],                      desc = "Cut until the EOL" },
+    { on = "x", run = [ "delete --cut", "move 1 --in-operating" ],         desc = "Cut the current character" },
+    { on = "ч", run = [ "delete --cut", "move 1 --in-operating" ],         desc = "Cut the current character" },
+    { on = "y", run = "yank",                                              desc = "Copy the selected characters" },
+    { on = "н", run = "yank",                                              desc = "Copy the selected characters" },
+    { on = "p", run = "paste",                                             desc = "Paste the copied characters after the cursor" },
+    { on = "з", run = "paste",                                             desc = "Paste the copied characters after the cursor" },
+    { on = "P", run = "paste --before",                                    desc = "Paste the copied characters before the cursor" },
+    { on = "З", run = "paste --before",                                    desc = "Paste the copied characters before the cursor" },
 
     # Undo/Redo
     { on = "u",     run = "undo", desc = "Undo the last operation" },
+    { on = "г",     run = "undo", desc = "Undo the last operation" },
     { on = "<C-r>", run = "redo", desc = "Redo the last operation" },
 
     # Help
     { on = "~", run = "help", desc = "Open help" },
+    { on = "Ё", run = "help", desc = "Open help" },
 ]
 
 [confirm]
@@ -214,13 +321,18 @@ keymap = [
     { on = "<Enter>", run = "close --submit", desc = "Submit the confirm" },
 
     { on = "n", run = "close",          desc = "Cancel the confirm" },
+    { on = "т", run = "close",          desc = "Cancel the confirm" },
     { on = "y", run = "close --submit", desc = "Submit the confirm" },
+    { on = "н", run = "close --submit", desc = "Submit the confirm" },
 
     { on = "k", run = "arrow -1", desc = "Move cursor up" },
+    { on = "л", run = "arrow -1", desc = "Move cursor up" },
     { on = "j", run = "arrow 1",  desc = "Move cursor down" },
+    { on = "о", run = "arrow 1",  desc = "Move cursor down" },
 
     # Help
     { on = "~", run = "help", desc = "Open help" },
+    { on = "Ё", run = "help", desc = "Open help" },
 ]
 
 [cmp]
@@ -234,6 +346,7 @@ keymap = [
 
     # Help
     { on = "~", run = "help", desc = "Open help" },
+    { on = "Ё", run = "help", desc = "Open help" },
 ]
 
 [help]
@@ -243,9 +356,12 @@ keymap = [
 
     # Navigation
     { on = "k", run = "arrow -1", desc = "Move cursor up" },
+    { on = "л", run = "arrow -1", desc = "Move cursor up" },
     { on = "j", run = "arrow 1",  desc = "Move cursor down" },
+    { on = "о", run = "arrow 1",  desc = "Move cursor down" },
 
     # Filtering
     { on = "f", run = "filter", desc = "Apply a filter for the help items" },
+    { on = "а", run = "filter", desc = "Apply a filter for the help items" },
 ]
 
