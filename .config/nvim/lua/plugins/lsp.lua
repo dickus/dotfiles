@@ -9,7 +9,9 @@ return {
 
     opts = {
         servers = {
-            bashls = {},
+            bashls = {
+                filetypes = { "sh", "zsh" }
+            },
             clangd = {},
             lua_ls = {},
             marksman = {},
@@ -22,7 +24,7 @@ return {
     config = function(_, opts)
         require("mason").setup({})
         require("mason-lspconfig").setup({
-            ensure_installed = { "bashls", "clangd", "lua_ls", "marksman", "pyright", "gopls", "csharp_ls" },
+            ensure_installed = { "bashls", "clangd", "lua_ls", "marksman", "pyright", "gopls" },
         })
 
         vim.lsp.config("*", {
