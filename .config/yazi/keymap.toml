@@ -135,6 +135,8 @@ keymap = [
     { on = [ "п", "ц" ],       run = "cd ~/.docs",                         desc = "Goto ~/.docs" },
     { on = [ "g", "P" ],       run = "cd ~/projects",                      desc = "Goto ~/projects" },
     { on = [ "п", "З" ],       run = "cd ~/projects",                      desc = "Goto ~/projects" },
+    { on = [ "g", "b" ],       run = "cd ~/Blender",                       desc = "Goto ~/Blender" },
+    { on = [ "п", "и" ],       run = "cd ~/Blender",                       desc = "Goto ~/Blender" },
 
     # Extra
     { on = [ "m", "e" ], run = "shell 'chmod +x $@'",                       desc = "Make file executable" },
