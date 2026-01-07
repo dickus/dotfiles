@@ -17,7 +17,6 @@ My dotfiles for a bunch of apps.
 
 ## Dependencies
 * [bat](https://github.com/sharkdp/bat)
-* [clipse](https://github.com/savedra1/clipse)
 * [dunst](https://github.com/dunst-project/dunst)
 * [eww](https://github.com/elkowar/eww)
 * [exa](https://github.com/ogham/exa)
@@ -36,7 +35,7 @@ My dotfiles for a bunch of apps.
 * `7zip`, `unzip`
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [rofi](https://github.com/davatorium/rofi)
-* [sf-mono-nerd](https://github.com/epk/SF-Mono-Nerd-Font)
+* `nerd-fonts-sf-mono`
 * [still](https://github.com/faergeek/still)
 * [swappy](https://github.com/jtheoof/swappy)
 * [swayimg](https://github.com/artemsen/swayimg)
