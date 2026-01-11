@@ -1,3 +1,5 @@
+require("full-border"):setup()
+
 function Linemode:size_and_mtime()
     local time = math.floor(self._file.cha.mtime or 0)
 
