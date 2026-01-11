@@ -180,6 +180,7 @@ window#waybar.empty #window {
 }
 
 #custom-gamepad.mid {
+    color:      @alt-text;
     background: @bg-yellow;
 }
 
