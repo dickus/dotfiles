@@ -1,8 +1,9 @@
 [mgr]
 # General
-ratio     = [1, 3, 3]
-linemode  = "size_and_mtime"
-scrolloff = 200
+ratio        = [1, 3, 3]
+linemode     = "size_and_mtime"
+scrolloff    = 200
+mouse_events = []
 
 # Sort
 sort_by        = "natural"
@@ -13,6 +14,7 @@ sort_translit  = true
 [preview]
 tab_size     = 4
 image_filter = "lanczos3"
+wrap         = "yes"
 
 [opener]
 edit = [
@@ -46,28 +48,29 @@ exes = [
 [open]
 prepend_rules = [
     # docs
-    { name = "*.pdf", use = "pdfs" },
+    { url = "*.pdf", use = "pdfs" },
 
     # configs
-    { name = "*.ini", use = "edit" },
+    { url = "*.ini", use = "edit" },
 
     # images/gifs
-    { name = "*.png",  use = "images" },
-    { name = "*.jpg",  use = "images" },
-    { name = "*.jpeg", use = "images" },
-    { name = "*.webp", use = "images" },
-    { name = "*.gif",  use = "images" },
-    { name = "*.svg",  use = "images" },
+    { url = "*.png",  use = "images" },
+    { url = "*.jpg",  use = "images" },
+    { url = "*.jpeg", use = "images" },
+    { url = "*.webp", use = "images" },
+    { url = "*.gif",  use = "images" },
+    { url = "*.svg",  use = "images" },
 
     # audio
-    { name = "*.mp3",  use = "audio" },
-    { name = "*.flac", use = "audio" },
-    { name = "*.wav",  use = "audio" },
+    { url = "*.mp3",  use = "audio" },
+    { url = "*.flac", use = "audio" },
+    { url = "*.wav",  use = "audio" },
+    { url = "*.m4a",  use = "audio" },
 
     # runs
-    { name = "*.run", use = "runs" },
+    { url = "*.run", use = "runs" },
 
     # exes
-    { name = "*.exe", use = "exes" },
+    { url = "*.exe", use = "exes" },
 ]
 
