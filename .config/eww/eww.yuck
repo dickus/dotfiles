@@ -32,7 +32,7 @@
 
 (defwidget mainclock []
     (label :class "mainclock"
-           :text {formattime(EWW_TIME, "%H:%M")})
+           :text {formattime(EWW_TIME, "%H%M")})
 )
 
 (defpoll date :interval "60s" 
