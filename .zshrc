@@ -9,23 +9,26 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 
 function preexec() {
-  timer=$(($(date +%s%0N)*0.000000001))
+    timer=$(($(date +%s%0N)*0.000000001))
 }
 
 function precmd() {
-  if [ $timer ]; then
-    now=$(($(date +%s%0N)*0.000000001))
-    elapsed=$(echo $(($now-$timer)) | awk '{printf "%.3f", $1}')
+    if [ $timer ]; then
+        now=$(($(date +%s%0N)*0.000000001))
+        elapsed=$(echo $(($now-$timer)) | awk '{printf "%.3f", $1}')
 
-    export RPROMPT="%F{cyan}${elapsed}s %{$reset_color%}"
-    unset timer
-  fi
+        export RPROMPT="%F{cyan}${elapsed}s %{$reset_color%}"
+        unset timer
+    fi
 }
 
 
 alias dfs="./.config/scripts/misc/df.sh"
 
-alias vi="nvim"
+alias v="nvim"
+
+alias '??'="./.config/scripts/run/browser.sh search"
+alias '?t'="./.config/scripts/run/browser.sh torrent"
 
 alias ff="fastfetch"
 
