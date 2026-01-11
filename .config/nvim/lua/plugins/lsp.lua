@@ -16,7 +16,13 @@ return {
             lua_ls = {},
             marksman = {},
             pyright = {},
-            gopls = {},
+            gopls = {
+                on_attach = function(client, bufnr)
+                    vim.o.expandtab  = true
+                    vim.o.tabstop    = 4
+                    vim.o.shiftwidth = 4
+                end
+            },
             csharp_ls = {},
         },
     },
