@@ -3,6 +3,10 @@ My dotfiles for a bunch of apps.
 **[[Preview](#preview)] × [[Dependencies](#dependencies)] × [[Installation](#installation)]**
 
 
+## IMPORTANT NOTE
+These dotfiles are pretty much paired with my [scripts](https://github.com/dickus/scripts). If you're not planning on using them, you need to check hypr/conf/keybinds.conf to remove keys related to scripts.
+
+
 ## Preview
 <table>
     <tr>
