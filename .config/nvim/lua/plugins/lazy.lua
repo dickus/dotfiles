@@ -27,7 +27,7 @@ local plugins = {
     require("plugins.luasnip"),
     require("plugins.which-keys"),
     require("plugins.lualine"),
-    require("plugins.obsidian"),
+    --require("plugins.obsidian"),
     require("plugins.outline"),
     require("plugins.footnote"),
     require("plugins.snacks"),
