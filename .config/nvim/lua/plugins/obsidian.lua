@@ -48,14 +48,6 @@ return {
                 date_format = "",
                 substitutions = {},
             },
-
-            follow_url_func = function(url)
-                vim.fn.jobstart({"xdg-open", url})
-            end,
-
-            follow_img_func = function(img)
-                vim.fn.jobstart({"xdg-open", img})
-            end,
         })
 
         vim.opt_local.conceallevel = 1
